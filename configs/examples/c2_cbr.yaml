@@ -1,0 +1,33 @@
+# Condition C2: Checklist-Based Reading (CBR)
+# Single reviewer using domain-specific checklist
+
+inspection_id: "c2_cbr_run_001"
+condition: "C2_CBR"
+
+reading_techniques:
+  - "CBR"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+  - "checklists/cbr_checklist_v2.yaml"
+
+llm_params:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_cbr: "v2.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  description: "CBR-based inspection with single reviewer using domain-specific checklist"
+  checklist_path: "artifacts/input/checklists/cbr_checklist_v2.yaml"
+  focus_areas:
+    - "CL1-CL7: All checklist items across Design/MSC sections"

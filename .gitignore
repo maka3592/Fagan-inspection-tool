@@ -1,0 +1,127 @@
+# =============================================================================
+# Fagan Inspection Tool - .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# -----------------------------------------------------------------------------
+# Virtual Environments
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# -----------------------------------------------------------------------------
+# Testing & Linting Caches
+# -----------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
+
+# -----------------------------------------------------------------------------
+# IDE / Editor
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# Logs and Temporary Files
+# -----------------------------------------------------------------------------
+*.log
+tmp/
+temp/
+*.tmp
+*.bak
+
+# -----------------------------------------------------------------------------
+# macOS
+# -----------------------------------------------------------------------------
+.DS_Store
+__MACOSX/
+
+# -----------------------------------------------------------------------------
+# Node.js (falls Claude-Flow oder ähnliches genutzt wurde)
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# -----------------------------------------------------------------------------
+# Claude Code / Workflow Directories
+# -----------------------------------------------------------------------------
+.claude/
+.claude-flow/
+.hive-mind/
+
+# -----------------------------------------------------------------------------
+# Environment Variables / Secrets (NEVER commit!)
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+secrets/
+
+# -----------------------------------------------------------------------------
+# Generated Run Outputs (nicht committen, werden neu generiert)
+# -----------------------------------------------------------------------------
+runs/
+eval/
+
+# -----------------------------------------------------------------------------
+# Gold Standard
+# -----------------------------------------------------------------------------
+# WICHTIG: Gold-Dateien werden für Evaluation benötigt!
+# Die spezifische Gold-Datei ist explizit erlaubt, damit der Professor
+# das Repo klonen und fagan eval ausführen kann.
+#
+# Generell ignorieren:
+artifacts/gold/*.xlsx
+# Aber die benötigte XLS-Datei explizit erlauben:
+!artifacts/gold/Faults_List_In_ver6.xls
+!artifacts/gold/README.md
+
+# -----------------------------------------------------------------------------
+# Artifacts Input (NICHT ignorieren - werden für Inspektion benötigt)
+# -----------------------------------------------------------------------------
+# artifacts/input/ wird NICHT ignoriert!
+
+# -----------------------------------------------------------------------------
+# Lokale Entwicklungsskripte (optional - können manuell committet werden)
+# -----------------------------------------------------------------------------
+# Persönliche run_*.sh Skripte werden nicht automatisch ignoriert,
+# da einige als Beispiele nützlich sein könnten.

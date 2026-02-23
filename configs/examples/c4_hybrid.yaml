@@ -1,0 +1,44 @@
+# Condition C4: Hybrid (UBR + CBR + PBR)
+# All reading techniques combined for maximum coverage
+
+inspection_id: "c4_hybrid_run_001"
+condition: "C4_HYBRID"
+
+reading_techniques:
+  - "UBR"
+  - "CBR"
+  - "PBR_TESTER"
+  - "PBR_DESIGNER"
+  - "PBR_USER"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+  - "requirements/TextReqSpec_v3.6.pdf"
+  - "guides/GuideUBR_rankbased_v2.pdf"
+
+llm_params:
+  provider: "openai"
+  model: "gpt-5-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_ubr: "v1.0"
+  reviewer_cbr: "v1.0"
+  reviewer_pbr_tester: "v1.0"
+  reviewer_pbr_designer: "v1.0"
+  reviewer_pbr_user: "v1.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  description: "Hybrid inspection combining all reading techniques"
+  focus_areas:
+    - "Use case traceability (UBR)"
+    - "Systematic checklist coverage (CBR)"
+    - "Multiple perspectives (PBR)"
+  expected_benefit: "Maximum defect detection through complementary techniques"

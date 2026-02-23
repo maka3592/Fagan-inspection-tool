@@ -1,0 +1,53 @@
+# Condition C1: Checklist-Based Reading (CBR)
+# Three independent reviewers using domain-specific checklist
+
+inspection_id: "c1_cbr_run_001"
+condition: "C2_CBR"
+
+reading_techniques:
+  - "CBR"
+  - "CBR"
+  - "CBR"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+  - "checklists/cbr_checklist_v2.yaml"
+
+llm_params:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_cbr: "v2.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  description: "CBR-based inspection with 3 reviewers using domain-specific checklist"
+  checklist_path: "artifacts/input/checklists/cbr_checklist_v2.yaml"
+  focus_areas:
+    - "CL1-CL3: Missing signals, interface inconsistencies, parameter mismatches"
+    - "CL4-CL5: Acknowledgment completeness, timeout specifications"
+    - "CL6-CL7: Table vs MSC consistency, traceability gaps"
+  reviewer_focus:
+    - >
+      YOUR ASSIGNED SCOPE: Table 1 and Sections 3.1, 3.2, 3.2.1, 3.2.2 (data structures, user signals, signal table).
+      Focus checklist items CL1, CL2, CL3 on these sections.
+      Check every signal name in these sections against Table 1.
+      Always cite the exact signal name (e.g. 'Reject_Order') in your evidence.
+    - >
+      YOUR ASSIGNED SCOPE: Sections 3.3, 3.3.1, 3.3.2, 3.4, 3.4.1, 3.4.2 (operator signals, MSC protocols).
+      Focus checklist items CL1, CL4, CL5 on these sections.
+      Check missing acknowledgments and timeouts in MSC sequences.
+      Always cite the exact signal name (e.g. 'Allocate_car') in your evidence.
+    - >
+      YOUR ASSIGNED SCOPE: Sections 4.1 and 4.2 (MSC diagrams and cross-section consistency).
+      Focus checklist items CL5, CL6, CL7 on these sections.
+      Verify that every signal used in 4.x is defined in sections 3.x and Tables.
+      Always cite the exact signal name (e.g. 'Start_Voice') in your evidence.

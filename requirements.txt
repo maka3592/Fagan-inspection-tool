@@ -1,0 +1,42 @@
+# Fagan Inspection Tool - Requirements
+# Python 3.11+
+
+# CLI
+typer>=0.12.0
+rich>=13.7.0
+python-dotenv>=1.0.0
+
+# Data Validation & Models
+pydantic>=2.6.0
+pydantic-settings>=2.1.0
+
+# File Handling
+openpyxl>=3.1.2
+PyYAML>=6.0.1
+
+# PDF Processing
+pdfplumber>=0.11.0
+# Alternative: pymupdf>=1.23.0
+
+# Data Processing
+pandas>=2.2.0
+
+# String Matching
+rapidfuzz>=3.6.0
+
+# LLM Providers
+anthropic>=0.18.0
+openai>=1.12.0
+
+# HTTP
+httpx>=0.26.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+
+# Development
+black>=24.0.0
+ruff>=0.2.0
+mypy>=1.8.0

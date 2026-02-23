@@ -1,0 +1,66 @@
+# Domain-Specific Checklist for Checklist-Based Reading (CBR)
+# Taxi Dispatch System Design Document Review
+#
+# Each item targets a concrete defect pattern found in telecom/embedded
+# design specifications.  Reviewers iterate over these items and scan
+# the design sections (3.x, 4.x, Tables) for violations.
+
+checklist_version: "2.0"
+description: "Domain-specific checklist for taxi dispatch system design inspection"
+
+categories:
+  - name: "CL1 – Missing Signals"
+    question: "Is every signal that appears in an MSC (3.4.x, 4.x) also defined in a signal table (Table 1-3) or interface section (3.2, 3.3)?"
+    items:
+      - "For each MSC in sections 3.4.1, 3.4.2, 4.1, 4.2: list every signal arrow."
+      - "For each signal arrow, verify it has a matching entry in Table 1, Table 2, or Table 3."
+      - "For each signal in Tables 1-3, verify it is used in at least one MSC."
+      - "Report any signal that appears in an MSC but is NOT defined in a table."
+
+  - name: "CL2 – Interface Inconsistencies"
+    question: "Are the interfaces between components (User, Operator, Taxi_System) consistent across all sections?"
+    items:
+      - "Compare signal directions in Table 1 (sender/receiver) with MSC arrow directions."
+      - "Check that each component name is spelled identically across all diagrams and tables."
+      - "Verify that signal flow between components matches the architecture in section 3.1."
+      - "Report any interface mismatch between table definitions and MSC usage."
+
+  - name: "CL3 – Parameter Type Mismatches"
+    question: "Do signal parameter types in Table 1 match the data structures defined in section 3.1 and used in MSCs?"
+    items:
+      - "For each signal with parameters (e.g., Order(Order_struct)), verify the struct is defined in 3.1."
+      - "Check that parameter types in Table 1 match the actual usage in MSC sequences."
+      - "Verify composite data structures (e.g., Order_struct) have all required fields."
+      - "Report any signal whose parameter type does not match its definition."
+
+  - name: "CL4 – Acknowledgment Completeness"
+    question: "Does every request signal have a corresponding acknowledgment or reject signal?"
+    items:
+      - "For each request signal (e.g., Order, Allocate_car), check for a corresponding ACK/confirm."
+      - "For each request signal, check for a corresponding reject/error signal."
+      - "Verify that ACK signals appear in the correct MSC position (after the request)."
+      - "Report any request signal that lacks both an ACK and a reject path."
+
+  - name: "CL5 – Timeout Specifications"
+    question: "Is a timeout specified for every synchronous signal pair where the sender waits for a response?"
+    items:
+      - "Identify all synchronous message pairs in MSC diagrams (request → response)."
+      - "For each pair, check whether a timeout value or timeout handling is specified."
+      - "Verify that timeout behavior is defined (e.g., retry, abort, notify user)."
+      - "Report any synchronous pair that lacks timeout specification."
+
+  - name: "CL6 – Table 1 vs MSC Consistency"
+    question: "Are signal properties (name, type, direction, parameters) in Table 1 consistent with their usage in MSC diagrams?"
+    items:
+      - "For each signal in Table 1, locate all MSC occurrences."
+      - "Verify signal names are spelled identically in Table 1 and MSC diagrams."
+      - "Check that the fault type (M/W) is implied correctly by the discrepancy found."
+      - "Report any inconsistency between Table 1 definitions and MSC usage."
+
+  - name: "CL7 – Traceability Gaps"
+    question: "Can every design element in sections 3.x and 4.x be traced to a requirement or use case?"
+    items:
+      - "For each MSC in 3.4.x and 4.x, verify it maps to at least one use case scenario."
+      - "For each signal defined in Tables 1-3, verify it supports a documented requirement."
+      - "Check that all use case steps referenced in 2.x have corresponding design coverage in 3.x/4.x."
+      - "Report any design element that cannot be traced to a requirement."

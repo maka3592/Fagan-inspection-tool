@@ -1,0 +1,63 @@
+# Condition C1: Usage-Based Reading (UBR)
+# Three independent reviewers using design/MSC review
+
+inspection_id: "c1_ubr_run_001"
+condition: "C1_UBR"
+
+reading_techniques:
+  - "UBR"
+  - "UBR"
+  - "UBR"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+  - "guides/GuideUBR_rankbased_v2.pdf"
+
+llm_params:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_ubr: "v1.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  # UBR variant: "RB-UBR" (rank-based) or "TC-UBR" (time-controlled)
+  ubr_variant: "RB-UBR"
+  # Use case artifact for UBR tracing (relative to artifacts/input/)
+  use_case_artifact: "usecases/UseCasesRank_v3.4.pdf"
+  # Number of use cases in the artifact (for metadata)
+  use_case_count: 19
+  # Time budgets per use case (TC-UBR only, in minutes)
+  # time_budgets:
+  #   "UC1.1": 8
+  #   "UC1.2": 6
+  description: "UBR-based inspection with 3 reviewers focusing on Design/MSC sections"
+  focus_areas:
+    - "Message Sequence Charts (MSC) in sections 3.x and 4.x"
+    - "Signal sequences and interface definitions"
+    - "State transitions and message ordering"
+    - "Design consistency and completeness"
+  reviewer_focus:
+    - >
+      YOUR ASSIGNED SCOPE: Table 1 and Sections 3.1, 3.2, 3.2.1, 3.2.2 (data structures, user signals, signal table).
+      Concentrate on missing or wrong signal definitions, parameter types, and data structure completeness.
+      Check every signal name in these sections against Table 1.
+      Always cite the exact signal name (e.g. 'Reject_Order') in your evidence.
+    - >
+      YOUR ASSIGNED SCOPE: Sections 3.3, 3.3.1, 3.3.2, 3.4, 3.4.1, 3.4.2 (operator signals, MSC protocols).
+      Concentrate on missing signals in MSC sequences, wrong parameter types, missing acknowledgments,
+      and inconsistencies between signal tables and MSC diagrams.
+      Always cite the exact signal name (e.g. 'Allocate_car') in your evidence.
+    - >
+      YOUR ASSIGNED SCOPE: Sections 4.1 and 4.2 (MSC diagrams and cross-section consistency).
+      Concentrate on MSC completeness, missing timeout handling, signal ordering,
+      and verify that every signal used in 4.x is defined in sections 3.x and Tables.
+      Always cite the exact signal name (e.g. 'Start_Voice') in your evidence.
