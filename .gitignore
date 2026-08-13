@@ -101,6 +101,7 @@ secrets/
 # -----------------------------------------------------------------------------
 runs/
 eval/
+results/
 
 # -----------------------------------------------------------------------------
 # Gold Standard
@@ -119,6 +120,9 @@ artifacts/gold/*.xlsx
 # Artifacts Input (NICHT ignorieren - werden für Inspektion benötigt)
 # -----------------------------------------------------------------------------
 # artifacts/input/ wird NICHT ignoriert!
+# Insbesondere ist die deterministisch extrahierte UBR-Worklist
+# artifacts/input/usecases/UseCasesRank_v3.4_extracted.json INPUT (kein
+# Run-Output) und wird mitcommittet, damit Runs offline reproduzierbar bleiben.
 
 # -----------------------------------------------------------------------------
 # Lokale Entwicklungsskripte (optional - können manuell committet werden)

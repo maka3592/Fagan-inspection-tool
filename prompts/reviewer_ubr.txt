@@ -40,7 +40,11 @@ Output format:
       "risk": "A",
       "fault_type": "M",
       "description": "'Reject_Order': A signal is missing for not confirming orders.",
+      "entity": "Reject_Order",
+      "expected": "An MSC arrow 'Reject_Order' from Central to Taxi must exist after the negative branch of 'Order'.",
+      "observed": "The MSC in 3.4.1 only shows the 'Confirm' arrow; no negative-path signal is drawn.",
       "evidence": {{"quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.", "page_hint": "p. 7"}},
+      "evidence_location": "p. 7, 3.4.1, MSC",
       "confidence": 0.85,
       "flags": []
     }}
@@ -94,14 +98,53 @@ When tracing use cases through the design, look for:
 ## Mandatory Fields
 
 Every defect MUST have ALL of these:
-- **position**: Canonical tokens only (e.g., "3.4.1" or "Table 1, 3.4.2")
-- **page_hint**: Page reference (e.g., "p. 7", "p. 12-13")
+- **position**: Canonical tokens only (e.g., "3.4.1" or "Table 1, 3.4.2"). NEVER empty.
+- **page_hint**: Page reference (e.g., "p. 7", "p. 12-13"). MUST be set whenever a page is recognisable.
 - **risk**: A (High), B (Medium), C (Low) - NEVER use UNK
 - **fault_type**: M (Missing) or W (Wrong) - NEVER use UNK
 - **description**: Clear, specific description using exact signal names (1-3 sentences)
-- **evidence**: Object with quote_or_paraphrase (from document) and page_hint
+- **entity**: The exact signal / use-case / module name as written in the document
+  (e.g. "Reject_Order", "UC1.1"). MUST be filled when a named element exists; copy it
+  verbatim from the artefact. Leave empty ONLY if no named element applies.
+- **expected**: 1-2 sentences stating what the artefact OUGHT to specify
+  (grounded in the use case / requirement that drives the inspection).
+- **observed**: 1-2 sentences stating what the artefact ACTUALLY specifies
+  (or that it is silent).
+- **evidence**: Object with `quote_or_paraphrase` (a SHORT excerpt or close paraphrase
+  from the document, ≤ 25 words) and `page_hint`. NEVER invent text.
+- **evidence_location**: Precise pointer such as "p. 7, 3.4.1, MSC" or "Table 1".
+  If omitted, it will be auto-composed from page_hint + position.
 - **confidence**: 0.7 to 0.95 (be realistic)
 - **flags**: Empty array [] unless uncertain
+
+Anti-hallucination rule: entity, evidence.quote_or_paraphrase and evidence_location
+must originate from the artefact. If you cannot ground a claim, do NOT log the defect.
+
+## STRICT INSPECTION RECORD FORMAT (HARD STOP)
+
+Every reported defect MUST satisfy ALL of the following. If ANY of these
+cannot be filled from the loaded artefacts, DO NOT log the defect at all —
+silence is better than a weak record.
+
+- **entity** (required): the literal name of the signal / use-case /
+  module / parameter as written in the artefacts. Copy it verbatim.
+- **expected** (required, 1 sentence): what the artefacts (requirements,
+  use case, guidelines) say SHOULD hold.
+- **observed** (required, 1 sentence): what the design / MSC / table /
+  API actually says (or that it is silent).
+- **evidence_location** (required): "p. X, <position>, <Table/MSC/Figure>"
+  whenever a page is recognisable; "<position>" only when no page exists.
+- **evidence.quote_or_paraphrase** (required, <= 25 words): short
+  artefact-grounded excerpt or paraphrase. Never invented text.
+
+Forbidden values for ANY of the fields above:
+- placeholder text such as "unknown", "n/a", "tbd", "UNK";
+- references to the gold standard, fault list, expected defect counts,
+  or any external solution document.
+
+Do-not-log rule: if entity, expected, or observed cannot be grounded in
+the artefacts, drop the candidate finding. Defekt nicht melden wenn
+entity/expected/observed nicht artefakt-belegbar sind.
 
 ## Quality Checks
 

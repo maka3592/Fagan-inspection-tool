@@ -38,6 +38,11 @@ dev = [
     "ruff>=0.2.0",
     "mypy>=1.8.0",
 ]
+# Optional: only needed for the plotting helper scripts/fault_share_plots.py
+# (deferred import; the rest of the tool runs without matplotlib).
+plots = [
+    "matplotlib>=3.8.0",
+]
 
 [project.scripts]
 fagan = "fagan_tool.cli:app"

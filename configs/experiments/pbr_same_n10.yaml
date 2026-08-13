@@ -1,0 +1,89 @@
+# Scope note:
+# PBR is implemented as a tool capability / exploratory configuration only.
+# PBR results are not part of the final quantitative main comparison.
+# The final main comparison (`costed_split_soft_n10`) uses UBR and CBR only.
+#
+# Experiment: PBR same-scope, N=10
+# Ten reviewers, all reviewing the same artefact set (no reviewer_focus
+# splitting), distributed across three perspectives:
+#   PBR_TESTER   x 4  — testability / observability gaps in the design
+#   PBR_USER     x 3  — user-perspective gaps (echoes UBR, focused on
+#                       defect-quality review for downstream reporting)
+#   PBR_DESIGNER x 3  — implementability / interface-contract gaps
+#
+# Rationale for the 4/3/3 split (also in docs/EXPERIMENTS.md):
+# - TESTER gets the largest slice because the Taxi design is signal- /
+#   MSC-heavy; testability gaps (timeouts, partitions, oracles) tend to
+#   be the most numerous class of defects.
+# - USER and DESIGNER each get three reviewers — balanced coverage for
+#   user-scenario gaps and interface-contract gaps respectively.
+#
+# Artefact policy: every reviewer is offered the full canonical set
+# (design / requirements / usecase). The runtime reviewer-policy filter
+# (REVIEWER_ARTIFACT_POLICY) will keep only what each perspective is
+# allowed to see — e.g. PBR_DESIGNER does not get the use cases.
+
+inspection_id: "pbr_same_n10"
+condition: "C3_PBR_TEAM"
+
+reading_techniques:
+  - "PBR_TESTER"
+  - "PBR_TESTER"
+  - "PBR_TESTER"
+  - "PBR_TESTER"
+  - "PBR_USER"
+  - "PBR_USER"
+  - "PBR_USER"
+  - "PBR_DESIGNER"
+  - "PBR_DESIGNER"
+  - "PBR_DESIGNER"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "requirements/TextReqSpec_v3.6.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+
+llm_params:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_pbr_tester: "v1.0"
+  reviewer_pbr_designer: "v1.0"
+  reviewer_pbr_user: "v1.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  experiment_variant: "PBR_SAME_N10"
+  scope_mode: "same"
+  # Enable the one-shot repair LLM call so expected/observed are always
+  # filled (or, on repair-failure, deterministically paraphrased from
+  # the defect text). See docs/DEFECT_REPORT_QUALITY.md.
+  record_quality_mode: "repair"
+  # Opt in to deterministic PBR description normalisation
+  # (requirements-style phrasings → design-/MSC-/API-style). Pure text
+  # rewrite of already-present defect text; no new facts. See
+  # docs/DEFECT_REPORT_QUALITY.md.
+  pbr_description_normalize: true
+  description: "PBR same-scope experiment with 10 reviewers (4 TESTER / 3 USER / 3 DESIGNER)."
+  focus_areas:
+    - "Testability (Tester perspective)"
+    - "Implementability (Designer perspective)"
+    - "Usability (User perspective)"
+    - "Requirements-to-Design consistency"
+  team_composition:
+    - role: "Tester"
+      focus: "Can the design be tested? (partitions, boundaries, timeouts, oracles)"
+      n_reviewers: 4
+    - role: "User"
+      focus: "Does the design meet user needs? (scenarios, feedback, errors)"
+      n_reviewers: 3
+    - role: "Designer"
+      focus: "Can the design be implemented? (interfaces, contracts, data types)"
+      n_reviewers: 3

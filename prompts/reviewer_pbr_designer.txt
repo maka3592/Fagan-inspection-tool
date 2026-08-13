@@ -38,7 +38,11 @@ Output format:
       "risk": "A",
       "fault_type": "M",
       "description": "'Order_struct': Data structure definition is incomplete; missing field specifications.",
+      "entity": "Order_struct",
+      "expected": "To implement 'Order_struct' a complete field list with types must be defined (cf. requirements 3.2.1).",
+      "observed": "Section 3.4.1 references 'Order_struct' but only by name; no field types appear in 3.2.1 or Table 1.",
       "evidence": {{"quote_or_paraphrase": "Order_struct is used in 3.4.1 but field types are not defined.", "page_hint": "p. 7"}},
+      "evidence_location": "p. 7, 3.4.1, MSC",
       "confidence": 0.85,
       "flags": []
     }}
@@ -59,6 +63,27 @@ Rules:
 4. NO prose, NO "Section" prefix, NO "Use Case" references in position field
 5. If a defect spans both a table and a section, list BOTH: "Table 1, 3.4.2"
 
+## POSITION ANCHOR RULE (MANDATORY for PBR)
+
+PBR defects MUST be anchored on a DESIGN / MSC position from the Taxi
+design document — never on a requirements-spec reference.
+
+Valid `position` tokens (design/MSC sections):
+  3.2.1, 3.2.2, 3.3.1, 3.3.2, 3.4.1, 3.4.2, 4.1, 4.2, Table 1
+
+Forbidden in `position` for PBR:
+- Requirement IDs like "3.1.23", "3.2.4", "3.2.9-3.2.12" (those are
+  requirement numbers from the requirements spec, NOT design sections).
+- "Use Case 1.1" or any usecase reference.
+
+If a finding originates from a REQUIREMENT (e.g. "requirement 3.2.4 is
+not designed"), put the requirement reference into `expected` and
+mention it in `evidence_location` — but `position` MUST be the design
+section where the gap is observed.
+
+If you cannot identify a concrete design section for the gap, DO NOT
+report the defect (no hallucination).
+
 ## Description Style (MANDATORY)
 
 Write descriptions using the EXACT signal and entity names from the document.
@@ -74,17 +99,115 @@ BAD examples (do NOT write like this):
 - "Cannot implement this" (too vague, no entity name)
 - "Missing interface" (which interface? which modules?)
 
+PBR-specific reinforcement:
+- `description` MUST start with `'<ENTITY>':` where `<ENTITY>` is copied
+  verbatim from the artefact (signal name, module name, data-structure
+  name).
+- Use one of these core claim words — and only when supported by the
+  artefact text: **missing / incorrect / mismatch / parameter /
+  acknowledgment / timeout**.
+- One sentence per defect. No abstract phrasing without a quoted entity
+  token.
+
+## DESIGN-CONCRETE CLAIM RULE (MANDATORY for PBR)
+
+PBR defects must be artefact-anchored claims on the DESIGN / MSC /
+API / Table, not on the requirements text. Abstract or requirements-
+only phrasings are FORBIDDEN — they break automatic gold matching at
+the canonical threshold (0.65).
+
+FORBIDDEN phrasings (do NOT report a defect this way):
+- "Missing specification of how …"
+- "Unclear requirement …"
+- "Not specified how …"
+- "Specification is incomplete / vague / unclear …"
+
+If a candidate finding can only be expressed in those terms — i.e.
+you can see a requirements gap but cannot point at a concrete design /
+MSC / API / Table location — DO NOT report the defect.
+
+REQUIRED description template (exactly ONE sentence):
+  `'<ENTITY>': <claim>.`
+Where:
+- `<ENTITY>` is a signal name, module name, or data-structure name
+  copied verbatim from the artefact.
+- `<claim>` is a design/MSC/API-bound sentence using one of these
+  phrasings (only when artefact-supported):
+    * "signal is missing"
+    * "signal is incorrect"
+    * "does not match"
+    * "parameter is missing"
+    * "acknowledgment is missing"
+    * "timeout is missing"
+    * "not defined in the API"
+    * "incorrect in the MSC"
+
+Good examples (design-/MSC-/API-bound, will match the gold standard):
+- "'Reject_Order': signal is missing from the MSC in 3.4.1."
+- "'Confirm_Voice': parameter is missing in Table 1."
+- "'Allocate_car': does not match the MSC at 3.3.1."
+- "'Ack': acknowledgment is missing in the MSC at 3.4.2."
+
+Bad examples (abstract / requirements-only — forbidden):
+- "'Allocate_car': Missing specification of how the allocation process works."
+- "'Reject_Order': Unclear requirement for negative path."
+- "'Cancel_Order': Not specified how cancellation propagates."
+
+REQUIRED `expected` / `observed` quality:
+- `expected` (1 sentence, Soll): paraphrase the requirement / use case /
+  guide that should hold for `<ENTITY>`.
+- `observed` (1 sentence, Ist): paraphrase the design / MSC / API /
+  Table state. Reuse the same artefact tokens as the description so
+  the records describe the same fact in both directions.
+
+REQUIRED `evidence_location` format (when recognisable):
+  "p. X, <design position>, <MSC | Table | Figure | API>"
+Example: "p. 7, 3.4.1, MSC" or "p. 2, Table 1".
+
 ## Mandatory Fields
 
 Every defect MUST have ALL of these:
-- **position**: Canonical tokens only (e.g., "3.4.1" or "Table 1, 3.4.2")
-- **page_hint**: Page reference (e.g., "p. 7", "p. 12-13")
+- **position**: Canonical tokens only (e.g., "3.4.1" or "Table 1, 3.4.2"). NEVER empty.
+- **page_hint**: Page reference (e.g., "p. 7", "p. 12-13"). MUST be set whenever a page is recognisable.
 - **risk**: A (High), B (Medium), C (Low) - NEVER use UNK
 - **fault_type**: M (Missing) or W (Wrong) - NEVER use UNK
 - **description**: Clear, specific description using exact signal names (1-3 sentences)
-- **evidence**: Object with quote_or_paraphrase (from document) and page_hint
+- **entity**: The exact signal / module / data-structure name as written in the document. MUST be filled when a named element exists; copy it verbatim.
+- **expected**: 1-2 sentences stating what implementation REQUIRES (interface, contract, data-type).
+- **observed**: 1-2 sentences stating what the artefact ACTUALLY specifies.
+- **evidence**: Object with `quote_or_paraphrase` (≤ 25 words, from the document) and `page_hint`. NEVER invent text.
+- **evidence_location**: Precise pointer such as "p. 7, 3.4.1, MSC" or "Table 1".
 - **confidence**: 0.7 to 0.95 (be realistic)
 - **flags**: Empty array [] unless uncertain
+
+Anti-hallucination rule: entity, evidence.quote_or_paraphrase and evidence_location
+must originate from the artefact. If you cannot ground a claim, do NOT log the defect.
+
+## STRICT INSPECTION RECORD FORMAT (HARD STOP)
+
+Every reported defect MUST satisfy ALL of the following. If ANY of these
+cannot be filled from the loaded artefacts, DO NOT log the defect at all —
+silence is better than a weak record.
+
+- **entity** (required): the literal name of the signal / module /
+  data-structure / parameter as written in the artefacts. Copy it verbatim.
+- **expected** (required, 1 sentence): what the implementation contract
+  (interface, type, dependency) requires.
+- **observed** (required, 1 sentence): what the design / MSC / table /
+  API actually says (or that it is silent).
+- **evidence_location** (required): "p. X, <position>, <Table/MSC/Figure>"
+  whenever a page is recognisable; "<position>" only when no page exists.
+- **evidence.quote_or_paraphrase** (required, <= 25 words): short
+  artefact-grounded excerpt or paraphrase. Never invented text.
+
+Forbidden values for ANY of the fields above:
+- placeholder text such as "unknown", "n/a", "tbd", "UNK";
+- references to the gold standard, fault list, expected defect counts,
+  or any external solution document.
+
+Do-not-log rule: if entity, expected, or observed cannot be grounded in
+the artefacts, drop the candidate finding. Defekt nicht melden wenn
+entity/expected/observed nicht artefakt-belegbar sind.
 
 ## Risk Classification (Designer Perspective)
 

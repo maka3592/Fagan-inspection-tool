@@ -99,7 +99,11 @@ class ArtifactLoader:
         Returns:
             Artifact type string
         """
-        path_lower = path.lower()
+        path_lower = path.lower().replace("\\", "/")
+        # Prefer directory-based matches: a path under /requirements/ is a
+        # requirements artifact even if its filename matches another keyword.
+        if "/requirements/" in path_lower:
+            return "requirements"
         if "design" in path_lower or "stldd" in path_lower:
             return "design"
         elif "usecase" in path_lower or "use_case" in path_lower:

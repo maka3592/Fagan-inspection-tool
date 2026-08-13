@@ -1,0 +1,176 @@
+# Scope note:
+# SUPPLEMENTARY ANALYSIS ONLY. PBR is NOT part of the final quantitative main
+# comparison `costed_split_soft_n10` (which uses UBR and CBR only). This config
+# is the PBR counterpart of the existing UBR/CBR costed split-soft setup, built
+# with the SAME mechanism (same model/sampling, n=10, split-soft scope, real
+# token/cost logging) so PBR can be tested as an additional reading technique.
+# No hybrid reading technique is defined here. `UBR ∪ CBR` (and any union with
+# PBR) is a post-hoc result union, not a hybrid technique.
+#
+# Experiment: COSTED PBR split-scope (soft), N=10 (Supplementary)
+# Instrumentierter PBR-Lauf — identisches split-soft-Setup wie
+# costed_split_soft_n10_{ubr,cbr}.yaml, aber mit PBR-Perspektiven. Usage-Logging
+# ist bei dry_run=false automatisch aktiv (runs/<run_id>/llm_usage.csv); keine
+# Gold-Information fließt in den Run ein.
+#
+# Reviewer-Perspektiven (10 = 4 TESTER / 3 USER / 3 DESIGNER), je einem der
+# zehn Sektionsanker zugeordnet:
+#   R1 PBR_TESTER   -> 3.1     R2 PBR_TESTER   -> 3.2.1
+#   R3 PBR_TESTER   -> 3.2.2   R4 PBR_TESTER   -> 3.3.1
+#   R5 PBR_USER     -> 3.3.2   R6 PBR_USER     -> 3.4.1
+#   R7 PBR_USER     -> 3.4.2   R8 PBR_DESIGNER -> 4.1
+#   R9 PBR_DESIGNER -> 4.2     R10 PBR_DESIGNER-> Table 1
+#
+# "Soft" rule (identical to UBR/CBR): each reviewer keeps the primary anchor as
+# main task but MAY still log clear A/B defects outside the anchor with precise
+# location + evidence. Within the anchor, defects of any risk (A/B/C) are in
+# scope; outside, only A/B.
+
+inspection_id: "costed_pbr_split_soft_n10"
+# condition uses the existing valid PBR enum value (C3_PBR_TEAM). The
+# "supplementary analysis" status is carried by experiment_variant + inspection_id
+# + the scope note above, not by a new condition type.
+condition: "C3_PBR_TEAM"
+
+reading_techniques:
+  - "PBR_TESTER"
+  - "PBR_TESTER"
+  - "PBR_TESTER"
+  - "PBR_TESTER"
+  - "PBR_USER"
+  - "PBR_USER"
+  - "PBR_USER"
+  - "PBR_DESIGNER"
+  - "PBR_DESIGNER"
+  - "PBR_DESIGNER"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "requirements/TextReqSpec_v3.6.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+
+llm_params:
+  provider: "openai"
+  # Must match the final UBR/CBR setup exactly (gpt-4o-mini, 0.2, 4096).
+  model: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_pbr_tester: "v1.0"
+  reviewer_pbr_user: "v1.0"
+  reviewer_pbr_designer: "v1.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  experiment_variant: "PBR_SPLIT_SOFT_N10_SUPPLEMENTARY"
+  scope_mode: "split"
+  # One-shot repair LLM call so expected/observed are always filled. See
+  # docs/DEFECT_REPORT_QUALITY.md.
+  record_quality_mode: "repair"
+  # Deterministic PBR description normalisation (requirements-style phrasings ->
+  # design-/MSC-/API-style). Pure text rewrite of present defect text; no new
+  # facts. See docs/DEFECT_REPORT_QUALITY.md.
+  pbr_description_normalize: true
+  description: "PBR split-scope (soft) with 10 reviewers (4 TESTER / 3 USER / 3 DESIGNER) — supplementary analysis, one section anchor each + A/B escape hatch."
+  focus_areas:
+    - "Testability (Tester perspective)"
+    - "Usability (User perspective)"
+    - "Implementability (Designer perspective)"
+    - "Message Sequence Charts (MSC) in sections 3.x and 4.x"
+    - "Requirements-to-Design consistency"
+  reviewer_focus:
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.1 (overall design structure, top-level signal flow).
+      Concentrate on missing top-level signals, structural gaps between requirements and 3.1,
+      and inconsistencies that propagate into the lower sections.
+      Always cite the exact signal name (e.g. 'Order') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.2.1 (data structures, request/order signals).
+      Concentrate on missing or wrong signal definitions, parameter types, and data structure
+      completeness for the request/order family. Cross-check each signal name against Table 1.
+      Always cite the exact signal name (e.g. 'Reject_Order', 'Cancel_Order') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.2.2 (user-side signals, taxi/driver interactions).
+      Concentrate on missing user-side signals, wrong parameter types, and inconsistencies
+      between the requirements text and 3.2.2.
+      Always cite the exact signal name (e.g. 'Login', 'Log_Out') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.3.1 (operator-central signals, allocation flow).
+      Concentrate on missing or wrong operator signals, allocation protocol gaps, and missing
+      acknowledgments. Trace each signal against the requirements.
+      Always cite the exact signal name (e.g. 'Allocate_car', 'Confirm') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.3.2 (operator-side state and acknowledgments).
+      Concentrate on missing acknowledgments, wrong parameter types, and state-transition
+      inconsistencies on the operator side.
+      Always cite the exact signal name (e.g. 'Ack', 'Indicate_Alarm') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.4.1 (taxi MSC, signal sequencing on the car side).
+      Concentrate on missing signals in the MSC, wrong sequencing, and missing reject/cancel
+      paths. Cross-check that signals used here are defined upstream.
+      Always cite the exact signal name (e.g. 'Reject_Order', 'ZoneInfo') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.4.2 (central MSC, signal sequencing on the central side).
+      Concentrate on missing acknowledgments, wrong parameter types, missing cancel/voice
+      signals, and inconsistencies between the central MSC and Table 1.
+      Always cite the exact signal name (e.g. 'Cancel_Order', 'Confirm_Voice') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 4.1 (cross-actor MSC, end-to-end sequences).
+      Concentrate on MSC completeness, missing timeout handling, signal ordering, and the
+      consistency between 4.1 sequences and the signal definitions in 3.x and Tables.
+      Always cite the exact signal name (e.g. 'Start_Voice', 'Available') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 4.2 (alternative MSC paths, error and timeout handling).
+      Concentrate on missing alternative flows, error/timeout signals, and parameter
+      inconsistencies in alternative sequences.
+      Always cite the exact signal name (e.g. 'Not_Avail', 'Login_Rejected') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Table 1 (signal table, parameter types, missing signals).
+      Concentrate on signals missing from Table 1 that are referenced in 3.x/4.x, wrong or
+      missing parameter types, and signals listed in Table 1 but never used.
+      Always cite the exact signal name as it appears in Table 1 in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.

@@ -147,6 +147,15 @@ Protection mechanisms:
 - Filename validation
 - Multi-path batch validation
 
+#### position_tokens.py
+- Extraction, canonicalization and comparison of position tokens (sections 3.x/4.x, tables) and signal tokens used by scribe consolidation and matching.
+
+#### gold_aligned_filter.py
+- Deterministic filter selecting the gold-aligned subset of consolidated defects for evaluation against the gold standard.
+
+#### usage_logging.py
+- Optional per-call logging of tokens, runtime and list-price API costs (`UsageLogger`, written as `llm_usage.csv` per run).
+
 ### 5. Evaluation Package (`src/fagan_tool/evaluation/`)
 
 #### gold_loader.py
@@ -331,6 +340,7 @@ def calculate_custom_metric(found_defects, gold_defects):
 ## Testing Strategy
 
 ### Unit Tests
+Unter anderem (vollständiger Testbestand: siehe `PROJECT_STRUCTURE.md`):
 - `test_schemas.py`: Data model validation
 - `test_leakage_guard.py`: Security testing
 - `test_matcher.py`: Matching algorithm
@@ -385,10 +395,9 @@ def calculate_custom_metric(found_defects, gold_defects):
 2. Streaming LLM responses
 3. Interactive meeting simulation
 4. Advanced duplicate detection (embeddings)
-5. Cost tracking per run
-6. Web UI for result visualization
-7. Multi-language support
-8. Rework phase automation (code patching)
+5. Web UI for result visualization
+6. Multi-language support
+7. Rework phase automation (code patching)
 
 ### Scalability
 - Currently designed for single-document inspections

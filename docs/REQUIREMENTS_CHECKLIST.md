@@ -2,7 +2,6 @@
 
 This document tracks all professor requirements for the Fagan Inspection Tool replication study.
 
-**Last Updated:** 2026-02-01
 **Verification Script:** `fagan verify` or `python scripts/verify_requirements.py`
 
 ---
@@ -246,7 +245,6 @@ cat runs/c1_ubr_run_001/reviewer_outputs.json | jq 'length'
 **Status:** PASS
 
 **Evidence:**
-- Script: `scripts/create_manual_template.py`
 - CLI: `fagan manual-template --run <run_id>`
 
 ---
@@ -257,7 +255,6 @@ cat runs/c1_ubr_run_001/reviewer_outputs.json | jq 'length'
 **Status:** PASS
 
 **Evidence:**
-- Script: `scripts/calculate_manual_metrics.py`
 - CLI: `fagan manual-eval --run <run_id>`
 - Output: `eval/<run_id>/metrics_manual.json`
 
@@ -415,20 +412,3 @@ fagan manual-eval --run c1_ubr_run_001
 ```
 
 This creates `eval/c1_ubr_run_001/metrics_manual.json` with human-validated precision/recall.
-
----
-
-## Change Log
-
-| Date | Change | Author |
-|------|--------|--------|
-| 2026-01-25 | Initial requirements analysis | Claude |
-| 2026-01-25 | Fixed R7: Added xlrd dependency | Claude |
-| 2026-01-25 | Fixed R14: Implemented manual-template | Claude |
-| 2026-01-25 | Fixed R15: Implemented manual-eval | Claude |
-| 2026-01-25 | Added fagan verify command | Claude |
-| 2026-01-25 | Moved to docs/REQUIREMENTS_CHECKLIST.md | Claude |
-| 2026-01-25 | Fixed R17 check (false positive) | Claude |
-| 2026-02-01 | Added R18-R21: Matching validity improvements | Claude |
-| 2026-02-01 | Added R22-R26: CBR integration (prompt, checklist, config, tests) | Claude |
-| 2026-02-01 | Added R27-R28: CBR checklist as artifact, UBR guide removed from CBR | Claude |

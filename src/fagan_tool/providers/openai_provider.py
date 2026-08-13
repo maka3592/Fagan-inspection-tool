@@ -3,11 +3,14 @@
 import json
 import logging
 import os
+import uuid
+from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Set
 
 from openai import OpenAI, BadRequestError
 
 from .base import LLMProvider
+from ..utils.usage_logging import compute_costs, extract_usage
 
 logger = logging.getLogger(__name__)
 
@@ -306,7 +309,7 @@ class OpenAIProvider(LLMProvider):
         kwargs = self._build_request_kwargs(messages, response_format, max_tokens_override=max_tokens)
 
         try:
-            response = self.client.chat.completions.create(**kwargs)
+            response = self._create_with_usage_logging(kwargs)
             choice = response.choices[0]
             finish_reason = choice.finish_reason
 
@@ -385,6 +388,57 @@ class OpenAIProvider(LLMProvider):
                 ) from e
             logger.error(f"OpenAI BadRequestError: {error_msg}")
             raise
+
+    def _create_with_usage_logging(self, kwargs: Dict[str, Any]):
+        """Führt den Chat-Completions-Call aus und loggt – falls ein
+        UsageLogger angehängt ist – Token-Usage, Laufzeit und Kosten.
+
+        Ohne angehängten Logger ist dies ein reiner Pass-through (Verhalten
+        und Rückgabe identisch zum direkten API-Call). Robust: fehlende
+        Usage führt nicht zum Absturz; Fehler werden geloggt und
+        weitergereicht.
+        """
+        if self.usage_logger is None:
+            return self.client.chat.completions.create(**kwargs)
+
+        call_id = uuid.uuid4().hex[:12]
+        start = datetime.now(timezone.utc)
+        response = None
+        error_msg = ""
+        try:
+            response = self.client.chat.completions.create(**kwargs)
+            return response
+        except Exception as exc:  # Fehler erfassen, dann weiterreichen
+            error_msg = f"{type(exc).__name__}: {exc}"
+            raise
+        finally:
+            end = datetime.now(timezone.utc)
+            duration = (end - start).total_seconds()
+            input_tokens, output_tokens, total_tokens, available = (
+                extract_usage(response) if response is not None else (None, None, None, False)
+            )
+            input_cost, output_cost, total_cost = (
+                compute_costs(input_tokens, output_tokens, self.cost_config)
+                if available else (None, None, None)
+            )
+            try:
+                self.usage_logger.record({
+                    "call_id": call_id,
+                    "model": self.model,
+                    "start_time_utc": start.isoformat(),
+                    "end_time_utc": end.isoformat(),
+                    "duration_seconds": round(duration, 6),
+                    "input_tokens": input_tokens,
+                    "output_tokens": output_tokens,
+                    "total_tokens": total_tokens,
+                    "input_cost": input_cost,
+                    "output_cost": output_cost,
+                    "total_cost": total_cost,
+                    "usage_available": "true" if available else "false",
+                    "error": error_msg,
+                })
+            except Exception as log_exc:  # Logging darf den Call nie brechen
+                logger.warning(f"Usage-Logging fehlgeschlagen: {log_exc}")
 
     def get_provider_name(self) -> str:
         """Get provider name."""

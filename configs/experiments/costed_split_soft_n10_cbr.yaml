@@ -1,0 +1,162 @@
+# Experiment: COSTED CBR split-scope (soft), N=10
+# Instrumentierter Ersatz für cbr_split_soft_n10 — identisches Setup, aber
+# mit echter LLM-Tokenusage- und Laufzeit-Erfassung pro Call
+# (runs/<run_id>/llm_usage.csv). Usage-Logging ist bei dry_run=false
+# automatisch aktiv; keine Gold-Information fließt in den Run ein.
+# Coverage variant with 10 reviewers, one primary anchor each.
+#
+# Each reviewer owns ONE of the ten relevant slices:
+#   1) 3.1   2) 3.2.1   3) 3.2.2   4) 3.3.1   5) 3.3.2
+#   6) 3.4.1 7) 3.4.2   8) 4.1     9) 4.2    10) Table 1
+#
+# "Soft" rule (in every reviewer_focus block): the reviewer keeps the
+# primary anchor as their main task but MAY still log clear A/B
+# (critical/important) defects encountered outside the anchor — with
+# precise location and evidence. Within the anchor, defects of any risk
+# (A/B/C) are in scope; outside, only A/B. This prevents critical
+# cross-section findings (e.g. A8 "Cancel order" — 3.2.1 + 3.4.2 +
+# Table 1) from falling through the cracks of strict division of labour.
+#
+# Table 1 is anchored to exactly one reviewer (R10) to avoid
+# double-assignment; the soft rule still lets R1…R9 file obvious A/B
+# Table-1 issues if they trip over one.
+
+inspection_id: "costed_cbr_split_soft_n10"
+condition: "C2_CBR"
+
+reading_techniques:
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+  - "CBR"
+
+artifacts:
+  - "design/Taxi_des_exp_v2.pdf"
+  - "requirements/TextReqSpec_v3.6.pdf"
+  - "usecases/UseCasesRank_v3.4.pdf"
+  - "checklists/cbr_checklist_v2.yaml"
+
+llm_params:
+  provider: "openai"
+  model: "gpt-4o-mini"
+  temperature: 0.2
+  max_tokens: 4096
+
+prompt_versions:
+  reviewer_cbr: "v2.0"
+  scribe_meeting: "v1.0"
+  moderator_planning: "v1.0"
+  moderator_followup: "v1.0"
+
+dry_run: false
+
+extra_config:
+  experiment_variant: "CBR_SPLIT_SOFT_N10"
+  scope_mode: "split"
+  # Enable one-shot repair LLM call so expected/observed are always filled
+  # or the defect is dropped. See docs/DEFECT_REPORT_QUALITY.md.
+  record_quality_mode: "repair"
+  description: "CBR split-scope (soft) with 10 reviewers — one section anchor each + A/B escape hatch."
+  checklist_path: "artifacts/input/checklists/cbr_checklist_v2.yaml"
+  focus_areas:
+    - "CL1-CL3: Missing signals, interface inconsistencies, parameter mismatches"
+    - "CL4-CL5: Acknowledgment completeness, timeout specifications"
+    - "CL6-CL7: Table vs MSC consistency, traceability gaps"
+    - "Requirements-to-Design consistency"
+  reviewer_focus:
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.1 (overall design structure, top-level signal flow).
+      Run checklist items CL1-CL3 against the top-level structure. Trace each signal back
+      to the requirements text.
+      Always cite the exact signal name (e.g. 'Order') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.2.1 (data structures, request/order signals).
+      Run checklist items CL1-CL3 with extra attention to parameter types and missing
+      cancel/reject signals.
+      Always cite the exact signal name (e.g. 'Reject_Order', 'Cancel_Order') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.2.2 (user-side signals, taxi/driver interactions).
+      Run checklist items CL1, CL3 with attention to missing user-side signals and parameter
+      gaps relative to the requirements.
+      Always cite the exact signal name (e.g. 'Login', 'Log_Out') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.3.1 (operator-central signals, allocation flow).
+      Run checklist items CL1, CL4 with attention to acknowledgment completeness and
+      allocation protocol gaps.
+      Always cite the exact signal name (e.g. 'Allocate_car', 'Confirm') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.3.2 (operator-side state and acknowledgments).
+      Run checklist items CL4, CL5 on missing acknowledgments and timeout handling on the
+      operator side.
+      Always cite the exact signal name (e.g. 'Ack', 'Indicate_Alarm') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.4.1 (taxi MSC, signal sequencing on the car side).
+      Run checklist items CL1, CL4-CL5 on missing MSC signals, wrong sequencing, and
+      missing reject/cancel paths.
+      Always cite the exact signal name (e.g. 'Reject_Order', 'ZoneInfo') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 3.4.2 (central MSC, signal sequencing on the central side).
+      Run checklist items CL4-CL6 on missing acknowledgments, wrong parameter types and
+      MSC↔Table 1 consistency.
+      Always cite the exact signal name (e.g. 'Cancel_Order', 'Confirm_Voice') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 4.1 (cross-actor MSC, end-to-end sequences).
+      Run checklist items CL5, CL6 on MSC completeness, timeout handling, and signal
+      ordering across actors.
+      Always cite the exact signal name (e.g. 'Start_Voice', 'Available') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Section 4.2 (alternative MSC paths, error and timeout handling).
+      Run checklist items CL5, CL7 on missing alternative flows and parameter inconsistencies
+      in alternative sequences.
+      Always cite the exact signal name (e.g. 'Not_Avail', 'Login_Rejected') in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.
+    - >
+      YOUR ASSIGNED SCOPE: Table 1 (signal table, parameter types, missing signals).
+      Run checklist items CL6, CL7 on table-vs-MSC consistency, missing signals, and
+      parameter-type mismatches.
+      Always cite the exact signal name as it appears in Table 1 in your evidence.
+      Primary focus: assigned sections. Outside your focus you MAY log clear A/B defects
+      only if you include precise location (section + page/table/msc) and evidence.
+      Do not broaden search outside focus. Within your focus, log defects of any risk
+      (A/B/C); outside your focus, only A/B.

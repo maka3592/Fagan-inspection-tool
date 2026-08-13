@@ -301,3 +301,104 @@ def test_defect_schema_version_exists():
     assert isinstance(DEFECT_SCHEMA_VERSION, str)
     # Should be semantic version format
     assert "." in DEFECT_SCHEMA_VERSION
+
+
+# ---------------------------------------------------------------------------
+# Inspection-Record quality fields (2026-05)
+# ---------------------------------------------------------------------------
+
+
+def test_defect_accepts_new_quality_fields():
+    """entity/expected/observed/evidence_location must be accepted and round-trip."""
+    d = Defect(
+        id="d_quality_1",
+        position="3.4.1",
+        page_hint="p. 7",
+        risk=RiskLevel.A,
+        fault_type=FaultType.M,
+        description="'Reject_Order' missing.",
+        evidence="MSC 3.4.1 has no reject arrow.",
+        entity="Reject_Order",
+        expected="MSC must contain a Reject_Order arrow.",
+        observed="Only Confirm arrow is present.",
+        evidence_location="p. 7, 3.4.1, MSC",
+    )
+    assert d.entity == "Reject_Order"
+    assert d.expected.startswith("MSC must")
+    assert d.observed.startswith("Only Confirm")
+    assert d.evidence_location == "p. 7, 3.4.1, MSC"
+    # Round-trip through model_dump
+    dumped = d.model_dump()
+    for k in ("entity", "expected", "observed", "evidence_location"):
+        assert k in dumped
+
+
+def test_defect_missing_quality_fields_get_flagged():
+    """When entity/expected/observed/evidence are empty, the right flags appear."""
+    d = Defect(
+        id="d_quality_2",
+        position="3.2.1",
+        page_hint="p. 2",
+        risk=RiskLevel.B,
+        fault_type=FaultType.M,
+        description="Some defect text.",
+        evidence="",
+    )
+    assert "missing_entity" in d.flags
+    assert "missing_expected" in d.flags
+    assert "missing_observed" in d.flags
+    assert "missing_evidence" in d.flags
+    # evidence_location should be auto-derived from page_hint + position
+    assert d.evidence_location == "p. 2, 3.2.1"
+    assert "missing_evidence_location" not in d.flags
+
+
+def test_defect_evidence_location_falls_back_to_position_only():
+    """Without page_hint, position alone seeds evidence_location."""
+    d = Defect(
+        id="d_quality_3",
+        position="Table 1",
+        description="Signal missing.",
+        evidence="No row for the signal.",
+    )
+    assert d.evidence_location == "Table 1"
+    assert "missing_evidence_location" not in d.flags
+
+
+def test_defect_evidence_location_truly_missing_when_no_anchors():
+    """If position is 'unknown' AND page_hint absent, location stays missing."""
+    d = Defect(
+        id="d_quality_4",
+        position="unknown",
+        description="Unanchored finding.",
+        evidence="x",
+    )
+    assert d.evidence_location is None or not d.evidence_location.strip()
+    assert "missing_evidence_location" in d.flags
+    # And the existing missing_position flag still fires.
+    assert "missing_position" in d.flags
+
+
+def test_defect_full_quality_no_quality_flags():
+    """A fully-populated defect must not carry any missing_* quality flags."""
+    d = Defect(
+        id="d_quality_5",
+        position="3.4.2",
+        page_hint="p. 6",
+        risk=RiskLevel.A,
+        fault_type=FaultType.W,
+        description="'Confirm_Voice' has wrong parameters.",
+        evidence="Confirm_Voice in 3.4.2 lists 2 params, Table 1 lists 3.",
+        entity="Confirm_Voice",
+        expected="Confirm_Voice should carry 3 parameters per Table 1.",
+        observed="MSC arrow for Confirm_Voice carries only 2 parameters.",
+        evidence_location="p. 6, 3.4.2, MSC",
+    )
+    for flag in (
+        "missing_entity",
+        "missing_expected",
+        "missing_observed",
+        "missing_evidence",
+        "missing_evidence_location",
+    ):
+        assert flag not in d.flags

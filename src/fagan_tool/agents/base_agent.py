@@ -84,6 +84,11 @@ class BaseAgent:
             LLM response text
         """
         messages = [{"role": "user", "content": user_message}]
+        # Agent-Rolle für das (optionale) Usage-Log setzen. No-op, wenn kein
+        # UsageLogger am Provider hängt.
+        set_ctx = getattr(self.provider, "set_call_context", None)
+        if callable(set_ctx):
+            set_ctx(agent_role=self.role)
         return self.provider.generate(
             messages, system=system_prompt, response_format=response_format
         )

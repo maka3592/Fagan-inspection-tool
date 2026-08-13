@@ -1,3 +1,8 @@
+# Scope note:
+# PBR is implemented as a tool capability / exploratory configuration only.
+# PBR results are not part of the final quantitative main comparison.
+# The final main comparison (`costed_split_soft_n10`) uses UBR and CBR only.
+#
 # Condition C3: Perspective-Based Reading (PBR) Team
 # Three reviewers with different perspectives: Tester, Designer, User
 
@@ -16,7 +21,7 @@ artifacts:
 
 llm_params:
   provider: "openai"
-  model: "gpt-5-mini"
+  model: "gpt-4o-mini"
   temperature: 0.2
   max_tokens: 4096
 

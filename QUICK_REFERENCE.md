@@ -1,72 +1,85 @@
-# Quick Reference Card
+# Schnellreferenz
 
 ## Installation
 
 ```bash
-# Clone/navigate to project
 cd Fagan_Code
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev,plots]"
+```
 
-# Run setup script
-bash scripts/setup.sh
-
-# Or manual:
-pip install -r requirements.txt
-pip install -e .
-
-# Set API key
+```bash
+# API-Key nur für echte OpenAI-Runs (nicht für Tests oder Dry-Run):
+cp .env.example .env   # anschließend OPENAI_API_KEY eintragen
+# oder direkt als Umgebungsvariable:
 export OPENAI_API_KEY="your-key"
 ```
 
-## Commands
+## Befehle
 
-### Run Inspection
+### Inspektion ausführen
 ```bash
 fagan run --config configs/examples/c1_ubr.yaml
 ```
 
-### Evaluate Results
+### Ergebnisse auswerten (Threshold der Hauptauswertung: 0.65)
 ```bash
-fagan eval --run c1_ubr_run_001 --gold artifacts/gold/Faults_List_In_ver6.xls
+fagan eval --run c1_ubr_run_001 --gold artifacts/gold/Faults_List_In_ver6.xls --match-threshold 0.65
 ```
 
-### Generate Report
+### Report erzeugen
 ```bash
 fagan report --run c1_ubr_run_001
 ```
 
-### Test Without API (Dry Run)
+### Test ohne API (Dry-Run)
 ```bash
 fagan dry-run
 ```
 
-## File Locations
+### Projektanforderungen verifizieren
+```bash
+fagan verify
+```
 
-### Input (What You Provide)
-- Design docs: `artifacts/input/design/`
-- Use cases: `artifacts/input/usecases/`
+### Manuelle Validierung (Vorlage + Metriken)
+```bash
+fagan manual-template --run c1_ubr_run_001   # CSV für manuelle Annotation exportieren
+fagan manual-eval --run c1_ubr_run_001       # Metriken aus manueller Annotation berechnen
+```
+
+## Dateiablage
+
+### Eingaben
+- Design-Dokumente: `artifacts/input/design/`
+- Use Cases: `artifacts/input/usecases/`
 - Requirements: `artifacts/input/requirements/`
-- Gold standard: `artifacts/gold/`
-- Configs: `configs/examples/`
+- UBR-Guides: `artifacts/input/guides/`
+- Checklisten: `artifacts/input/checklists/`
+- Goldstandard: `artifacts/gold/`
+- Configs: `configs/examples/` und `configs/experiments/`
 
-### Output (What Tool Generates)
-- Run results: `runs/<inspection_id>/`
+### Ausgaben
+- Run-Ergebnisse: `runs/<inspection_id>/`
 - Evaluation: `eval/<inspection_id>/`
 
-## Configuration Template
+## Konfigurationsvorlage
 
 ```yaml
 inspection_id: "my_run_001"
-condition: "C1_UBR"  # C1_UBR, C2_CBR, C3_PBR_TEAM, C4_HYBRID
+condition: "C1_UBR"  # C1_UBR, C2_CBR, C3_PBR_TEAM
 
 reading_techniques:
   - "UBR"  # UBR, CBR, PBR_TESTER, PBR_DESIGNER, PBR_USER
 
 artifacts:
   - "design/my_design.pdf"
+  - "requirements/my_requirements.pdf"
   - "usecases/my_usecases.pdf"
 
 llm_params:
-  provider: "openai"  # openai or anthropic
+  provider: "openai"  # openai oder anthropic
   model: "gpt-4o-mini"
   temperature: 0.2
   max_tokens: 4096
@@ -74,261 +87,234 @@ llm_params:
 dry_run: false
 ```
 
-## Experimental Conditions
+## Experimentelle Bedingungen
 
-| Code | Name | Description |
-|------|------|-------------|
-| C1 | UBR | Single reviewer, use case traceability |
-| C2 | CBR | Single reviewer, systematic checklist |
-| C3 | PBR Team | 3 reviewers (Tester, Designer, User) |
-| C4 | Hybrid | All techniques combined |
+| Code | Name | Beschreibung |
+|------|------|--------------|
+| C1 | UBR | 3 unabhängige Reviewer, Use-Case-basierte Inspektion |
+| C2 | CBR | 1 Reviewer, domänenspezifische Checkliste |
+| C3 | PBR-Team | 3 Reviewer (Tester, Designer, User) |
+
+PBR wurde supplementär untersucht und ist nicht Teil des quantitativen
+UBR-vs-CBR-Hauptvergleichs.
 
 ## Defect Schema
 
 ```json
 {
-  "id": "reviewer_1_abc123",
-  "position": "Section 3.2",
-  "page_hint": "p. 15",
-  "risk": "A",           // A=High, B=Medium, C=Low
-  "fault_type": "M",     // M=Missing, W=Wrong
-  "description": "...",
-  "evidence": "...",
-  "confidence": 0.9      // 0.0-1.0
+  "id": "meeting_7bfb1548",
+  "position": "3.4.1",
+  "page_hint": "p. 5",
+  "risk": "A",
+  "fault_type": "M",
+  "description": "'Confirm': A signal is missing for confirming the order from the central to the taxi.",
+  "evidence": {
+    "quote_or_paraphrase": "The design does not specify a confirmation signal for the order sent to the taxi (p. 5)",
+    "page_hint": "p. 5"
+  },
+  "confidence": 0.85,
+  "flags": ["missing_entity", "missing_expected", "missing_observed"],
+  "reviewer_id": null,
+  "technique": null,
+  "source_defect_ids": ["reviewer_1_ubr_e988706d", "reviewer_2_ubr_02f85891", "reviewer_3_ubr_88c0e1b8"],
+  "source_reviewer_ids": ["reviewer_1_ubr", "reviewer_2_ubr", "reviewer_3_ubr"],
+  "source_techniques": ["UBR"],
+  "position_canonical": "3.4.1",
+  "position_autofixed": false,
+  "entity": null,
+  "expected": null,
+  "observed": null,
+  "evidence_location": "p. 5, 3.4.1"
 }
 ```
 
-## Metrics Output
+- `risk`: A (hoch), B (mittel), C (niedrig), UNK (unbekannt)
+- `fault_type`: M (Missing), W (Wrong), UNK (unbekannt)
+- `confidence`: 0.0–1.0
+- `evidence` ist ein Objekt; die optionalen Qualitätsfelder `entity`,
+  `expected` und `observed` können `null` sein.
+- Bei konsolidierten Meeting-Defekten sind `reviewer_id` und `technique`
+  `null`; die Herkunft steht in den Provenance-Feldern (`source_*`).
+  Die Arrays sind hier gekürzt; das vollständige reale Beispiel steht in
+  `USAGE_EXAMPLES.md`.
+
+## Metrikausgabe
+
+`fagan eval` schreibt `eval/<run_id>/metrics.json`. Gekürzte Auswahl der
+im aktuellen `EvaluationMetrics`-Schema vorgesehenen Schlüssel (Werte
+illustrativ; die Datei entsteht erst durch `fagan eval`):
 
 ```json
 {
-  "precision": 0.80,     // Of found, how many are real
-  "recall": 0.67,        // Of real, how many found
-  "f1_score": 0.73,      // Harmonic mean
+  "run_id": "c1_ubr_run_001",
+  "total_found": 25,
+  "total_gold": 36,
+  "true_positives": 12,
+  "true_positives_exact": 5,
+  "true_positives_partial": 7,
+  "false_positives": 13,
+  "false_negatives": 24,
+  "precision": 0.48,
+  "recall": 0.333,
+  "f1_score": 0.393,
   "recall_by_risk": {
-    "A": 0.75,
-    "B": 0.65,
-    "C": 0.60
-  }
+    "A": 0.4,
+    "B": 0.3,
+    "C": 0.25,
+    "UNK": 0.0
+  },
+  "match_threshold": 0.65
 }
 ```
 
-## Common Tasks
+## Häufige Aufgaben
 
-### View Found Defects
+### Gefundene Defekte anzeigen
 ```bash
 cat runs/<run_id>/final_defects.json | jq
 ```
 
-### View Metrics
+### Metriken anzeigen
 ```bash
 cat eval/<run_id>/metrics.json | jq
 ```
 
-### View Meeting Minutes
+### Meeting-Protokoll anzeigen
 ```bash
 cat runs/<run_id>/meeting_output.json | jq '.minutes'
 ```
 
-### List All Runs
+### Vorhandene Runs auflisten
 ```bash
 ls -l runs/
 ```
 
-### Compare Conditions
+## Schnellstart mit Beispielskript
+
 ```bash
-# Run all conditions
-for config in configs/examples/*.yaml; do
-  fagan run --config $config
-done
-
-# Evaluate all
-for run in runs/*/; do
-  fagan eval --run $(basename $run) --gold artifacts/gold/Faults_List_In_ver6.xls
-done
-
-# Compare recalls
-cat eval/*/metrics.json | jq '.recall'
+./run_example.sh dry-run   # Test ohne API-Key (keine externe LLM-API)
+./run_example.sh ubr       # UBR-Run + Evaluation
+./run_example.sh cbr       # CBR-Run + Evaluation
+./run_example.sh full      # Kompletter Durchlauf (UBR + CBR + Gold-Checksums)
 ```
 
-## Thesis Runs (Recommended)
+`ubr`, `cbr` und `full` führen echte OpenAI-Aufrufe aus und benötigen
+einen gültigen `OPENAI_API_KEY`. Diese Modi erzeugen neue Run- und
+Evaluationsartefakte unter `runs/<RUN_ID>/` und `eval/<RUN_ID>/`.
 
-**Default Model: `gpt-4o-mini`** (stable, fully tested)
-
-### Quick Start
-
-```bash
-# Using the run_example script (recommended)
-./run_example.sh dry-run   # Test ohne API-Key
-./run_example.sh ubr       # UBR-Run + Eval
-./run_example.sh cbr       # CBR-Run + Eval
-./run_example.sh full      # Kompletter Durchlauf
-```
-
-### Manual Run
+### Manueller Lauf
 
 ```bash
-# Load environment
+# .env laden — eine Möglichkeit, OPENAI_API_KEY bereitzustellen
+# (alternativ den Key direkt als Umgebungsvariable exportieren)
 set -a; source .env; set +a
 
-# Run with gpt-4o-mini (default in config)
-RUN_ID="thesis_$(date +%Y%m%d_%H%M%S)"
+# Inspektion starten (Modell laut Config: gpt-4o-mini)
+RUN_ID="ubr_$(date +%Y%m%d_%H%M%S)"
 fagan run --config configs/examples/c1_ubr.yaml --run-id "$RUN_ID"
 
-# Evaluate
+# Auswerten
 fagan eval --run "$RUN_ID" --gold artifacts/gold/Faults_List_In_ver6.xls --match-threshold 0.65
-
-# Check for errors
-python -c "import json; d=json.load(open('runs/${RUN_ID}/meeting_output.json')); print('Parse errors:', len(d.get('json_parse_errors',[])), 'Incomplete:', len(d.get('incomplete_reviewers',[])))"
 ```
 
-**Note for zsh users**: Avoid pasting commands with `#` comments in interactive shell.
-Use the `./run_example.sh` script instead.
+**Hinweis für zsh-Nutzer:** Befehle mit `#`-Kommentaren nicht direkt in
+die interaktive Shell einfügen. Alternativ das Skript
+`./run_example.sh` verwenden.
 
 ---
 
-## Model Selection
+## Modell und strukturierte Ausgabe
 
-### gpt-4o-mini (Default, Recommended)
+Die finalen Experimente verwenden `gpt-4o-mini` mit `temperature: 0.2`
+und `max_tokens: 4096` (siehe `configs/experiments/`).
 
-- Full support for temperature, top_p, sampling parameters
-- Reliable JSON output with `response_format`
-- Cost-effective for thesis experiments
+Unterstützte Provider: `openai` und `anthropic` (Auswahl über
+`llm_params.provider` in der Config).
 
-### Newer GPT Models
+Der OpenAI-Provider verwendet API-seitig durchgängig
+`max_completion_tokens`. Bei Modellen, die keine eigenen
+Sampling-Parameter unterstützen (z. B. eigene `temperature`-Werte),
+werden diese Parameter automatisch weggelassen und eine Warnung
+protokolliert.
 
-Some newer models have API restrictions:
-- Only support `temperature=1` (default) - custom values are ignored with warning
-- Do not support `top_p`, `presence_penalty`, `frequency_penalty`
-- Use `max_completion_tokens` instead of `max_tokens` (handled automatically)
+### Strukturierte JSON-Ausgabe
 
-The provider handles these automatically - logs a warning and continues.
-
-### Structured JSON Output
-
-Reviewer and Scribe agents use strict JSON Schema output:
-- Schema validation ensures all required fields are present
-- Empty/truncated responses trigger automatic retry (up to 1x with 2x token limit)
-- Failed outputs are marked as `is_incomplete: true` in `reviewer_outputs.json`
-
-If you see `incomplete_reviewers` in meeting_output.json:
-1. Check `runs/<run_id>/debug/` for raw response files
-2. Consider increasing `max_tokens` in config
-3. Check network connectivity or API rate limits
-
-### Manual Run (Legacy)
-
-```bash
-# Set your API key
-export OPENAI_API_KEY="sk-..."
-
-# Run with gpt-4o-mini (default in configs)
-fagan run --config configs/examples/c1_ubr.yaml --run-id my_run
-
-# Evaluate
-fagan eval --run my_run --gold artifacts/gold/Faults_List_In_ver6.xls --match-threshold 0.65
-```
-
-### Using Older Models (GPT-4)
-
-To use GPT-4 models, update the config:
-
-```yaml
-llm_params:
-  provider: "openai"
-  model: "gpt-4o-mini"  # Uses legacy max_tokens parameter
-  temperature: 0.2
-  max_tokens: 4096
-```
+- Reviewer- und Scribe-Agenten erzwingen die Ausgabe über
+  `response_format` mit striktem JSON-Schema (`type: "json_schema"`).
+- Leere oder abgeschnittene Antworten lösen genau einen automatischen
+  Retry aus; bei abgeschnittenen Antworten mit verdoppeltem Tokenlimit.
+- Fehlgeschlagene Reviewer-Ausgaben werden in `reviewer_outputs.json`
+  als `is_incomplete: true` markiert.
 
 ## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| API key error | Set `OPENAI_API_KEY` (or `ANTHROPIC_API_KEY` for Claude) |
-| max_tokens error | Some models use max_completion_tokens (handled automatically) |
-| temperature error | Some models don't support custom temperature (auto-ignored with warning) |
-| Artifact not found | Check path in config, ensure file exists |
-| Leakage guard error | Don't load files from `artifacts/gold/` |
-| Import error | Run `pip install -e .` |
-| Tests fail | Check Python version (3.11+ required) |
-| JSON parse errors | Check `runs/<run_id>/debug/` for raw LLM responses |
+| Problem | Lösung |
+|---------|--------|
+| API-Key-Fehler | `OPENAI_API_KEY` setzen (bzw. `ANTHROPIC_API_KEY` für den Anthropic-Provider) |
+| max_tokens-Fehler | Einige Modelle verwenden `max_completion_tokens` (wird automatisch behandelt) |
+| temperature-Fehler | Einige Modelle unterstützen keine eigene `temperature` (wird automatisch ignoriert, mit Warnung) |
+| Artefakt nicht gefunden | Pfad in der Config prüfen; Datei muss unter `artifacts/input/` existieren |
+| Importfehler | `python -m pip install -e ".[dev,plots]"` ausführen |
+| Tests schlagen fehl | Python-Version prüfen (3.11+ erforderlich) |
+| JSON-Parse-Fehler | Rohantworten unter `runs/<run_id>/debug/` prüfen |
 
-## Debugging JSON Parse Failures
+## Debugging von JSON-Parse-Fehlern
 
-When the LLM returns invalid JSON, debug files are saved automatically:
+Liefert das LLM ungültiges JSON, werden Debug-Dateien automatisch
+gespeichert:
 
 ```bash
-# Location of debug files
+# Ablageort der Debug-Dateien
 ls runs/<run_id>/debug/
 
-# View a raw response that failed to parse
+# Eine nicht parsebare Rohantwort ansehen
 cat runs/<run_id>/debug/raw_response_reviewer_*.txt
 ```
 
-JSON parse errors are also recorded in `meeting_output.json`:
+Aufgetretene Parse-Fehler werden zusätzlich in `meeting_output.json`
+unter `json_parse_errors` vermerkt (der Schlüssel existiert nur, wenn
+Fehler aufgetreten sind):
+
 ```bash
 cat runs/<run_id>/meeting_output.json | jq '.json_parse_errors'
 ```
 
-The system uses OpenAI's `response_format: {type: "json_object"}` to enforce
-structured JSON output, significantly reducing parse failures.
-
-## Testing
+## Tests
 
 ```bash
-# Run all tests
+# Alle Tests ausführen
 pytest tests/
 
-# Run specific test
+# Einzelne Testdatei ausführen
 pytest tests/test_matcher.py
 
-# With coverage
+# Mit Coverage (pytest-cov ist Teil der ".[dev]"-Extras)
 pytest --cov=src/fagan_tool tests/
 ```
 
-## Development
+## Wichtige Nutzungsregeln
 
-### Add Reading Technique
-1. Edit `src/fagan_tool/core/schemas.py` (add enum)
-2. Create `prompts/reviewer_<technique>.txt`
-3. Update `ReviewerAgent._get_prompt_file()`
+1. Den Goldstandard (`artifacts/gold/`) niemals als Inspektionsinput
+   unter `artifacts/input/` ablegen
+2. Setup zuerst mit `fagan dry-run` testen (ohne API-Aufrufe)
+3. Jeder Run enthält einen Config-Snapshot (`config_snapshot.json`)
+   zur Reproduzierbarkeit
 
-### Add LLM Provider
-1. Create `src/fagan_tool/providers/<name>_provider.py`
-2. Inherit from `LLMProvider`
-3. Register in `factory.py`
-
-### Modify Prompts
-Edit files in `prompts/` directory - changes take effect immediately.
-
-## Important Rules
-
-1. **NEVER** place gold standard in `artifacts/input/`
-2. **ALWAYS** snapshot configs for reproducibility
-3. **USE** dry-run for testing before API calls
-4. **VERSION** your prompts in config
-5. **TRACK** prompt changes for experiments
-
-## Help
+## Hilfe
 
 ```bash
-# General help
+# Allgemeine Hilfe
 fagan --help
 
-# Command help
+# Hilfe zu einzelnen Befehlen
 fagan run --help
 fagan eval --help
 fagan report --help
 ```
 
-## Documentation
+## Dokumentation
 
-- `README.md` - Full documentation
-- `ARCHITECTURE.md` - Technical details
-- `USAGE_EXAMPLES.md` - Detailed examples
-- `PROJECT_STRUCTURE.md` - File organization
-
-## Contact
-
-For issues, see README.md or open a GitHub issue.
+- `README.md` – zentrale Projekt- und Nutzungsdokumentation
+- `ARCHITECTURE.md` – technische Architektur
+- `USAGE_EXAMPLES.md` – ausführliche Nutzungs- und Reproduktionsanleitung
+- `PROJECT_STRUCTURE.md` – Projektstruktur

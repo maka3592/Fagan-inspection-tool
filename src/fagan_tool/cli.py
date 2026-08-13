@@ -765,8 +765,7 @@ def verify_requirements():
     from pathlib import Path
 
     # Find project root (where pyproject.toml is)
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parent.parent.parent
+    project_root = Path(__file__).resolve().parents[2]
 
     # Import and run verification
     sys.path.insert(0, str(project_root / "scripts"))

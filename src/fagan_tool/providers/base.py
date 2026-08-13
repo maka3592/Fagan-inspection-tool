@@ -26,6 +26,23 @@ class LLMProvider(ABC):
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.extra_params = kwargs
+        # Optionales Usage-Logging (standardmäßig inaktiv). Wird per
+        # attach_usage_logger() gesetzt; ohne Logger ändert sich nichts.
+        self.usage_logger = None
+        self.cost_config = None
+
+    def attach_usage_logger(self, usage_logger, cost_config=None) -> None:
+        """Hängt einen UsageLogger (+ Preis-Config) an. Ohne Aufruf bleibt
+        das Logging inaktiv und das Verhalten unverändert."""
+        self.usage_logger = usage_logger
+        self.cost_config = cost_config
+
+    def set_call_context(self, **kwargs) -> None:
+        """Setzt run-/agent-weite Kontextfelder für das Usage-Log
+        (run_id, technique, phase, agent_role, reviewer_id). No-op, wenn
+        kein Logger angehängt ist."""
+        if self.usage_logger is not None:
+            self.usage_logger.set_context(**kwargs)
 
     @abstractmethod
     def generate(

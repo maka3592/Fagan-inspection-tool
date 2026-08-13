@@ -116,6 +116,25 @@ show_gold_checksums() {
     shasum -a 256 artifacts/gold/Faults_List_In_ver6.xls artifacts/gold/README.md
 }
 
+# Make sure the deterministic UBR worklist exists next to the use-case PDF.
+# The extractor is idempotent and offline (no LLM, no network), so re-running
+# it before every UBR run is cheap and guarantees the file is up-to-date.
+ensure_ubr_worklist() {
+    local pdf="artifacts/input/usecases/UseCasesRank_v3.4.pdf"
+    local json="artifacts/input/usecases/UseCasesRank_v3.4_extracted.json"
+    if [[ ! -f "$pdf" ]]; then
+        print_warning "Use-Case-PDF nicht gefunden: $pdf — Worklist-Extract übersprungen."
+        return 0
+    fi
+    echo "Erzeuge UBR-Worklist aus $pdf ..."
+    python scripts/extract_use_cases_rankbased.py --pdf "$pdf" --out "$json"
+    if [[ -f "$json" ]]; then
+        print_success "UBR-Worklist bereit: $json"
+    else
+        print_warning "UBR-Worklist konnte nicht geschrieben werden — UBR läuft ohne Worklist."
+    fi
+}
+
 show_results() {
     local run_id="$1"
     echo ""
@@ -162,6 +181,8 @@ run_ubr() {
     local RUN_ID="thesis_ubr_check_$(date +%Y%m%d_%H%M%S)"
     echo "RUN_ID: $RUN_ID"
     echo ""
+
+    ensure_ubr_worklist
 
     echo "Starte UBR-Inspektion..."
     fagan run --config configs/examples/c1_ubr.yaml --run-id "$RUN_ID"
@@ -227,6 +248,7 @@ run_full() {
     print_header "1/4: UBR-Inspektion"
     local RUN_ID_UBR="thesis_ubr_full_$(date +%Y%m%d_%H%M%S)"
     echo "RUN_ID_UBR: $RUN_ID_UBR"
+    ensure_ubr_worklist
     fagan run --config configs/examples/c1_ubr.yaml --run-id "$RUN_ID_UBR"
 
     if [[ ! -f "runs/$RUN_ID_UBR/final_defects.json" ]]; then

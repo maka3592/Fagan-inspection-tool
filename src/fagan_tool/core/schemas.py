@@ -101,6 +101,37 @@ class Defect(BaseModel):
     position_autofix_reason: str = Field(
         default="", description="Reason for position autofix (e.g. single_mentioned_token)"
     )
+    # ---------------------------------------------------------------
+    # Inspection-Record quality fields (Defect Report Quality, 2026-05)
+    # Added to lift report quality without touching matcher/metrics:
+    # the matcher continues to read `position`, `description`, and the
+    # legacy `evidence` dict. The five fields below are purely
+    # informational + diagnostic; their absence is flagged but never
+    # rejects a defect.
+    # ---------------------------------------------------------------
+    entity: Optional[str] = Field(
+        default=None,
+        description=(
+            "Named entity from the artefact this defect references "
+            "(signal / use-case / module name). Must be quoted exactly "
+            "as written in the document."
+        ),
+    )
+    expected: Optional[str] = Field(
+        default=None,
+        description="Short statement of what the artefact should specify (1-2 sentences).",
+    )
+    observed: Optional[str] = Field(
+        default=None,
+        description="Short statement of what the artefact actually specifies (1-2 sentences).",
+    )
+    evidence_location: Optional[str] = Field(
+        default=None,
+        description=(
+            "Precise pointer into the artefact, e.g. 'p. 5, 3.4.1, MSC' "
+            "or 'Table 1'. Derived from page_hint+position when omitted."
+        ),
+    )
 
     @field_validator("confidence")
     @classmethod
@@ -164,6 +195,43 @@ class Defect(BaseModel):
                 self.flags.append("missing_description")
             if "incomplete" not in self.flags:
                 self.flags.append("incomplete")
+
+        # ----- Inspection-record quality flags (2026-05) -----
+        # We never reject defects on these; we only record what is missing
+        # so downstream reporting and prompt-discipline checks can see it.
+        def _is_blank(v: Optional[str]) -> bool:
+            return not (v and v.strip())
+
+        if _is_blank(self.entity) and "missing_entity" not in self.flags:
+            self.flags.append("missing_entity")
+        if _is_blank(self.expected) and "missing_expected" not in self.flags:
+            self.flags.append("missing_expected")
+        if _is_blank(self.observed) and "missing_observed" not in self.flags:
+            self.flags.append("missing_observed")
+
+        # Evidence quote — check the normalized dict (already populated above).
+        ev_text = ""
+        if isinstance(self.evidence, dict):
+            ev_text = str(self.evidence.get("quote_or_paraphrase") or "").strip()
+        if not ev_text and "missing_evidence" not in self.flags:
+            self.flags.append("missing_evidence")
+
+        # Deterministic evidence_location composition from page_hint+position.
+        # This is pure formatting (no new information is invented): if a
+        # reviewer omitted evidence_location we synthesise the pointer from
+        # data the reviewer DID supply. Empty inputs leave the field empty
+        # and trigger the missing_evidence_location flag.
+        if _is_blank(self.evidence_location):
+            page = (self.page_hint or "").strip()
+            pos = (self.position or "").strip()
+            if page and pos and pos.lower() != "unknown":
+                self.evidence_location = f"{page}, {pos}"
+            elif page:
+                self.evidence_location = page
+            elif pos and pos.lower() != "unknown":
+                self.evidence_location = pos
+        if _is_blank(self.evidence_location) and "missing_evidence_location" not in self.flags:
+            self.flags.append("missing_evidence_location")
 
         return self
 

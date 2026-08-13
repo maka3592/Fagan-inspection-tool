@@ -153,6 +153,13 @@ Return ONLY valid JSON, no explanations or markdown:
                         position_mentions=d.get("_canon_mentions", []),
                         position_autofixed=d.get("_canon_autofixed", False),
                         position_autofix_reason=d.get("_canon_autofix_reason", ""),
+                        # Inspection-record quality fields forwarded from
+                        # reviewer-side defects (or from the scribe's own
+                        # consolidation hints). No transformation here.
+                        entity=d.get("entity"),
+                        expected=d.get("expected"),
+                        observed=d.get("observed"),
+                        evidence_location=d.get("evidence_location"),
                     )
                     consolidated_defects.append(defect)
                 else:
@@ -431,6 +438,12 @@ Return ONLY valid JSON, no explanations or markdown:
                     position_mentions=canon.mentions,
                     position_autofixed=canon.autofixed,
                     position_autofix_reason=canon.autofix_reason,
+                    # Forward inspection-record quality fields from the
+                    # original reviewer defect during rescue too.
+                    entity=defect.entity,
+                    expected=defect.expected,
+                    observed=defect.observed,
+                    evidence_location=defect.evidence_location,
                 )
                 final_list.append(rescued_defect)
                 rescued_count += 1

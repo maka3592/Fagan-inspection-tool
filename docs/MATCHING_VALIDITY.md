@@ -136,21 +136,16 @@ sub-tokens provide a secondary check (e.g., `order_reject` and
 
 ---
 
-## 4. Recommended Threshold
+## 4. Threshold Configuration and Experimental Use
 
-The default `--match-threshold` is **0.60** (backward-compatible).
+The technical CLI default for `--match-threshold` is **0.60**.
 
-After the signal gating improvements (A1), a threshold of **0.70** is
-recommended for stricter precision:
-
-```bash
-fagan eval --run my_run --match-threshold 0.70
-```
+The final main evaluation uses a threshold of **0.65**. The value
+**0.60** is additionally considered as a sensitivity threshold. The
+technical CLI default is distinct from this final evaluation decision.
 
 The signal gates already reject most false partials at the gate level
-(score = 0.0). Raising the threshold from 0.60 to 0.70 provides an
-additional margin for borderline cases that pass the gates but have
-weak description similarity.
+(score = 0.0).
 
 ---
 
@@ -186,16 +181,16 @@ fagan manual-eval --run <RUN_ID>
 This produces `eval/<RUN_ID>/metrics_manual.json` with precision, recall,
 and F1 based on your manual annotations instead of the automated matching.
 
-### Auto-Match vs Manual Truth
+### Automatic Candidates and Manual Validation
 
 | Metric Source | Based On | Use Case |
 |---------------|----------|----------|
 | `metrics.json` | Automated heuristic matching | Rapid iteration, CI |
 | `metrics_manual.json` | Human expert annotations | Thesis reporting, validation |
 
-The manual metrics are the ground truth for academic reporting. The
-automated metrics are useful for development iteration but should always
-be validated manually before drawing conclusions.
+The matcher produces match candidates. Manual assessment determines the
+confirmed assignment. For the final pooled evaluation, the finalized
+manual validation decisions are authoritative.
 
 ---
 

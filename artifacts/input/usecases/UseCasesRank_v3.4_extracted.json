@@ -1,0 +1,274 @@
+{
+  "source": "artifacts/input/usecases/UseCasesRank_v3.4.pdf",
+  "extracted_at": "2026-06-01T14:35:56.224984+00:00",
+  "use_cases": [
+    {
+      "id": "1.1",
+      "title": "Taxi: Submit order",
+      "purpose": "The driver receives an order from a customer. The driver should be able to sub- mit an order from the terminal in the car. An order can be submitted in all states, except in “Offline”.",
+      "tasks": [
+        "A customer wants a taxi.",
+        "The order is entered on the terminal in the car.",
+        "The order is sent to the central.",
+        "The order is confirmed by the central."
+      ],
+      "variants": [
+        "4b No available taxis at the desired time. A new order must be submitted with different pick-up time in a new request from the taxi."
+      ]
+    },
+    {
+      "id": "1.2",
+      "title": "Central: Submit order",
+      "purpose": "Orders are received by the operators. These are submitted into the system.",
+      "tasks": [
+        "The operator receives an order.",
+        "The operator submits the order into the system. The order may contain specific requests such as allergy, non-smoker etc. The order can be prioritized, i.e. some customers are more important than others.",
+        "The system confirms the order to the operator. The order is automatically dispatched to a car."
+      ],
+      "variants": [
+        "3b If the order is very close in time the system presents an estimate of how long it takes for a car to be available."
+      ]
+    },
+    {
+      "id": "1.3",
+      "title": "Central: Display traffic overview",
+      "purpose": "The operator should be able to see available cars and orders in each zone. This is used to estimate how long it takes for a car to be present at the pick-up location.",
+      "tasks": [
+        "The operator selects the traffic overview on the terminal.",
+        "The overview is displayed."
+      ],
+      "variants": [
+        "2b The system is down and an overview cannot be presented. The operator has to check available cars manually over a voice communication link."
+      ]
+    },
+    {
+      "id": "1.4",
+      "title": "Taxi: Log in",
+      "purpose": "The driver logs on to the system to acknowledge presence and to be able to receive orders. (Note that a driver can drive different taxis at different times. Also note that a taxi has many different drivers, although only one driver at a time.)",
+      "tasks": [
+        "The car is in state “Offline”.",
+        "The driver swipes the identification card in the terminal in the car.",
+        "The terminal sends the position and driver information to the central.",
+        "The central confirms the log in.",
+        "The car sends the position (zone).",
+        "The central starts sending overview information on all zones.",
+        "The car is in the state “Available”."
+      ],
+      "variants": [
+        "1b The car is not in the state offline. There can be only one driver logged in at the same time in the car terminal. The car has to be in state “Offline” in order to allow new logins.",
+        "4b The card is not valid. The central rejects the driver. The driver and the car are not logged in and remain in state “Offline”."
+      ]
+    },
+    {
+      "id": "1.5",
+      "title": "Taxi: Receive order",
+      "purpose": "The driver receives an order from the central.",
+      "tasks": [
+        "The car is in the state “Available”.",
+        "Order is sent to the terminal in the car.",
+        "The driver accepts the order.",
+        "The central confirms order.",
+        "The driver goes to the designated address.",
+        "The car is in state “Waiting for customer”."
+      ],
+      "variants": [
+        "3b The order is neither rejected nor accepted within 2 minutes. The order is automatically canceled.",
+        "4b The order is rejected due to some reason. The taxi remain in state “Available”."
+      ]
+    },
+    {
+      "id": "1.6",
+      "title": "Taxi: Driving a customer",
+      "purpose": "The driver has a customer in the car and is about to transport the customer to the designated address.",
+      "tasks": [
+        "Car in state “Available”.",
+        "Driver receives order. See receive order (use-case 1.5).",
+        "Car in state “Waiting for customer”.",
+        "Drive to the pick-up location.",
+        "Wait until customer arrives.",
+        "Start meter and transportation.",
+        "Car in state “Driving”.",
+        "When driver is confident in time of arrival, send arrival zone and time to central.",
+        "Car in state “Soon available”.",
+        "Arrival at destination. Charge customer and print out receipt.",
+        "Car in state “Available”. The car sends the position (zone)."
+      ],
+      "variants": [
+        "2b The driver picks up customer without order. Use case starts at step 6.",
+        "6b Customer does not show up. Car is put in state “Available”.",
+        "9b Driver does not use the “Soon available” function. Step 9 is skipped."
+      ]
+    },
+    {
+      "id": "1.7",
+      "title": "Central: Handle incoming alarms",
+      "purpose": "If a driver sounds the alarm, an operator is responsible for handling the event.",
+      "tasks": [
+        "An incoming alarm opens a voice radio connection to the car. All sounds from the car are sent to the operator.",
+        "The operator determines the course of action.",
+        "When the situation causing the alarm is no longer current, the operator resets the alarm. This can only be done by the operator."
+      ],
+      "variants": [
+        "1b The event is a false alarm. The operator decides whether it is false or not. The operator chooses to cancel or not."
+      ]
+    },
+    {
+      "id": "1.8",
+      "title": "Taxi: Alarm event",
+      "purpose": "If the driver, for some reason, feels threatened there is an alarm system which notifies the central of the problems.",
+      "tasks": [
+        "The driver is in some kind of trouble and hits the alarm button.",
+        "The voice radio channel to the central is opened from the taxi to the central.",
+        "The taxi sends exact coordinates to the central every 30 seconds.",
+        "The channel is open until the central resets the alarm.The voice link is terminated."
+      ],
+      "variants": []
+    },
+    {
+      "id": "1.9",
+      "title": "Taxi: View traffic overview",
+      "purpose": "The driver should be able to see in which zones there are cars and the amount of outstanding orders in each zone.",
+      "tasks": [
+        "The driver requests traffic overview information on the terminal in the car.",
+        "Overview information is sent to the terminal from the central.",
+        "The terminal displays the information."
+      ],
+      "variants": []
+    },
+    {
+      "id": "1.10",
+      "title": "Central: Dispatch order",
+      "purpose": "Orders can be marked for manual dispatching. These orders have to be manually dispatched by an operator. Default is automatic dispatch.",
+      "tasks": [
+        "The system notifies the operator in an appropriate time before pick-up time.",
+        "The operator selects a car to send the order to. The selection of car is based on the taxi number. That is, the selection is not dependent of the current status of the car.",
+        "The system sends the order.",
+        "The car sends an acceptance notification of the order. The system automatically con- firms the acceptance notification to the car.",
+        "The system notifies the operator that the order has been accepted."
+      ],
+      "variants": [
+        "3b Parts of the system are down, making automatic dispatch impossible. The operator has to dispatch all orders manually.",
+        "4b The designated car rejects the order or is busy. The order must be manually dispatched to another car."
+      ]
+    },
+    {
+      "id": "1.11",
+      "title": "Central: Send text message",
+      "purpose": "The operators have the option to send text message to the cars. This can be done to a specific car, to a certain set of cars or to all cars.",
+      "tasks": [
+        "The operator selects cars in the system to send a text message.",
+        "The text is entered.",
+        "The destination is chosen. This can be a specific car, a group of car, or all cars indepen- dent of state.",
+        "The message is sent. Each car receiving the message should acknowledge the reception to the central automatically.",
+        "The system confirms the delivery of the text message."
+      ],
+      "variants": [
+        "4b If message is sent to a specific car and the message cannot reach the destination, the operator should be notified of this.",
+        "4c If the message is sent to a group of cars or all cars, and none of the cars acknowledges the message, this should be noted to the operator. If, however, only some cars don’t acknowledge, no notification is necessary."
+      ]
+    },
+    {
+      "id": "1.12",
+      "title": "Central: Log in to central system",
+      "purpose": "The operators log in to the central system to be able to use it.",
+      "tasks": [
+        "Enter user identification and password.",
+        "The system verifies the identification.",
+        "The user is logged on the system."
+      ],
+      "variants": [
+        "2b The user information is incorrect. The operator is not logged on."
+      ]
+    },
+    {
+      "id": "1.13",
+      "title": "Central: Initiate radio communication",
+      "purpose": "The operator should have the possibility to contact a specific driver over a voice radio connection. Can be used when the ordering system is down, but the communication link is operational.",
+      "tasks": [
+        "The operator selects radio call.",
+        "The system displays a list of available cars.",
+        "The operator chooses a car to contact.",
+        "The communication link is established and conversation is possible in a radio like man- ner. See receive voice radio communication.",
+        "Both sides cancel the communication link. The voice link is terminated."
+      ],
+      "variants": [
+        "4b The wanted car is not available. No connection is established."
+      ]
+    },
+    {
+      "id": "1.14",
+      "title": "Taxi: Initiate radio communication",
+      "purpose": "The driver should have the possibility to contact the central through a voice channel using this system. Can be used if the ordering system is down, but the communi- cation link is operational.",
+      "tasks": [
+        "The driver initiates the communication on the terminal in the car.",
+        "The call is placed in an incoming call queue in the central.",
+        "The call is put through and conversation is possible in a radio like manner. That is, a button has to be pressed for the speech to be sent.",
+        "Both sides cancel the conversation. The voice link is terminated."
+      ],
+      "variants": []
+    },
+    {
+      "id": "1.15",
+      "title": "Taxi: Incoming radio communication",
+      "purpose": "The central can initiate a voice contact to be able to talk to the driver. Can be used if the ordering system is down, but the communication link is operational.",
+      "tasks": [
+        "An incoming radio request from the central.",
+        "The connection is put through and conversation is possible in a radio like manner. See radio communication initiated by the driver.",
+        "Both sides cancel the communication. The voice link is terminated."
+      ],
+      "variants": [
+        "2b The driver presses a cancellation button. The connection is canceled.",
+        "3b If the connection is broken during conversation due to loss of contact with server, the connection is simply broken and the terminal returned to the previous state."
+      ]
+    },
+    {
+      "id": "1.16",
+      "title": "Taxi: View properties",
+      "purpose": "The driver should be able to view the properties of the car and also the properties on the driver him/herself. Note that the drivers can only view information on themselves.",
+      "tasks": [
+        "The driver chooses on the terminal in the car to see the properties associated with the car and driver.",
+        "The central sends the information to the car terminal."
+      ],
+      "variants": []
+    },
+    {
+      "id": "1.17",
+      "title": "Central: Incoming radio communication",
+      "purpose": "The drivers have the possibility to contact the central through a voice radio chan- nel.",
+      "tasks": [
+        "A free operator takes the incoming communication requests.",
+        "A connection with the car is established. Conversation is possible in a radio like man- ner. That is, a button is pressed to enable sending of speech information.",
+        "The connection is canceled from both side. The voice link is terminated."
+      ],
+      "variants": [
+        "2b If the connection is broken during conversation due to loss of contact with the car, the connection is simply broken."
+      ]
+    },
+    {
+      "id": "1.18",
+      "title": "Central: Update driver properties",
+      "purpose": "Each driver has a set of properties. These can be promptness, smoker or non- smoker, number of complaints, etc. The operator is responsible for updating this informa- tion.",
+      "tasks": [
+        "A request to update driver properties is received.",
+        "The operator selects the driver in question on the update properties system.",
+        "The properties are updated and submitted.",
+        "The system acknowledges the changes."
+      ],
+      "variants": [
+        "2b Driver not registered in the system. The driver must first be registered in the system. This is done with other systems."
+      ]
+    },
+    {
+      "id": "1.19",
+      "title": "Taxi: Receive text message",
+      "purpose": "The central has the possibility to send text messages to the cars. This can be done to a specific car, to a certain set of cars or to all cars.",
+      "tasks": [
+        "When a text message is received, a graphical indication is displayed on the terminal as well as an audio notification.",
+        "The drivers presses a button to read the message.",
+        "The message is marked as read."
+      ],
+      "variants": []
+    }
+  ],
+  "warnings": []
+}
