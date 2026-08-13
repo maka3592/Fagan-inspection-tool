@@ -1,0 +1,46 @@
+run_id,defect_id,reviewer_count,reviewer_ids,representative_fault_type,representative_position,representative_page_hint,representative_description
+costed_ubr_split_soft_n10_018,h:15f0e84b612a30c3,2,reviewer_2_ubr;reviewer_7_ubr,W,Table 1,p. 6,'Order': The signal has wrong parameter types in Table 1.
+costed_ubr_split_soft_n10_018,h:033a81d18df1202a,1,reviewer_8_ubr,M,4.1,p. 9,'Reject_Order': A signal is missing for not confirming orders.
+costed_ubr_split_soft_n10_018,h:08736b6c329198b0,1,reviewer_8_ubr,W,4.1,p. 9,'Meter_On': The signal is missing a parameter for the taxi number.
+costed_ubr_split_soft_n10_018,h:0f3daa56156d6536,1,reviewer_1_ubr,W,3.3.1,p. 5,'OrderOper': The signal is incorrectly defined with missing parameters.
+costed_ubr_split_soft_n10_018,h:12a7f006a66c44c6,1,reviewer_7_ubr,M,3.4.2,p. 5,'Terminate_Voice': A signal is missing for terminating voice communication from the taxi.
+costed_ubr_split_soft_n10_018,h:13c4d62c3418e30c,1,reviewer_3_ubr,M,3.2.2,p. 3,'Order': The signal has wrong parameter types in Table 1.
+costed_ubr_split_soft_n10_018,h:19100074f6f8399c,1,reviewer_10_ubr,M,Table 1,p. 7,'Order_Cancel': A signal is missing for canceling an order after acceptance.
+costed_ubr_split_soft_n10_018,h:31afdf62dda9bca9,1,reviewer_10_ubr,M,Table 1,p. 7,'Order': A signal is missing for the order confirmation acknowledgment.
+costed_ubr_split_soft_n10_018,h:44bbdcc538621a57,1,reviewer_4_ubr,M,3.4.2,p. 6,'Ack': Missing signal for acknowledging order acceptance.
+costed_ubr_split_soft_n10_018,h:477ab0e330bb81d0,1,reviewer_1_ubr,M,3.4.1,p. 5,'Reject_Order': A signal is missing for not confirming orders.
+costed_ubr_split_soft_n10_018,h:4a94c83837bc0b0c,1,reviewer_4_ubr,M,3.4.1,p. 6,'Confirm': Missing acknowledgment for order confirmation.
+costed_ubr_split_soft_n10_018,h:4d704014af9db399,1,reviewer_6_ubr,M,3.4.1,p. 6,'Order': The signal has wrong parameter types in Table 1.
+costed_ubr_split_soft_n10_018,h:51ad00cfba0cc538,1,reviewer_6_ubr,M,3.4.1,p. 6,'Reject_Order': A signal is missing for not confirming orders.
+costed_ubr_split_soft_n10_018,h:5422d14d78f8e95a,1,reviewer_1_ubr,M,3.2.1,p. 4,'Start_Voice': No timeout is specified for this signal.
+costed_ubr_split_soft_n10_018,h:587fb462f5671c97,1,reviewer_10_ubr,M,3.4.2,p. 5,'Order_Reject': Missing signal definition in Table 1.
+costed_ubr_split_soft_n10_018,h:60cbb4a2b5f17724,1,reviewer_9_ubr,M,4.2,p. 10,'Terminate_Voice': Missing signal for confirming termination of voice communication.
+costed_ubr_split_soft_n10_018,h:63b48333e775a424,1,reviewer_5_ubr,M,3.3.2,p. 5,'LoginFailed': Missing error handling for failed login attempts.
+costed_ubr_split_soft_n10_018,h:64c940243bdfb624,1,reviewer_4_ubr,M,3.3.1,p. 5,'Get_Order': Missing acknowledgment signal for retrieving orders.
+costed_ubr_split_soft_n10_018,h:65ffb278065e0e6c,1,reviewer_5_ubr,M,3.3.2,p. 5,'Ack': The acknowledgment signal is missing from the design for order acceptance.
+costed_ubr_split_soft_n10_018,h:6be1577644e91630,1,reviewer_10_ubr,M,Table 1,p. 7,'Ack': The signal is listed but not used in any use case.
+costed_ubr_split_soft_n10_018,h:6c8235d2942cd0ce,1,reviewer_7_ubr,M,3.4.2,p. 5,'Order_Cancel': A signal is missing for canceling orders after acceptance.
+costed_ubr_split_soft_n10_018,h:6cf6aec68cf57e48,1,reviewer_9_ubr,M,4.2,p. 10,'Start_Voice': Missing error handling for when the taxi is not available.
+costed_ubr_split_soft_n10_018,h:729c69526c94da64,1,reviewer_3_ubr,M,3.2.2,p. 3,'Reject_Order': A signal is missing for not confirming orders.
+costed_ubr_split_soft_n10_018,h:742ca9ed8aa451b3,1,reviewer_6_ubr,M,3.4.1,p. 6,'Order_Cancel': A signal is missing for canceling orders after acceptance.
+costed_ubr_split_soft_n10_018,h:8438f663ed62ca32,1,reviewer_1_ubr,M,3.4.1,p. 5,'Order': The signal has wrong parameter types in Table 1.
+costed_ubr_split_soft_n10_018,h:874afe8754eb7f27,1,reviewer_8_ubr,W,4.1,p. 9,'Ack': The order acknowledgment sequence is out of order.
+costed_ubr_split_soft_n10_018,h:9c5a6abd822817c9,1,reviewer_2_ubr,M,3.2.1,p. 3,'Order': A signal is missing for confirming orders from the taxi to the central.
+costed_ubr_split_soft_n10_018,h:a83ba4cc8241373b,1,reviewer_5_ubr,M,3.3.2,p. 5,'Order_Reject': Missing acknowledgment signal for rejected orders.
+costed_ubr_split_soft_n10_018,h:a94bb803d62a73dc,1,reviewer_4_ubr,M,3.3.1,p. 5,'Allocate_car': A signal is missing for confirming car allocation.
+costed_ubr_split_soft_n10_018,h:ab438724e095be69,1,reviewer_2_ubr,M,3.2.1,p. 3,'Reject_Order': A signal is missing for not confirming orders.
+costed_ubr_split_soft_n10_018,h:af6819c7d6d6f41c,1,reviewer_3_ubr,W,3.2.2,p. 3,'LoginOk': The signal is incorrectly defined without specifying the driver number.
+costed_ubr_split_soft_n10_018,h:b1804b81fee29df9,1,reviewer_8_ubr,M,4.1,p. 9,'Order': Missing timeout handling for order acceptance.
+costed_ubr_split_soft_n10_018,h:b426cd8bc21ed35a,1,reviewer_7_ubr,M,3.4.2,p. 5,'Ack': A signal is missing for acknowledging the receipt of orders.
+costed_ubr_split_soft_n10_018,h:b8e625deec39d9f7,1,reviewer_10_ubr,M,3.4.1,p. 5,'Confirm_Voice': Missing parameter type definition in Table 1.
+costed_ubr_split_soft_n10_018,h:ba9e33878a4889c9,1,reviewer_5_ubr,M,3.3.2,p. 5,'Confirm': Missing confirmation signal for order submission from the operator.
+costed_ubr_split_soft_n10_018,h:c4844a1b0a604b62,1,reviewer_4_ubr,M,3.4.2,p. 6,'Order_Reject': Missing acknowledgment for order rejection.
+costed_ubr_split_soft_n10_018,h:ca98f4160bcd3f32,1,reviewer_5_ubr,M,3.3.2,p. 5,'LoginOk': Missing acknowledgment for successful login of the operator.
+costed_ubr_split_soft_n10_018,h:dd1f3f922f2703ea,1,reviewer_1_ubr,M,3.1,p. 3,'Order_struct': Missing definition for 'Order_number' in the context of order handling.
+costed_ubr_split_soft_n10_018,h:de4fb40c65b77ce4,1,reviewer_9_ubr,W,4.2,p. 10,'Voice_Msg': The signal sequence is inconsistent with the expected flow.
+costed_ubr_split_soft_n10_018,h:e9b2b86cc6ad5c59,1,reviewer_3_ubr,M,3.2.2,p. 3,'Start_Voice': Missing timeout specification for voice communication initiation.
+costed_ubr_split_soft_n10_018,h:ec21e256fcbe4b5f,1,reviewer_3_ubr,M,3.2.2,p. 3,'LoginFailed': Missing acknowledgment signal for failed login attempts.
+costed_ubr_split_soft_n10_018,h:edf8850c149ad5d1,1,reviewer_9_ubr,M,4.2,p. 10,'Confirm_Voice': Missing acknowledgment signal for voice communication initiation.
+costed_ubr_split_soft_n10_018,h:f0246e33aab9a17a,1,reviewer_7_ubr,M,3.4.2,p. 5,'Order_Reject': A signal is missing for rejecting orders.
+costed_ubr_split_soft_n10_018,h:f1cd68ed52953a98,1,reviewer_2_ubr,M,3.4.1,p. 5,'Confirm': A signal is missing for confirming the acceptance of an order.
+costed_ubr_split_soft_n10_018,h:f595a30fdba353bd,1,reviewer_2_ubr,W,3.2.1,p. 3,'Start_Voice': The parameter type for operator number is inconsistent.

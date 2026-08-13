@@ -1,0 +1,37 @@
+gold_id,risk,position,description,hit_ubr,hit_cbr,hit_pbr,hit_union
+1,B,Flera ställen,Properties. Requirements 3.2.9-3.2.12 are not designed. A driver should be specifiied with different properties but this is not implemented. This fault can be found in many places in the design.,0,0,0,0
+2,C,"3.2.1, 3.4.1, 3.4.2","Overview information. The overview information is sent continously, not on demand as specified in the requirements. A signal ""Traffic Overview"" is missing. This fault can be found in many places.",0,0,0,0
+3,B,3.4.1,"Atomatic reject. There is not ""automatic reject as in requirement 3.1.3. ",0,0,0,0
+4,A,"3.2.1, 3.4.2","Soon Available. The functionality for ""Soon available"" is missing. This is used in requirement 3.1.8.",0,0,0,0
+5,A,"3.1, 3.3.1",Prioritise orders. It is not possible to prioritise and order. Requirement 3.2.3.,0,0,0,0
+6,A,"3.3.1, 3.3.2","Estimated time. The information about ""Estimated time"" to be available  in the signal ""confirm"". The operator shoudl be able to estimate the time when a taxi will arrive to a customer. Requirement 3.2.3. ",1,0,0,1
+7,B,"3.3.1, 3.3.2",Allocate car. Requirement 3.2.4 and the design of allocate_car (3.3.1 i STLDD) do not correspind.,1,1,0,1
+8,A,"3.2.1, 3.4.2, Table 1","Cancel order. The signal ""Cancel_Order"" is missing. Requirement 3.2.4 is not fullfilled. No message to the operator. (4.1  in  STLDD). Manuel dispatch and cancel order. ",1,1,0,1
+9,C,"3.3.1, 3.4.1",Message to a group of cars. It is not possible to send a message to a specific car group. A message has to be sent either to one or to all cars. Requirement 3.2.5.,0,0,0,0
+10,B,"3.3.2, 3.4.2",ACK is missing. Acknoledgement (ACK) is missing when text messages are sent. The system does not confirm that text messages are received and OK. Requirment 3.2.5. ,0,0,0,0
+11,B,4.1,"Not Available. The signla ""Not_Avail"" is sent in wrong occasion. According to the requirements, a taxi driver is available already when an order has been accepted. ",0,0,0,0
+13,B,3.2.1,"LogOut is missing. The signal ""Log_out"" is missing and a taxi driver cannot log out of the system. ",0,0,0,0
+14,A,"3.2.2,  3.3.1,  3.4.1, 4.1, Table 1",Confirm Order. A ??taxi driver/operator?? cannot confirm an order. This fault is present on many places.,0,0,0,0
+15,A,"3.2.1., 3.2.2, 3.4.2",Bill. There is no signal to send the price to a taxi driver. It is also not possible to print out receipt. ,0,0,0,0
+16,B,3.2.1,"Reset Alarm. A taxi driver can reset the alarm, which is not allowed according to the requirements. ",0,0,0,0
+17,A,"3.3.1, 3.3.2",Log in. The operator cannot log in to the system and does not get a message when/if he/she has been logged in. ,0,0,0,0
+18,B,"3.3.1, 3.3.2, 3.4.1",Log out. The operator cannot log out of the system. ,0,0,0,0
+19,C,"3.4.2, 4.1","Detailed Position. Detailed_Position is not sent, i.e. when the taximeter is on, the car should send exact position. ",0,0,0,0
+20,A,"3.4.2,  4.1, Table 1","Available is missig. The signal ""Available"" is missing, The cars do not tell the central when it is available after drivinga custoimer. The car should have send available.",0,0,0,0
+21,B,3.4.1,"Login Rejected is missing. The signal ""Login_rejected"" is missing. No validation of drivers occurs. ",0,0,0,0
+22,A,3.4.2,"Taximeter signals. The signals ""meter_on"" och ""meter_off"" are missing between the taxt module and the central. The central should know when the taximeter is on and off.",0,0,0,0
+23,A,3.2.1,"Start alarm is missing. The signal ""start alarm"" is missiing.",0,0,0,0
+24,C,"3.4.1, 3.2.2",Communication request. A signal is missing that should remove/reject a driver's communication request. ,0,0,0,0
+25,C,"3.1, 3.3.2",Taxi number. The taxi number is missing in order_struct. (Kraven saknar order number),1,0,0,1
+26,A,"3.3.2, 3.4.2",Indicate alarm. A signal to indicate an alarm is missing from the central to the operator. An alarm  signal between taxi and central is also missing.,0,0,0,0
+27,B,"Table 1, 3.4.2","Logged in parameters. The signal ""Logged In"" misses parameters.",1,0,0,1
+28,C,"3.4.2, 4.2","Voice message parameters. The signal ""Voice_Msg"" is inconsistent according to the parameters . Sometimes 2 is used and sometimes 3 is used. ",1,1,0,1
+29,B,3.2.1,"Login in parameters. The signal ???""Login""??? misses a parameter. ",0,0,0,0
+30,A,"3.2.2, 3.4.1 ",Reject Orders. A signal is missing for not confirming orders. ,0,0,0,0
+31,B,"3.2.1, Table 1","Confirm Voice. The signal ""Confirm_Voice"" is missing. ",1,1,0,1
+32,C,4.2,"Start Voice. The signal ""Start_voice"" from driver should be ""send_voice""",1,1,0,1
+33,C,3.4.2,Start Voice in 3.4.2 misses one parameter.,0,0,0,0
+35,B,"3.3.2, 3.1","Manual Dispatch. A signal to confirm a manual dispatch is missing in section 3.3.2.  Further, a signal cannot be marked for manual dispatch. ",0,0,0,0
+36,A,3.4.1,ZoneInfo. A signal to send zone info is missing in section 3.4.1. ,0,0,0,0
+37,C,Table 1,"Signals missing in table. Some signals are missing in the table, like for example, Ok.",0,0,0,0
+38,C,4.1,"Order. The first signal ""Order"" should be OrderOper. Further, one parameter is missing.",1,1,0,1

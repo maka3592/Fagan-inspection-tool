@@ -1,0 +1,463 @@
+[
+  {
+    "id": "meeting_bf5eb50d",
+    "position": "3.3.1",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Allocate_car': A corresponding acknowledgment signal is missing.",
+    "evidence": {
+      "quote_or_paraphrase": "The signal 'Allocate_car' does not have an ACK signal defined in the documentation.",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_4_cbr_c2d968a2",
+      "reviewer_4_cbr_08c179e4"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 4, 3.3.1"
+  },
+  {
+    "id": "meeting_4b10ea53",
+    "position": "3.3.1",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'OrderOper': A corresponding reject signal is missing.",
+    "evidence": {
+      "quote_or_paraphrase": "The signal 'OrderOper' lacks a defined reject signal in the documentation.",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_4_cbr_c2d968a2",
+      "reviewer_4_cbr_08c179e4"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 4, 3.3.1"
+  },
+  {
+    "id": "meeting_ab329b14",
+    "position": "3.3.2",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'OrderOper': A corresponding acknowledgment signal is missing.",
+    "evidence": {
+      "quote_or_paraphrase": "The signal 'OrderOper' does not have a defined acknowledgment in the API (p. 4).",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_5_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_5_cbr_36dce0cc"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_5_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "OrderOper",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The signal 'OrderOper' does not have a defined acknowledgment in the API (p. 4).",
+    "evidence_location": "p. 4, 3.3.2"
+  },
+  {
+    "id": "meeting_f8f1c4cb",
+    "position": "3.4.2",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Ack': A corresponding acknowledgment signal is missing for the 'Order' signal.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 4.1 shows 'Order' but lacks an 'Ack' signal (p. 9).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_7_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_7_cbr_35c26387"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_7_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": "3.4.2",
+    "position_canonical": "4.1",
+    "position_mentions": [
+      "4.1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Ack",
+    "expected": "The MSC in 4.1 shows 'Order' but has an 'Ack' signal (p. 9).",
+    "observed": "The MSC in 4.1 shows 'Order' but lacks an 'Ack' signal (p. 9).",
+    "evidence_location": "p. 5, 3.4.2"
+  },
+  {
+    "id": "meeting_b15e7c0e",
+    "position": "3.4.2",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order_Reject': A corresponding reject signal is missing for the 'Order' signal.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 4.1 shows 'Order' but lacks an 'Order_Reject' signal (p. 9).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_7_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_7_cbr_3595ae90"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_7_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": "3.4.2",
+    "position_canonical": "4.1",
+    "position_mentions": [
+      "4.1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Order_Reject",
+    "expected": "The MSC in 4.1 shows 'Order' but has an 'Order_Reject' signal (p. 9).",
+    "observed": "The MSC in 4.1 shows 'Order' but lacks an 'Order_Reject' signal (p. 9).",
+    "evidence_location": "p. 5, 3.4.2"
+  },
+  {
+    "id": "meeting_3b3f653a",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order_Reject': A signal is missing for rejecting orders in the MSC.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Order_Reject' which is used in the MSC (p. 7)",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_10_cbr_c5a64fb9"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order_Reject",
+    "expected": "Table 1 should include 'Order_Reject' which is used in the MSC (p. 7).",
+    "observed": "Table 1 does not include 'Order_Reject' which is used in the MSC (p. 7)",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_64308d4c",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Ack': A signal is missing for acknowledging orders in the MSC.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Ack' which is used in the MSC (p. 7)",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_10_cbr_d26d1d97"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Ack",
+    "expected": "Table 1 should include 'Ack' which is used in the MSC (p. 7).",
+    "observed": "Table 1 does not include 'Ack' which is used in the MSC (p. 7)",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_f9e56b63",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The signal has wrong parameter types in Table 1.",
+    "evidence": {
+      "quote_or_paraphrase": "'Order' in Table 1 does not match the parameter types defined in the MSC (p. 7)",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_10_cbr_d1b84a15"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Order' in Table 1 does not match the parameter types defined in the MSC (p. 7)",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_fef6caf2",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Confirm': A signal is missing for confirming orders in the MSC.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Confirm' which is used in the MSC (p. 7)",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_10_cbr_99f647ff"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Confirm",
+    "expected": "Table 1 should include 'Confirm' which is used in the MSC (p. 7).",
+    "observed": "Table 1 does not include 'Confirm' which is used in the MSC (p. 7)",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_62a1e558",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Start_Voice': A signal is missing for starting voice communication in the MSC.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Start_Voice' which is used in the MSC (p. 7)",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_10_cbr_4bb74994"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Start_Voice",
+    "expected": "Table 1 should include 'Start_Voice' which is used in the MSC (p. 7).",
+    "observed": "Table 1 does not include 'Start_Voice' which is used in the MSC (p. 7)",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_1ff7a191",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Text_Message': A signal is missing for sending text messages in the MSC.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Text_Message' which is used in the MSC (p. 7)",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_10_cbr_4a18218d"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Text_Message",
+    "expected": "Table 1 should include 'Text_Message' which is used in the MSC (p. 7).",
+    "observed": "Table 1 does not include 'Text_Message' which is used in the MSC (p. 7)",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_8a7c9bc8",
+    "position": "3.2.2",
+    "page_hint": "p. 4",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Start_Voice': Incorrect parameter order in Table 1 compared to MSC.",
+    "evidence": {
+      "quote_or_paraphrase": "The parameter order for 'Start_Voice' in Table 1 does not match its definition in the MSC.",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_1_cbr",
+    "technique": "CBR",
+    "source_defect_ids": [
+      "reviewer_1_cbr_4a05b2eb"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_cbr"
+    ],
+    "source_techniques": [
+      "CBR"
+    ],
+    "original_position": "3.2.2",
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Start_Voice",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "The parameter order for 'Start_Voice' in Table 1 does not match its definition in the MSC.",
+    "evidence_location": "p. 4, 3.2.2"
+  }
+]

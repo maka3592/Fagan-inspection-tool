@@ -1,0 +1,1527 @@
+[
+  {
+    "reviewer_id": "reviewer_1_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_1_cbr_103f48b8",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "uncertain",
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The MSC in 3.4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 9, 3.4.1"
+      },
+      {
+        "id": "reviewer_1_cbr_995d8cce",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': A signal is missing for confirming orders from the central to the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 shows 'Order' but lacks a corresponding confirmation signal.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "The MSC in 3.4.1 shows 'Order' but has a corresponding confirmation signal.",
+        "observed": "The MSC in 3.4.1 shows 'Order' but lacks a corresponding confirmation signal.",
+        "evidence_location": "p. 9, 3.4.1"
+      },
+      {
+        "id": "reviewer_1_cbr_3e99c834",
+        "position": "3.2.1",
+        "page_hint": "p. 2",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 defines 'Order' with parameters that do not match the structure in 3.2.1.",
+          "page_hint": "p. 2"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 defines 'Order' with parameters that do not match the structure in 3.2.1.",
+        "evidence_location": "p. 2, 3.2.1"
+      },
+      {
+        "id": "reviewer_1_cbr_ca1b62ed",
+        "position": "3.2.1",
+        "page_hint": "p. 2",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Start_Voice': The signal parameters are inconsistent with the definition in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 shows different parameter types for 'Start_Voice' than specified in 3.2.1.",
+          "page_hint": "p. 2"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "Table 1 shows different parameter types for 'Start_Voice' than specified in 3.2.1.",
+        "evidence_location": "p. 2, 3.2.1"
+      },
+      {
+        "id": "reviewer_1_cbr_0f2934a1",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Confirm_Voice': The signal sequence is incorrect in the MSC.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not follow the expected sequence for 'Confirm_Voice'.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm_Voice",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The MSC in 3.4.1 does not follow the expected sequence for 'Confirm_Voice'.",
+        "evidence_location": "p. 9, 3.4.1"
+      }
+    ],
+    "notes": "Checklist basis: project-provided checklist (7 items). Checked CL1-CL7. CL1: 2 defects found. CL4: 1 defect found. CL6: 2 defects found.",
+    "timestamp": "2026-06-11T22:30:01.254301",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_2_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_2_cbr_159a518b",
+        "position": "3.2.1",
+        "page_hint": "p. 2",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a reject signal for orders (p. 2)",
+          "page_hint": "p. 2"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a reject signal for orders (p. 2)",
+        "evidence_location": "p. 2, 3.2.1"
+      },
+      {
+        "id": "reviewer_2_cbr_ffdfe1cc",
+        "position": "3.2.1",
+        "page_hint": "p. 2",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Cancel_Order': A signal is missing for canceling orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a cancel signal for orders (p. 2)",
+          "page_hint": "p. 2"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Cancel_Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a cancel signal for orders (p. 2)",
+        "evidence_location": "p. 2, 3.2.1"
+      },
+      {
+        "id": "reviewer_2_cbr_07141087",
+        "position": "Table 1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 shows 'Order' with incorrect parameter types (p. 6)",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 shows 'Order' with incorrect parameter types (p. 6)",
+        "evidence_location": "p. 6, Table 1"
+      },
+      {
+        "id": "reviewer_2_cbr_04b2bcc3",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': A corresponding reject signal is missing for the order acknowledgment.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject path for 'Ack' (p. 9)",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "The MSC in 3.4.1 should include a reject path for 'Ack' (p. 9).",
+        "observed": "The MSC in 3.4.1 does not include a reject path for 'Ack' (p. 9)",
+        "evidence_location": "p. 9, 3.4.1"
+      },
+      {
+        "id": "reviewer_2_cbr_f93e70e5",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal is missing in the MSC for order handling.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include 'Order' signal (p. 9)",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "The MSC in 3.4.1 should include 'Order' signal (p. 9).",
+        "observed": "The MSC in 3.4.1 does not include 'Order' signal (p. 9)",
+        "evidence_location": "p. 9, 3.4.1"
+      }
+    ],
+    "notes": "Checklist basis: project-provided checklist (7 items). Checked CL1-CL3.",
+    "timestamp": "2026-06-11T22:30:23.698729",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_3_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_3_cbr_de5e28b0",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The MSC in 4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_cbr_34ee3e35",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 specifies 'Order' with parameters, but the MSC does not match this.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 specifies 'Order' with parameters, but the MSC does not match this.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_cbr_a8ba728f",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Start_Voice': A corresponding acknowledgment signal is missing.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not define an ACK signal for 'Start_Voice'.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not define an ACK signal for 'Start_Voice'.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_cbr_5c6bed11",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Stop_Voice': A corresponding acknowledgment signal is missing.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not define an ACK signal for 'Stop_Voice'.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Stop_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not define an ACK signal for 'Stop_Voice'.",
+        "evidence_location": "p. 3, 3.2.2"
+      }
+    ],
+    "notes": "Checklist basis: project-provided checklist (7 items). Checked CL1-CL4.",
+    "timestamp": "2026-06-11T22:30:35.472931",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_4_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_4_cbr_ab24573b",
+        "position": "3.3.1",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Allocate_car': A corresponding acknowledgment signal is missing.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Allocate_car' does not have a defined ACK signal in the documentation (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Allocate_car",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Allocate_car' does not have a defined ACK signal in the documentation (p. 4).",
+        "evidence_location": "p. 4, 3.3.1"
+      },
+      {
+        "id": "reviewer_4_cbr_84ad74f4",
+        "position": "3.3.1",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Allocate_car': A corresponding reject signal is missing.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Allocate_car' lacks a defined reject signal in the documentation (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Allocate_car",
+        "expected": "The signal 'Allocate_car' has a defined reject signal in the documentation (p. 4).",
+        "observed": "The signal 'Allocate_car' lacks a defined reject signal in the documentation (p. 4).",
+        "evidence_location": "p. 4, 3.3.1"
+      },
+      {
+        "id": "reviewer_4_cbr_99163de8",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not include a reject signal for the order flow (p. 9).",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "The MSC in 4.1 should include a reject signal for the order flow (p. 9).",
+        "observed": "The MSC in 4.1 does not include a reject signal for the order flow (p. 9).",
+        "evidence_location": "p. 9, 4.1"
+      }
+    ],
+    "notes": "Checklist basis: project-provided checklist (7 items). Checked CL1-CL4.",
+    "timestamp": "2026-06-11T22:30:43.767669",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_5_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_5_cbr_6741f963",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'OrderOper': A corresponding acknowledgment signal is missing for the order submission.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'OrderOper' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "OrderOper",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'OrderOper' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_88455cc9",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Allocate_car': A corresponding acknowledgment signal is missing for the car allocation.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Allocate_car' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Allocate_car",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Allocate_car' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_2110bd53",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'AlarmReset': A corresponding acknowledgment signal is missing for resetting the alarm.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'AlarmReset' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "AlarmReset",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'AlarmReset' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_f3fc361e",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Start_Voice': A corresponding acknowledgment signal is missing for initiating voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Start_Voice' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Start_Voice' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_b4865c87",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Terminate_Voice': A corresponding acknowledgment signal is missing for terminating voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Terminate_Voice' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Terminate_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Terminate_Voice' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_72aea20b",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Send_Voice': A corresponding acknowledgment signal is missing for sending voice messages.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Send_Voice' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Send_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Send_Voice' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_f2b906cf",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Stop_Voice': A corresponding acknowledgment signal is missing for stopping voice messages.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Stop_Voice' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Stop_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Stop_Voice' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_dc13bfca",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Get_Order': A corresponding acknowledgment signal is missing for retrieving orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Get_Order' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Get_Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Get_Order' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_cbr_b8cfbead",
+        "position": "3.3.2",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Text_Message': A corresponding acknowledgment signal is missing for sending text messages.",
+        "evidence": {
+          "quote_or_paraphrase": "The signal 'Text_Message' does not have a corresponding ACK signal defined (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Text_Message",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The signal 'Text_Message' does not have a corresponding ACK signal defined (p. 4).",
+        "evidence_location": "p. 4, 3.3.2"
+      }
+    ],
+    "notes": "Checked CL4 for acknowledgment completeness in section 3.3.2. Found multiple missing acknowledgment signals.",
+    "timestamp": "2026-06-11T22:31:23.725757",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_6_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_6_cbr_80574443",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "missing_acknowledgment",
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The MSC in 3.4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 9, 3.4.1"
+      },
+      {
+        "id": "reviewer_6_cbr_379ecabc",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Cancel': A signal is missing for cancelling orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a cancel signal for the order flow.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "missing_acknowledgment",
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Cancel",
+        "expected": "The MSC in 3.4.1 should include a cancel signal for the order flow.",
+        "observed": "The MSC in 3.4.1 does not include a cancel signal for the order flow.",
+        "evidence_location": "p. 9, 3.4.1"
+      },
+      {
+        "id": "reviewer_6_cbr_122f579e",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 does not match the parameter types used in the MSC for 'Order'.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 does not match the parameter types used in the MSC for 'Order'.",
+        "evidence_location": "p. 9, 3.4.1"
+      },
+      {
+        "id": "reviewer_6_cbr_ffbe1bd6",
+        "position": "3.4.1",
+        "page_hint": "p. 9",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Confirm': The signal sequence is incorrect in the MSC.",
+        "evidence": {
+          "quote_or_paraphrase": "The order confirmation sequence in the MSC does not follow the expected flow.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The order confirmation sequence in the MSC does not follow the expected flow.",
+        "evidence_location": "p. 9, 3.4.1"
+      }
+    ],
+    "notes": "Checked CL1, CL4, CL5. Found missing signals and wrong sequencing in the MSC.",
+    "timestamp": "2026-06-11T22:31:33.141726",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_7_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_7_cbr_18e9229d",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Reject': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not include a reject signal for the order flow.",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "needs_clarification",
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Reject",
+        "expected": "The MSC in 4.2 should include a reject signal for the order flow.",
+        "observed": "The MSC in 4.2 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 5, 3.4.2"
+      },
+      {
+        "id": "reviewer_7_cbr_2fbb666b",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': Acknowledge signal is missing for the 'Order' request.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not show an acknowledgment for the order.",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.2 does not show an acknowledgment for the order.",
+        "evidence_location": "p. 5, 3.4.2"
+      },
+      {
+        "id": "reviewer_7_cbr_8cac6d7c",
+        "position": "Table 1",
+        "page_hint": "p. 6",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 specifies 'Order' with incorrect parameter types compared to the definition in 3.1.",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "Table 1 specifies 'Order' with incorrect parameter types compared to the definition in 3.1.",
+        "evidence_location": "p. 6, Table 1"
+      },
+      {
+        "id": "reviewer_7_cbr_8f5e7e4a",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Confirm_Voice': The signal sequence is incorrect in the MSC.",
+        "evidence": {
+          "quote_or_paraphrase": "The sequence of 'Confirm_Voice' is not aligned with the expected order in the MSC.",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm_Voice",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The sequence of 'Confirm_Voice' is not aligned with the expected order in the MSC.",
+        "evidence_location": "p. 5, 3.4.2"
+      }
+    ],
+    "notes": "Checked CL4-CL6. Found defects related to missing acknowledgment signals and parameter type mismatches.",
+    "timestamp": "2026-06-11T22:31:41.841539",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_8_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_8_cbr_45e12546",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "needs_clarification",
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "The MSC in 4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 9, 4.1"
+      },
+      {
+        "id": "reviewer_8_cbr_b01b01e0",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "W",
+        "description": "'Ack': The signal sequence is incorrect in the MSC.",
+        "evidence": {
+          "quote_or_paraphrase": "The Ack signal appears before the Confirm signal in the MSC.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The Ack signal appears before the Confirm signal in the MSC.",
+        "evidence_location": "p. 9, 4.1"
+      },
+      {
+        "id": "reviewer_8_cbr_6e3b9340",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "B",
+        "fault_type": "M",
+        "description": "'Stop_Voice': A timeout specification is missing for the voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not specify a timeout for voice communication.",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Stop_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.2 does not specify a timeout for voice communication.",
+        "evidence_location": "p. 10, 4.2"
+      }
+    ],
+    "notes": "Checked CL5 and CL6. CL5: 1 defect found. CL6: 1 defect found.",
+    "timestamp": "2026-06-11T22:31:49.012917",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_9_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_9_cbr_1e477e6b",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Start_Voice': A corresponding reject signal is missing.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a reject signal for 'Start_Voice' (p. 10).",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_9_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a reject signal for 'Start_Voice' (p. 10).",
+        "evidence_location": "p. 10, 4.2"
+      },
+      {
+        "id": "reviewer_9_cbr_ca0f25c5",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Voice_Msg': Missing timeout specification for voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "Timeout handling for 'Voice_Msg' is not defined in the design (p. 10).",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_9_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Voice_Msg",
+        "expected": "Timeout handling for 'Voice_Msg' is defined in the design (p. 10).",
+        "observed": "Timeout handling for 'Voice_Msg' is not defined in the design (p. 10).",
+        "evidence_location": "p. 10, 4.2"
+      },
+      {
+        "id": "reviewer_9_cbr_1cc890c4",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Confirm_Voice': The signal sequence is incorrect in the MSC.",
+        "evidence": {
+          "quote_or_paraphrase": "'Confirm_Voice' appears before 'Start_Voice' in the MSC (p. 10).",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_9_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm_Voice",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "'Confirm_Voice' appears before 'Start_Voice' in the MSC (p. 10).",
+        "evidence_location": "p. 10, 4.2"
+      }
+    ],
+    "notes": "Checked CL5 and CL7. Found 2 missing signals and 1 sequence error.",
+    "timestamp": "2026-06-11T22:31:57.827121",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_10_cbr",
+    "role": "reviewer",
+    "technique": "CBR",
+    "defects": [
+      {
+        "id": "reviewer_10_cbr_76c1522f",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Reject': A signal is missing for rejecting orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not include 'Order_Reject' for order handling (p. 9)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Reject",
+        "expected": "The MSC in 4.1 should include 'Order_Reject' for order handling (p. 9).",
+        "observed": "The MSC in 4.1 does not include 'Order_Reject' for order handling (p. 9)",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_cbr_91acf6c5",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': A signal is missing for acknowledging orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not show 'Ack' after order confirmation (p. 9)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.1 does not show 'Ack' after order confirmation (p. 9)",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_cbr_bb02f40e",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Confirm': A signal is missing for confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not include 'Confirm' after order submission (p. 9)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm",
+        "expected": "The MSC in 4.1 should include 'Confirm' after order submission (p. 9).",
+        "observed": "The MSC in 4.1 does not include 'Confirm' after order submission (p. 9)",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_cbr_46912215",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Start_Voice': A signal is missing for initiating voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not show 'Start_Voice' for voice initiation (p. 10)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.2 does not show 'Start_Voice' for voice initiation (p. 10)",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_cbr_f0ee962f",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Terminate_Voice': A signal is missing for terminating voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not include 'Terminate_Voice' for ending voice calls (p. 10)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Terminate_Voice",
+        "expected": "The MSC in 4.2 should include 'Terminate_Voice' for ending voice calls (p. 10).",
+        "observed": "The MSC in 4.2 does not include 'Terminate_Voice' for ending voice calls (p. 10)",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_cbr_64eabb90",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Voice_msg': A signal is missing for sending voice messages.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not show 'Voice_msg' for voice data transmission (p. 10)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Voice_msg",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.2 does not show 'Voice_msg' for voice data transmission (p. 10)",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_cbr_b814a0ad",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Text_Message': A signal is missing for sending text messages.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not include 'Text_Message' for text communication (p. 10)",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_cbr",
+        "technique": "CBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Text_Message",
+        "expected": "The MSC in 4.2 should include 'Text_Message' for text communication (p. 10).",
+        "observed": "The MSC in 4.2 does not include 'Text_Message' for text communication (p. 10)",
+        "evidence_location": "p. 7, Table 1"
+      }
+    ],
+    "notes": "Checked CL1-CL7. CL1: 7 defects found related to missing signals in MSC.",
+    "timestamp": "2026-06-11T22:32:25.263229",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  }
+]

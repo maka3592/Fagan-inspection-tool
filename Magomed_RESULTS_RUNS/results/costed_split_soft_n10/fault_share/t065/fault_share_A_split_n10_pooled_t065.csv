@@ -1,0 +1,14 @@
+gold_id,gold_position,gold_risk,gold_description,share_UBR,share_CBR,count_UBR,denom_UBR,count_CBR,denom_CBR
+4,"3.2.1, 3.4.2",A,"Soon Available. The functionality for ""Soon available"" is missing. This is used in requirement 3.1.8.",0.0000,0.0000,0,200,0,200
+5,"3.1, 3.3.1",A,Prioritise orders. It is not possible to prioritise and order. Requirement 3.2.3.,0.0000,0.0000,0,200,0,200
+6,"3.3.1, 3.3.2",A,"Estimated time. The information about ""Estimated time"" to be available  in the signal ""confirm"". The operator shoudl be able to estimate the time when a taxi will arrive to a customer. Requirement 3.2.3. ",0.0000,0.0000,0,200,0,200
+8,"3.2.1, 3.4.2, Table 1",A,"Cancel order. The signal ""Cancel_Order"" is missing. Requirement 3.2.4 is not fullfilled. No message to the operator. (4.1  in  STLDD). Manuel dispatch and cancel order. ",0.0200,0.0750,4,200,15,200
+14,"3.2.2,  3.3.1,  3.4.1, 4.1, Table 1",A,Confirm Order. A ??taxi driver/operator?? cannot confirm an order. This fault is present on many places.,0.0000,0.0000,0,200,0,200
+15,"3.2.1., 3.2.2, 3.4.2",A,Bill. There is no signal to send the price to a taxi driver. It is also not possible to print out receipt. ,0.0000,0.0000,0,200,0,200
+17,"3.3.1, 3.3.2",A,Log in. The operator cannot log in to the system and does not get a message when/if he/she has been logged in. ,0.0000,0.0000,0,200,0,200
+20,"3.4.2,  4.1, Table 1",A,"Available is missig. The signal ""Available"" is missing, The cars do not tell the central when it is available after drivinga custoimer. The car should have send available.",0.0000,0.0000,0,200,0,200
+22,3.4.2,A,"Taximeter signals. The signals ""meter_on"" och ""meter_off"" are missing between the taxt module and the central. The central should know when the taximeter is on and off.",0.0000,0.0000,0,200,0,200
+23,3.2.1,A,"Start alarm is missing. The signal ""start alarm"" is missiing.",0.0000,0.0000,0,200,0,200
+26,"3.3.2, 3.4.2",A,Indicate alarm. A signal to indicate an alarm is missing from the central to the operator. An alarm  signal between taxi and central is also missing.,0.0000,0.0000,0,200,0,200
+30,"3.2.2, 3.4.1 ",A,Reject Orders. A signal is missing for not confirming orders. ,0.0000,0.0000,0,200,0,200
+36,3.4.1,A,ZoneInfo. A signal to send zone info is missing in section 3.4.1. ,0.0000,0.0000,0,200,0,200

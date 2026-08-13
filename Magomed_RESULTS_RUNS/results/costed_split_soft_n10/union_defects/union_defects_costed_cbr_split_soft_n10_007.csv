@@ -1,0 +1,45 @@
+run_id,defect_id,reviewer_count,reviewer_ids,representative_fault_type,representative_position,representative_page_hint,representative_description
+costed_cbr_split_soft_n10_007,h:5d89eb31e049214f,2,reviewer_2_cbr;reviewer_3_cbr,M,3.2.1,p. 2,'Reject_Order': A signal is missing for not confirming orders.
+costed_cbr_split_soft_n10_007,h:88b6904f05a00bcc,2,reviewer_1_cbr;reviewer_6_cbr,M,3.4.1,p. 9,'Reject_Order': A signal is missing for not confirming orders.
+costed_cbr_split_soft_n10_007,h:00fe1fe3ef384133,1,reviewer_2_cbr,W,3.2.1,p. 2,'Order': The parameter type for 'Order_struct' is inconsistent with its definition.
+costed_cbr_split_soft_n10_007,h:033a81d18df1202a,1,reviewer_8_cbr,M,4.1,p. 9,'Reject_Order': A signal is missing for not confirming orders.
+costed_cbr_split_soft_n10_007,h:08dfca420042cdaf,1,reviewer_3_cbr,M,3.2.2,p. 3,'Meter_On': Missing acknowledgment signal for starting the meter.
+costed_cbr_split_soft_n10_007,h:0c2e708d20c99dd1,1,reviewer_6_cbr,W,3.4.1,p. 9,'Order': The signal sequence is incorrect in the MSC.
+costed_cbr_split_soft_n10_007,h:0f267bc3261cbc04,1,reviewer_5_cbr,M,3.3.2,p. 4,'Terminate_Voice': A corresponding acknowledgment signal is missing for terminating voice communication.
+costed_cbr_split_soft_n10_007,h:13c4d62c3418e30c,1,reviewer_3_cbr,M,3.2.2,p. 3,'Order': The signal has wrong parameter types in Table 1.
+costed_cbr_split_soft_n10_007,h:140d2a8d23dbb2bd,1,reviewer_8_cbr,M,4.1,p. 9,'Order': A timeout specification is missing for the order handling.
+costed_cbr_split_soft_n10_007,h:15c0f9bb4933119a,1,reviewer_9_cbr,W,4.2,p. 10,'Terminate_Voice': The signal sequence is incorrect in the MSC.
+costed_cbr_split_soft_n10_007,h:15f0e84b612a30c3,1,reviewer_7_cbr,W,Table 1,p. 6,'Order': The signal has wrong parameter types in Table 1.
+costed_cbr_split_soft_n10_007,h:1bbc34414f09559f,1,reviewer_1_cbr,W,3.2.1,p. 2,'Start_Voice': The signal direction is inconsistent with the MSC.
+costed_cbr_split_soft_n10_007,h:201c09b28a2d2912,1,reviewer_8_cbr,W,Table 1,p. 6,'Order': The signal parameters in Table 1 do not match the MSC usage.
+costed_cbr_split_soft_n10_007,h:2bae376245e46ed6,1,reviewer_7_cbr,W,3.4.2,p. 5,'Ack': The signal is not acknowledged in the corresponding MSC.
+costed_cbr_split_soft_n10_007,h:332502036e1f073a,1,reviewer_9_cbr,M,4.2,p. 10,'Start_Voice': A corresponding reject signal is missing for this request signal.
+costed_cbr_split_soft_n10_007,h:33d1ed6c5c9e9edb,1,reviewer_10_cbr,M,Table 1,p. 7,'Start_Voice': A signal is missing for starting voice communication in the MSC.
+costed_cbr_split_soft_n10_007,h:34dff2a126fc14d4,1,reviewer_8_cbr,W,4.2,p. 10,'Start_Voice': The signal sequence is incorrect in the MSC.
+costed_cbr_split_soft_n10_007,h:396c0ec4985c4275,1,reviewer_5_cbr,M,3.3.2,p. 4,'Allocate_car': A corresponding acknowledgment signal is missing for the car allocation.
+costed_cbr_split_soft_n10_007,h:42b65e12a6fc0c63,1,reviewer_5_cbr,M,3.3.2,p. 4,'AlarmReset': A corresponding acknowledgment signal is missing for resetting the alarm.
+costed_cbr_split_soft_n10_007,h:5222d34ef4d6bd0c,1,reviewer_6_cbr,M,3.4.1,p. 9,'Order_Cancel': A signal is missing for cancelling orders.
+costed_cbr_split_soft_n10_007,h:544bedd358061054,1,reviewer_1_cbr,M,3.4.1,p. 9,'Order': A signal is missing for confirming orders from the central to the taxi.
+costed_cbr_split_soft_n10_007,h:5759469c4280c6b4,1,reviewer_2_cbr,M,3.2.1,p. 2,'Order_Cancel': A signal is missing for cancelling accepted orders.
+costed_cbr_split_soft_n10_007,h:67f79a4ff2186fbf,1,reviewer_10_cbr,M,Table 1,p. 7,'Order_Reject': A signal is missing for rejecting orders in the MSC.
+costed_cbr_split_soft_n10_007,h:6b519dcaa70953c3,1,reviewer_4_cbr,M,3.3.1,p. 4,'Allocate_car': A corresponding acknowledgment signal is missing.
+costed_cbr_split_soft_n10_007,h:6b79be33970689d1,1,reviewer_5_cbr,M,3.3.2,p. 4,'Get_Order': A corresponding acknowledgment signal is missing for retrieving orders.
+costed_cbr_split_soft_n10_007,h:718c6bd700c198e4,1,reviewer_7_cbr,W,3.4.2,p. 5,'Confirm_Voice': The signal sequence is incorrect in the MSC.
+costed_cbr_split_soft_n10_007,h:73efc9648a6da4c6,1,reviewer_5_cbr,M,3.3.2,p. 4,'Send_Voice': A corresponding acknowledgment signal is missing for sending voice messages.
+costed_cbr_split_soft_n10_007,h:74083402436227f1,1,reviewer_6_cbr,M,3.4.1,p. 9,'Ack': A corresponding acknowledgment signal is missing for the order.
+costed_cbr_split_soft_n10_007,h:749c73c62f491add,1,reviewer_5_cbr,M,3.3.2,p. 4,'Start_Voice': A corresponding acknowledgment signal is missing for initiating voice communication.
+costed_cbr_split_soft_n10_007,h:7eeb0070b4660d67,1,reviewer_1_cbr,M,3.2.1,p. 2,'Order': The signal has wrong parameter types in Table 1.
+costed_cbr_split_soft_n10_007,h:80970b0e9a9cccc0,1,reviewer_4_cbr,M,4.1,p. 9,'Order': The signal is missing a corresponding reject path in the MSC.
+costed_cbr_split_soft_n10_007,h:8f55142858dd4201,1,reviewer_5_cbr,M,3.3.2,p. 4,'OrderOper': A corresponding acknowledgment signal is missing for the order submission.
+costed_cbr_split_soft_n10_007,h:9fece28ef063515f,1,reviewer_3_cbr,M,3.2.2,p. 3,'Order': A signal is missing for confirming orders in the user-side signals.
+costed_cbr_split_soft_n10_007,h:a1b83313bc9c2436,1,reviewer_10_cbr,M,Table 1,p. 7,'Confirm_Voice': A signal is missing for confirming voice communication in the MSC.
+costed_cbr_split_soft_n10_007,h:a47498709b60ec76,1,reviewer_5_cbr,M,3.3.2,p. 4,'Text_Message': A corresponding acknowledgment signal is missing for sending text messages.
+costed_cbr_split_soft_n10_007,h:bceacba79deb8159,1,reviewer_10_cbr,M,Table 1,p. 7,'Ack': A signal is missing for acknowledging orders in the MSC.
+costed_cbr_split_soft_n10_007,h:d56f3a74eebcb04c,1,reviewer_9_cbr,M,4.2,p. 10,'Voice_Msg': Missing timeout specification for the voice communication.
+costed_cbr_split_soft_n10_007,h:e8f2f17043f71192,1,reviewer_1_cbr,W,3.2.1,p. 2,'Ack': The signal is not consistently defined across sections.
+costed_cbr_split_soft_n10_007,h:eaae77abd38525b0,1,reviewer_2_cbr,W,3.2.1,p. 2,'Order': The signal has wrong parameter types in Table 1.
+costed_cbr_split_soft_n10_007,h:ebf44a2e99a23a7f,1,reviewer_3_cbr,M,3.2.2,p. 3,'LoginSignal': Missing acknowledgment signal for login confirmation.
+costed_cbr_split_soft_n10_007,h:ec9eab507478ac26,1,reviewer_5_cbr,M,3.3.2,p. 4,'Stop_Voice': A corresponding acknowledgment signal is missing for stopping voice messages.
+costed_cbr_split_soft_n10_007,h:ee6333fe18efd6db,1,reviewer_4_cbr,M,3.3.1,p. 4,'OrderOper': A reject signal is missing for order handling.
+costed_cbr_split_soft_n10_007,h:f0246e33aab9a17a,1,reviewer_7_cbr,M,3.4.2,p. 5,'Order_Reject': A signal is missing for rejecting orders.
+costed_cbr_split_soft_n10_007,h:fb58514439f13ab3,1,reviewer_10_cbr,M,Table 1,p. 7,'Order': A signal is incorrectly defined in Table 1 with missing parameters.

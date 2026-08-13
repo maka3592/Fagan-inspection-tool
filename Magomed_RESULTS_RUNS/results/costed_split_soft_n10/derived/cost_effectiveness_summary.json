@@ -1,0 +1,160 @@
+{
+  "currency": "USD",
+  "basis": "list-price-based estimate on real token usage; not billing charges",
+  "total_api_cost_ubr_cbr_usd": 1.465276,
+  "api_cost_by_technique_usd": {
+    "UBR": 0.740605,
+    "CBR": 0.724671,
+    "PBR": 0.639742
+  },
+  "total_tokens": 8516222,
+  "input_tokens": 8098793,
+  "output_tokens": 417429,
+  "cached_tokens": "not available in usage logs",
+  "rows": [
+    {
+      "scope": "UBR_union_CBR",
+      "threshold": "0.65",
+      "role": "main",
+      "api_cost_usd": 1.465276,
+      "confirmed_count": 3,
+      "confirmed_ids": "8 28 31",
+      "cost_per_confirmed_usd": 0.488425,
+      "confirmed_A": 1,
+      "confirmed_B": 1,
+      "confirmed_C": 1,
+      "confirmed_A_plus_B": 2,
+      "cost_per_confirmed_A_critical_usd": 1.465276,
+      "cost_per_confirmed_A_plus_B_usd": 0.732638
+    },
+    {
+      "scope": "UBR",
+      "threshold": "0.65",
+      "role": "main",
+      "api_cost_usd": 0.740605,
+      "confirmed_count": 3,
+      "confirmed_ids": "8 28 31",
+      "cost_per_confirmed_usd": 0.246868,
+      "confirmed_A": 1,
+      "confirmed_B": 1,
+      "confirmed_C": 1,
+      "confirmed_A_plus_B": 2,
+      "cost_per_confirmed_A_critical_usd": 0.740605,
+      "cost_per_confirmed_A_plus_B_usd": 0.370302
+    },
+    {
+      "scope": "CBR",
+      "threshold": "0.65",
+      "role": "main",
+      "api_cost_usd": 0.724671,
+      "confirmed_count": 2,
+      "confirmed_ids": "8 31",
+      "cost_per_confirmed_usd": 0.362335,
+      "confirmed_A": 1,
+      "confirmed_B": 1,
+      "confirmed_C": 0,
+      "confirmed_A_plus_B": 2,
+      "cost_per_confirmed_A_critical_usd": 0.724671,
+      "cost_per_confirmed_A_plus_B_usd": 0.362335
+    },
+    {
+      "scope": "UBR_union_CBR_union_PBR",
+      "threshold": "0.65",
+      "role": "main",
+      "api_cost_usd": 2.105018,
+      "confirmed_count": 3,
+      "confirmed_ids": "8 28 31",
+      "cost_per_confirmed_usd": 0.701673,
+      "confirmed_A": 1,
+      "confirmed_B": 1,
+      "confirmed_C": 1,
+      "confirmed_A_plus_B": 2,
+      "cost_per_confirmed_A_critical_usd": 2.105018,
+      "cost_per_confirmed_A_plus_B_usd": 1.052509
+    },
+    {
+      "scope": "UBR_union_CBR",
+      "threshold": "0.60",
+      "role": "sensitivity",
+      "api_cost_usd": 1.465276,
+      "confirmed_count": 5,
+      "confirmed_ids": "8 25 27 28 31",
+      "cost_per_confirmed_usd": 0.293055,
+      "confirmed_A": 1,
+      "confirmed_B": 2,
+      "confirmed_C": 2,
+      "confirmed_A_plus_B": 3,
+      "cost_per_confirmed_A_critical_usd": 1.465276,
+      "cost_per_confirmed_A_plus_B_usd": 0.488425
+    },
+    {
+      "scope": "UBR",
+      "threshold": "0.60",
+      "role": "sensitivity",
+      "api_cost_usd": 0.740605,
+      "confirmed_count": 5,
+      "confirmed_ids": "8 25 27 28 31",
+      "cost_per_confirmed_usd": 0.148121,
+      "confirmed_A": 1,
+      "confirmed_B": 2,
+      "confirmed_C": 2,
+      "confirmed_A_plus_B": 3,
+      "cost_per_confirmed_A_critical_usd": 0.740605,
+      "cost_per_confirmed_A_plus_B_usd": 0.246868
+    },
+    {
+      "scope": "CBR",
+      "threshold": "0.60",
+      "role": "sensitivity",
+      "api_cost_usd": 0.724671,
+      "confirmed_count": 3,
+      "confirmed_ids": "8 28 31",
+      "cost_per_confirmed_usd": 0.241557,
+      "confirmed_A": 1,
+      "confirmed_B": 1,
+      "confirmed_C": 1,
+      "confirmed_A_plus_B": 2,
+      "cost_per_confirmed_A_critical_usd": 0.724671,
+      "cost_per_confirmed_A_plus_B_usd": 0.362335
+    },
+    {
+      "scope": "UBR_union_CBR_union_PBR",
+      "threshold": "0.60",
+      "role": "sensitivity",
+      "api_cost_usd": 2.105018,
+      "confirmed_count": 5,
+      "confirmed_ids": "8 25 27 28 31",
+      "cost_per_confirmed_usd": 0.421004,
+      "confirmed_A": 1,
+      "confirmed_B": 2,
+      "confirmed_C": 2,
+      "confirmed_A_plus_B": 3,
+      "cost_per_confirmed_A_critical_usd": 2.105018,
+      "cost_per_confirmed_A_plus_B_usd": 0.701673
+    }
+  ],
+  "personnel_cost_scenario_note": "Scenario only; no controlled human inspection time was measured. NO defects-per-hour metric. Not a measured human-vs-LLM comparison.",
+  "personnel_cost_scenarios_eur": [
+    {
+      "scenario": "low",
+      "staff_hours_per_defect": 0.8,
+      "labour_cost_eur_per_hour": 43.4,
+      "personnel_cost_eur_per_defect": 34.72,
+      "source_basis": "Applicon-style lower bound / major problem found and fixed"
+    },
+    {
+      "scenario": "medium",
+      "staff_hours_per_defect": 1.58,
+      "labour_cost_eur_per_hour": 43.4,
+      "personnel_cost_eur_per_defect": 68.57,
+      "source_basis": "ICL design-defect effort"
+    },
+    {
+      "scenario": "high",
+      "staff_hours_per_defect": 2.7,
+      "labour_cost_eur_per_hour": 43.4,
+      "personnel_cost_eur_per_defect": 117.18,
+      "source_basis": "Lockheed found-and-fixed upper scenario"
+    }
+  ]
+}

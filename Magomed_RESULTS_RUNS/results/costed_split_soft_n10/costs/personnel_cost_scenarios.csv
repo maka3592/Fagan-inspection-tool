@@ -1,0 +1,4 @@
+scenario,staff_hours_per_defect,labour_cost_eur_per_hour,personnel_cost_eur_per_defect,source_basis
+low,0.8,43.4,34.72,Applicon-style lower bound / major problem found and fixed
+medium,1.58,43.4,68.57,ICL design-defect effort
+high,2.7,43.4,117.18,Lockheed found-and-fixed upper scenario

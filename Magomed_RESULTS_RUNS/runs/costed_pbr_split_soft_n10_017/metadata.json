@@ -1,0 +1,112 @@
+{
+  "inspection_id": "costed_pbr_split_soft_n10_017",
+  "condition": "C3_PBR_TEAM",
+  "timestamp": "2026-06-14T19:48:58.127739",
+  "llm_params": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "temperature": 0.2,
+    "max_tokens": 4096,
+    "top_p": null,
+    "extra": {}
+  },
+  "artifacts_used": [
+    {
+      "name": "Taxi_des_exp_v2.pdf",
+      "path": "design/Taxi_des_exp_v2.pdf",
+      "type": "design",
+      "page_count": 11,
+      "size_bytes": 73350
+    },
+    {
+      "name": "TextReqSpec_v3.6.pdf",
+      "path": "requirements/TextReqSpec_v3.6.pdf",
+      "type": "requirements",
+      "page_count": 14,
+      "size_bytes": 119869
+    },
+    {
+      "name": "UseCasesRank_v3.4.pdf",
+      "path": "usecases/UseCasesRank_v3.4.pdf",
+      "type": "usecase",
+      "page_count": 8,
+      "size_bytes": 54560
+    }
+  ],
+  "prompt_versions": {
+    "reviewer_pbr_tester": "v1.0",
+    "reviewer_pbr_user": "v1.0",
+    "reviewer_pbr_designer": "v1.0",
+    "scribe_meeting": "v1.0",
+    "moderator_planning": "v1.0",
+    "moderator_followup": "v1.0"
+  },
+  "phase_completed": [
+    "planning",
+    "kickoff",
+    "preparation",
+    "individual_inspection",
+    "inspection_meeting",
+    "rework",
+    "followup"
+  ],
+  "logs_complete": null,
+  "evidence_quality": null,
+  "incomplete_defects_count": null,
+  "ubr_variant": null,
+  "ubr_use_case_source": null,
+  "ubr_use_case_count": null,
+  "ubr_time_budgets": null,
+  "ubr_tc_budgets_detected": null,
+  "reviewer_artifacts_assigned": {
+    "reviewer_1_pbr_tester": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_2_pbr_tester": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_3_pbr_tester": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_4_pbr_tester": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_5_pbr_user": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_6_pbr_user": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_7_pbr_user": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf"
+    ],
+    "reviewer_8_pbr_designer": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf"
+    ],
+    "reviewer_9_pbr_designer": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf"
+    ],
+    "reviewer_10_pbr_designer": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf"
+    ]
+  },
+  "defect_schema_version": "1.1.0",
+  "gold_guard_verified": true
+}

@@ -1,0 +1,483 @@
+[
+  {
+    "id": "meeting_0b6f5b5e",
+    "position": "3.3.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Get_Order': Missing acknowledgment signal for order retrieval.",
+    "evidence": {
+      "quote_or_paraphrase": "There is no acknowledgment signal defined for 'Get_Order' in the design (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_4_ubr_3012b3a8"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 5, 3.3.1"
+  },
+  {
+    "id": "meeting_9dca0c37",
+    "position": "3.2.1",
+    "page_hint": "p. 3",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order_struct': The definition of 'Address' is inconsistent with the expected type.",
+    "evidence": {
+      "quote_or_paraphrase": "'Address' is defined as an integer, which is inconsistent with its expected usage as a string (p. 3).",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_2_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_2_ubr_3db05ec9"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order_struct",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Address' is defined as an integer, which is inconsistent with its expected usage as a string (p. 3).",
+    "evidence_location": "p. 3, 3.2.1"
+  },
+  {
+    "id": "meeting_c07fdfc1",
+    "position": "3.4.2",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Ack': Missing acknowledgment signal for order acceptance.",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify an acknowledgment signal for 'Ack' (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_4_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_4_ubr_ecdaf949"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Ack",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify an acknowledgment signal for 'Ack' (p. 6).",
+    "evidence_location": "p. 6, 3.4.2"
+  },
+  {
+    "id": "meeting_2b088ba6",
+    "position": "Table 1",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "W",
+    "description": "'Order': The signal has wrong parameter types in Table 1.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 incorrectly omits the order number parameter for the 'Order' signal (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_7_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_7_ubr_eaee003c"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "Table 1 incorrectly omits the order number parameter for the 'Order' signal (p. 6).",
+    "evidence_location": "p. 6, Table 1"
+  },
+  {
+    "id": "meeting_34cda9f6",
+    "position": "3.3.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Allocate_car': A signal is missing for confirming car allocation.",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify a confirmation signal for 'Allocate_car' (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_4_ubr_846ad05c"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 5, 3.3.1"
+  },
+  {
+    "id": "meeting_d5214f07",
+    "position": "3.4.1",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Start_Voice': Missing confirmation signal for voice communication initiation.",
+    "evidence": {
+      "quote_or_paraphrase": "There is no confirmation signal defined for 'Start_Voice' in the design (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_ubr_25bc09e0",
+      "reviewer_3_ubr_0108b77f",
+      "reviewer_3_ubr_0ca7c48e",
+      "reviewer_4_ubr_e6c93dc0",
+      "reviewer_4_ubr_64bff513",
+      "reviewer_6_ubr_7eb5f60e",
+      "reviewer_6_ubr_8ee88903",
+      "reviewer_7_ubr_2d487d64",
+      "reviewer_7_ubr_35ddd8e7",
+      "reviewer_7_ubr_3bc8d54c",
+      "reviewer_10_ubr_e2909f4a"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_1_ubr",
+      "reviewer_3_ubr",
+      "reviewer_4_ubr",
+      "reviewer_6_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 6, 3.4.1"
+  },
+  {
+    "id": "meeting_7e86fce1",
+    "position": "3.2.1",
+    "page_hint": "p. 3",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The signal definition is missing parameters for order number and dispatch time.",
+    "evidence": {
+      "quote_or_paraphrase": "The signal 'Order' in 3.2.1 does not include order number and dispatch time (p. 3).",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_2_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_2_ubr_e5eea9e5"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [
+      "3.2.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "The signal 'Order' in 3.2.1 should include order number and dispatch time (p. 3).",
+    "observed": "The signal 'Order' in 3.2.1 does not include order number and dispatch time (p. 3).",
+    "evidence_location": "p. 3, 3.2.1"
+  },
+  {
+    "id": "meeting_c751d4f5",
+    "position": "3.4.1",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Confirm': Missing acknowledgment for order confirmation.",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not include an acknowledgment signal for 'Confirm' (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_ubr_25bc09e0",
+      "reviewer_4_ubr_e6c93dc0",
+      "reviewer_4_ubr_64bff513",
+      "reviewer_6_ubr_7eb5f60e",
+      "reviewer_6_ubr_8ee88903",
+      "reviewer_6_ubr_57bf2741",
+      "reviewer_7_ubr_2d487d64",
+      "reviewer_7_ubr_35ddd8e7",
+      "reviewer_7_ubr_3bc8d54c",
+      "reviewer_10_ubr_e2909f4a"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_1_ubr",
+      "reviewer_4_ubr",
+      "reviewer_6_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 6, 3.4.1"
+  },
+  {
+    "id": "meeting_602012a3",
+    "position": "3.2.2",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The signal has wrong parameter types in Table 1.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 defines 'Order' with incorrect parameter types (p. 4).",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_3_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_3_ubr_c48d9887"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": "3.2.2",
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "Table 1 defines 'Order' with incorrect parameter types (p. 4).",
+    "evidence_location": "p. 4, 3.2.2"
+  },
+  {
+    "id": "meeting_915e93c5",
+    "position": "3.2.1",
+    "page_hint": "p. 3",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Order_struct': The parameter types for Order_struct are inconsistent with usage.",
+    "evidence": {
+      "quote_or_paraphrase": "The definition of Order_struct in 3.1 does not match its usage in 3.2.1.",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_10_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_10_ubr_5487f8c0"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [
+      "3.1",
+      "3.2.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order_struct",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "The definition of Order_struct in 3.1 does not match its usage in 3.2.1.",
+    "evidence_location": "p. 3, 3.2.1"
+  },
+  {
+    "id": "meeting_b971a433",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Order': The signal has wrong parameter types in Table 1.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 incorrectly defines the parameters for the 'Order' signal (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_1_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_1_ubr_337334aa"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": "3.4.1",
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "Table 1 incorrectly defines the parameters for the 'Order' signal (p. 5).",
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_fa056df3",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Confirm_Voice': The signal has inconsistent parameter order.",
+    "evidence": {
+      "quote_or_paraphrase": "The parameter order for 'Confirm_Voice' is inconsistent with the use case (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_3_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_3_ubr_0108b77f"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Confirm_Voice",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "The parameter order for 'Confirm_Voice' is inconsistent with the use case (p. 5).",
+    "evidence_location": "p. 5, 3.4.1"
+  }
+]

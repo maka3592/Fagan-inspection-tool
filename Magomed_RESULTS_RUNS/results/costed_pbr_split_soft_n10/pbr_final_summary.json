@@ -1,0 +1,60 @@
+{
+  "dataset": "costed_pbr_split_soft_n10",
+  "analysis_type": "supplementary",
+  "main_comparison_dataset": "costed_split_soft_n10",
+  "technique": "PBR",
+  "runs": 20,
+  "reviewers_per_run": 10,
+  "model": "gpt-4o-mini",
+  "temperature": 0.2,
+  "max_tokens": 4096,
+  "scope": "split-soft",
+  "automatic_thresholds": [
+    0.65,
+    0.6
+  ],
+  "automatic_ids_t065": [
+    8
+  ],
+  "automatic_ids_t060": [
+    7,
+    8,
+    9,
+    28,
+    32,
+    38
+  ],
+  "manual_confirmed_ids": [
+    8
+  ],
+  "manual_doubtful_ids": [
+    7,
+    28
+  ],
+  "manual_rejected_ids": [
+    9,
+    32,
+    38
+  ],
+  "existing_confirmed_ubr_cbr_t065": [
+    8,
+    28,
+    31
+  ],
+  "existing_confirmed_ubr_cbr_t060": [
+    8,
+    25,
+    27,
+    28,
+    31
+  ],
+  "new_confirmed_pbr_only_vs_ubr_cbr": [],
+  "adds_confirmed_coverage_vs_ubr_cbr": false,
+  "hybrid_evaluated": false,
+  "interpretation": "PBR was run as a supplementary analysis in the same instrumented setup as UBR/CBR and manually validated. It produced no additional confirmed gold IDs beyond the already-confirmed UBR/CBR set (ID 8 is already confirmed there); PBR shows no demonstrated added benefit for a technique combination in this setup. This does not imply PBR is generally ineffective; no hybrid technique was evaluated.",
+  "source_docs": [
+    "docs/PBR_SUPPLEMENTARY_ANALYSIS_RESULTS.md",
+    "docs/PBR_SUPPLEMENTARY_MANUAL_VALIDATION_SUMMARY.md",
+    "docs/PBR_MANUAL_VALIDATION_CANDIDATES.md"
+  ]
+}

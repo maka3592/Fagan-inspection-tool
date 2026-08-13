@@ -1,0 +1,3 @@
+technique,n_reviewers,n_runs,union_unique_mean,union_unique_median,union_unique_min,union_unique_max,duplicate_ratio_mean,top_defect_ids
+CBR,10,20,46.60,46.00,43,52,0.0000,h:5d89eb31e049214f:32;h:88b6904f05a00bcc:30;h:7eeb0070b4660d67:18;h:6b519dcaa70953c3:17;h:ea0c9c06fa240c5d:15
+UBR,10,20,45.50,45.50,44,50,0.0000,h:15f0e84b612a30c3:22;h:477ab0e330bb81d0:21;h:51ad00cfba0cc538:19;h:729c69526c94da64:14;h:033a81d18df1202a:13

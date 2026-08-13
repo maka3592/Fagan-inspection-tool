@@ -1,0 +1,1571 @@
+[
+  {
+    "id": "meeting_c9799c36",
+    "position": "3.2.1",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The requirements do not define how rejected orders are handled (p. 4).",
+    "evidence": {
+      "quote_or_paraphrase": "The requirements do not define how rejected orders are handled (p. 4).",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_pbr_tester_3b53d101",
+      "reviewer_2_pbr_tester_8a004b57",
+      "reviewer_2_pbr_tester_4ae2a112"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_pbr_tester",
+      "reviewer_2_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 4, 3.2.1"
+  },
+  {
+    "id": "meeting_d8ad3945",
+    "position": "3.1.23",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order': The design is missing notification for order submission (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify notification for order submission (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_pbr_tester_ebc7f40c"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.1.23",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 6, 3.1.23"
+  },
+  {
+    "id": "meeting_808639eb",
+    "position": "3.1.28",
+    "page_hint": "p. 7",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order': The design is missing details on timeout handling for orders (p. 7).",
+    "evidence": {
+      "quote_or_paraphrase": "The design lacks details on timeout handling for orders (p. 7).",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_pbr_tester_c1f6f321"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.1.28",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, 3.1.28"
+  },
+  {
+    "id": "meeting_0a68d549",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Reject_Order': The design is missing the flow for rejected orders (p. 5).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not define the flow for rejected orders (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_pbr_tester_c0fb00fc",
+      "reviewer_2_pbr_tester_5c7e34e2",
+      "reviewer_4_pbr_tester_4c4a0fc7",
+      "reviewer_4_pbr_tester_8e6a7926",
+      "reviewer_5_pbr_user_c052c3b3",
+      "reviewer_6_pbr_user_bd2d4466",
+      "reviewer_6_pbr_user_a9dc77af",
+      "reviewer_7_pbr_user_a967b9e5"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_pbr_tester",
+      "reviewer_2_pbr_tester",
+      "reviewer_4_pbr_tester",
+      "reviewer_5_pbr_user",
+      "reviewer_6_pbr_user",
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_TESTER",
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_2819f524",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Confirm': No error handling for confirmation failures is specified in the design (p. 5).",
+    "evidence": {
+      "quote_or_paraphrase": "No error handling for confirmation failures is specified in the design (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_pbr_tester_c0fb00fc",
+      "reviewer_2_pbr_tester_5c7e34e2",
+      "reviewer_4_pbr_tester_4c4a0fc7",
+      "reviewer_5_pbr_user_c052c3b3"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_pbr_tester",
+      "reviewer_2_pbr_tester",
+      "reviewer_4_pbr_tester",
+      "reviewer_5_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_TESTER",
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_1c7f9342",
+    "position": "3.4.2",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order_Reject': The behavior for rejected orders is missing in the signals (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "The behavior for rejected orders is not defined in the signals (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_2_pbr_tester_d419a0d4",
+      "reviewer_4_pbr_tester_7590a395",
+      "reviewer_5_pbr_user_b5509ef4",
+      "reviewer_7_pbr_user_16309795"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_pbr_tester",
+      "reviewer_4_pbr_tester",
+      "reviewer_5_pbr_user",
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_TESTER",
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 6, 3.4.2"
+  },
+  {
+    "id": "meeting_8b015234",
+    "position": "Table 1",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': Table 1 does not list 'Order' as a signal (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not list 'Order' as a signal (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_5_pbr_user_4ec2aa06",
+      "reviewer_7_pbr_user_e87ca9c4",
+      "reviewer_10_pbr_designer_09a07049",
+      "reviewer_10_pbr_designer_906aa94c",
+      "reviewer_10_pbr_designer_b3bb882e",
+      "reviewer_10_pbr_designer_572d0edb"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_pbr_designer",
+      "reviewer_5_pbr_user",
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER",
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 6, Table 1"
+  },
+  {
+    "id": "meeting_db8dfe2a",
+    "position": "Table 1",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order_struct': Table 1 is missing fields for 'Order_struct' (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not specify fields for 'Order_struct' (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_7_pbr_user_e87ca9c4",
+      "reviewer_10_pbr_designer_09a07049",
+      "reviewer_10_pbr_designer_906aa94c",
+      "reviewer_10_pbr_designer_b3bb882e"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_pbr_designer",
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER",
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 6, Table 1"
+  },
+  {
+    "id": "meeting_d6b7f561",
+    "position": "4.1",
+    "page_hint": "p. 9",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': 'Order' signal does not include acknowledgment in the MSC (p. 9).",
+    "evidence": {
+      "quote_or_paraphrase": "'Order' signal does not include acknowledgment in the MSC (p. 9).",
+      "page_hint": "p. 9"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_8_pbr_designer_087a1853",
+      "reviewer_8_pbr_designer_c28569b2",
+      "reviewer_8_pbr_designer_10a35a94"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 9, 4.1"
+  },
+  {
+    "id": "meeting_267b8d20",
+    "position": "4.2",
+    "page_hint": "p. 10",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Terminate_Voice': 'Terminate_Voice' does not have an acknowledgment signal defined in the MSC (p. 10).",
+    "evidence": {
+      "quote_or_paraphrase": "'Terminate_Voice' does not have an acknowledgment signal defined in the MSC (p. 10).",
+      "page_hint": "p. 10"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_8_pbr_designer_b9684560",
+      "reviewer_8_pbr_designer_d70fcaaf",
+      "reviewer_9_pbr_designer_ff5b2fdc",
+      "reviewer_9_pbr_designer_cb4decee",
+      "reviewer_9_pbr_designer_4921e65a"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_pbr_designer",
+      "reviewer_9_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 10, 4.2"
+  },
+  {
+    "id": "meeting_7b72bcfe",
+    "position": "3.1.30",
+    "page_hint": "p. 8",
+    "risk": "C",
+    "fault_type": "M",
+    "description": "'Start_Voice': The design is missing timeout for voice communication (p. 8).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify timeout for voice communication (p. 8).",
+      "page_hint": "p. 8"
+    },
+    "confidence": 0.7,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_1_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_1_pbr_tester_9ffdeac0"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.1.30",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Start_Voice",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify timeout for voice communication (p. 8).",
+    "evidence_location": "p. 8, 3.1.30"
+  },
+  {
+    "id": "meeting_ecc963ff",
+    "position": "3.2.1",
+    "page_hint": "p. 2",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The requirements state that orders can be submitted in all states except offline (p. 7).",
+    "evidence": {
+      "quote_or_paraphrase": "The requirements state that orders can be submitted in all states except offline (p. 7).",
+      "page_hint": "p. 2"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_2_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_2_pbr_tester_8a004b57"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The requirements state that orders can be submitted in all states except offline (p. 7).",
+    "evidence_location": "p. 2, 3.2.1"
+  },
+  {
+    "id": "meeting_1f0dc61d",
+    "position": "3.2.1",
+    "page_hint": "p. 2",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Reject_Order': The handling of rejected orders is missing in the design (p. 2).",
+    "evidence": {
+      "quote_or_paraphrase": "The handling of rejected orders is not detailed in the design (p. 2).",
+      "page_hint": "p. 2"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_2_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_2_pbr_tester_4ae2a112"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Reject_Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The handling of rejected orders is not detailed in the design (p. 2).",
+    "evidence_location": "p. 2, 3.2.1"
+  },
+  {
+    "id": "meeting_b9356c3e",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The design is missing limits for the Order_struct parameters (p. 5).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify limits for the Order_struct parameters (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_2_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_2_pbr_tester_5c7e34e2"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify limits for the Order_struct parameters (p. 5).",
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_53f380c0",
+    "position": "3.4.2",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order_Cancel': The design is missing details on how canceled orders are processed (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "The design lacks details on how canceled orders are processed (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_2_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_2_pbr_tester_d419a0d4"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_2_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order_Cancel",
+    "expected": "The design has details on how canceled orders are processed (p. 6).",
+    "observed": "The design lacks details on how canceled orders are processed (p. 6).",
+    "evidence_location": "p. 6, 3.4.2"
+  },
+  {
+    "id": "meeting_969fef34",
+    "position": "3.2.2",
+    "page_hint": "p. 3",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Reject_Order': The MSC in 3.4.1 shows Order signal but no reject/error path is defined.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 3.4.1 shows Order signal but no reject/error path is defined.",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_3_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_3_pbr_tester_06267c0d"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": "3.2.2",
+    "position_canonical": "3.4.1",
+    "position_mentions": [
+      "3.4.1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Reject_Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The MSC in 3.4.1 shows Order signal but no reject/error path is defined.",
+    "evidence_location": "p. 3, 3.2.2"
+  },
+  {
+    "id": "meeting_da5b8d31",
+    "position": "3.2.2",
+    "page_hint": "p. 3",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order': The parameter types for Order_struct are not bounded in section 3.2.2.",
+    "evidence": {
+      "quote_or_paraphrase": "The parameter types for Order_struct are not bounded in section 3.2.2.",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_3_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_3_pbr_tester_e2958d3b"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.2",
+    "position_mentions": [
+      "3.2.2"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The parameter types for Order_struct are not bounded in section 3.2.2.",
+    "evidence_location": "p. 3, 3.2.2"
+  },
+  {
+    "id": "meeting_ba26f02d",
+    "position": "3.2.2",
+    "page_hint": "p. 3",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Start_Voice': No timeout conditions are specified for Start_Voice in section 3.2.2.",
+    "evidence": {
+      "quote_or_paraphrase": "No timeout conditions are specified for Start_Voice in section 3.2.2.",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_3_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_3_pbr_tester_7504d38a"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.2",
+    "position_mentions": [
+      "3.2.2"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Start_Voice",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "No timeout conditions are specified for Start_Voice in section 3.2.2.",
+    "evidence_location": "p. 3, 3.2.2"
+  },
+  {
+    "id": "meeting_d746f61a",
+    "position": "3.2.2",
+    "page_hint": "p. 3",
+    "risk": "C",
+    "fault_type": "M",
+    "description": "'Stop_Voice': does not clarify the outcome of Stop_Voice.",
+    "evidence": {
+      "quote_or_paraphrase": "Section 3.2.2 does not clarify the outcome of Stop_Voice.",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.7,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_3_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_3_pbr_tester_eb52c13b"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.2",
+    "position_mentions": [
+      "3.2.2"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Stop_Voice",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "Section 3.2.2 does not clarify the outcome of Stop_Voice.",
+    "evidence_location": "p. 3, 3.2.2"
+  },
+  {
+    "id": "meeting_3f966cf8",
+    "position": "3.3.1",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Allocate_car': The acknowledgment for car allocation is missing in the API (p. 4).",
+    "evidence": {
+      "quote_or_paraphrase": "The acknowledgment for car allocation is not defined in the API (p. 4).",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_4_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_4_pbr_tester_5d63d1c1"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Allocate_car",
+    "expected": "The acknowledgment for car allocation is defined in the API (p. 4).",
+    "observed": "The acknowledgment for car allocation is not defined in the API (p. 4).",
+    "evidence_location": "p. 4, 3.3.1"
+  },
+  {
+    "id": "meeting_6e954794",
+    "position": "3.3.1",
+    "page_hint": "p. 4",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'OrderOper': No handling for rejected orders is described in the signals (p. 4).",
+    "evidence": {
+      "quote_or_paraphrase": "No handling for rejected orders is described in the signals (p. 4).",
+      "page_hint": "p. 4"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_4_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_4_pbr_tester_4eb9f4c7"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "OrderOper",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "No handling for rejected orders is described in the signals (p. 4).",
+    "evidence_location": "p. 4, 3.3.1"
+  },
+  {
+    "id": "meeting_045fa4d5",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Start_Voice': timeout is missing (p. 5).",
+    "evidence": {
+      "quote_or_paraphrase": "Timeout behavior for initiating voice communication is not defined (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_4_pbr_tester",
+    "technique": "PBR_TESTER",
+    "source_defect_ids": [
+      "reviewer_4_pbr_tester_8e6a7926"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_pbr_tester"
+    ],
+    "source_techniques": [
+      "PBR_TESTER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Start_Voice",
+    "expected": "Timeout behavior for initiating voice communication is defined (p. 5).",
+    "observed": "Timeout behavior for initiating voice communication is not defined (p. 5).",
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_677985df",
+    "position": "3.3.2",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'AlarmReset': The design is missing an acknowledgment for the AlarmReset signal (p. 5).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify an acknowledgment for the AlarmReset signal (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_5_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_5_pbr_user_8a768b9b"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_5_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "AlarmReset",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify an acknowledgment for the AlarmReset signal (p. 5).",
+    "evidence_location": "p. 5, 3.3.2"
+  },
+  {
+    "id": "meeting_ceac0767",
+    "position": "3.4.1",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Confirm': The design does not include an acknowledgment for the Confirm signal sent to the operator (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not include an acknowledgment for the Confirm signal sent to the operator (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_5_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_5_pbr_user_c052c3b3"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_5_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Confirm",
+    "expected": "The design should include an acknowledgment for the Confirm signal sent to the operator (p. 6).",
+    "observed": "The design does not include an acknowledgment for the Confirm signal sent to the operator (p. 6).",
+    "evidence_location": "p. 6, 3.4.1"
+  },
+  {
+    "id": "meeting_9830a074",
+    "position": "3.4.2",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order_Reject': The design is missing an acknowledgment for the Order_Reject signal (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify an acknowledgment for the Order_Reject signal (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_5_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_5_pbr_user_b5509ef4"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_5_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order_Reject",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify an acknowledgment for the Order_Reject signal (p. 6).",
+    "evidence_location": "p. 6, 3.4.2"
+  },
+  {
+    "id": "meeting_d60e4ba2",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "C",
+    "fault_type": "W",
+    "description": "'Order': Table 1 indicates that the Order signal omits an integer parameter that should be included (p. 7).",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 indicates that the Order signal omits an integer parameter that should be included (p. 7).",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.7,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_5_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_5_pbr_user_4ec2aa06"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_5_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "Table 1 indicates that the Order signal omits an integer parameter that should be included (p. 7).",
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_8cf8c38c",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Reject_Order': The MSC in 3.4.1 does not include a reject signal for the order flow.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_6_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_6_pbr_user_bd2d4466"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_6_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [
+      "3.4.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Reject_Order",
+    "expected": "The MSC in 3.4.1 should include a reject signal for the order flow.",
+    "observed": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_49025e29",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Order': The MSC in 3.4.1 shows only the success branch; no rejection path is defined.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 3.4.1 shows only the success branch; no rejection path is defined.",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_6_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_6_pbr_user_a9dc77af"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_6_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [
+      "3.4.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The MSC in 3.4.1 shows only the success branch; no rejection path is defined.",
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_49daca23",
+    "position": "3.4.1",
+    "page_hint": "p. 5",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Terminate_Voice': The MSC in 3.4.1 is missing an acknowledgment for the termination of voice communication.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 3.4.1 does not specify an acknowledgment for the termination of voice communication.",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_6_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_6_pbr_user_6ed511d4"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_6_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [
+      "3.4.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Terminate_Voice",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The MSC in 3.4.1 does not specify an acknowledgment for the termination of voice communication.",
+    "evidence_location": "p. 5, 3.4.1"
+  },
+  {
+    "id": "meeting_6862550a",
+    "position": "3.4.2",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Ack': The design is missing an acknowledgment for rejected orders.",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify an acknowledgment for rejected orders.",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_7_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_7_pbr_user_16309795"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Ack",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify an acknowledgment for rejected orders.",
+    "evidence_location": "p. 6, 3.4.2"
+  },
+  {
+    "id": "meeting_547e17d3",
+    "position": "Table 1",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Order': Table 1 indicates missing parameters for the 'Order' signal.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 indicates missing parameters for the 'Order' signal.",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_7_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_7_pbr_user_e87ca9c4"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "Table 1 indicates missing parameters for the 'Order' signal.",
+    "evidence_location": "p. 6, Table 1"
+  },
+  {
+    "id": "meeting_16b3fb1b",
+    "position": "3.4.2",
+    "page_hint": "p. 6",
+    "risk": "C",
+    "fault_type": "M",
+    "description": "'Start_Voice': The design is missing an acknowledgment for 'Start_Voice'.",
+    "evidence": {
+      "quote_or_paraphrase": "The design does not specify an acknowledgment for 'Start_Voice'.",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.7,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_7_pbr_user",
+    "technique": "PBR_USER",
+    "source_defect_ids": [
+      "reviewer_7_pbr_user_02cdef00"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_7_pbr_user"
+    ],
+    "source_techniques": [
+      "PBR_USER"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Start_Voice",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "The design does not specify an acknowledgment for 'Start_Voice'.",
+    "evidence_location": "p. 6, 3.4.2"
+  },
+  {
+    "id": "meeting_295fc457",
+    "position": "4.1",
+    "page_hint": "p. 9",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Meter_On': 'Meter_On' timing is missing in the MSC (p. 9).",
+    "evidence": {
+      "quote_or_paraphrase": "'Meter_On' timing is not specified in the MSC (p. 9).",
+      "page_hint": "p. 9"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_8_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_8_pbr_designer_c28569b2"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Meter_On",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Meter_On' timing is not specified in the MSC (p. 9).",
+    "evidence_location": "p. 9, 4.1"
+  },
+  {
+    "id": "meeting_d5e9ff90",
+    "position": "4.1",
+    "page_hint": "p. 9",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Position': 'Position' updates do not specify timeout conditions in the MSC (p. 9).",
+    "evidence": {
+      "quote_or_paraphrase": "'Position' updates do not specify timeout conditions in the MSC (p. 9).",
+      "page_hint": "p. 9"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_8_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_8_pbr_designer_10a35a94"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Position",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Position' updates do not specify timeout conditions in the MSC (p. 9).",
+    "evidence_location": "p. 9, 4.1"
+  },
+  {
+    "id": "meeting_484ed26c",
+    "position": "4.2",
+    "page_hint": "p. 10",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Stop_Voice': 'Stop_Voice' is missing termination conditions in the MSC (p. 10).",
+    "evidence": {
+      "quote_or_paraphrase": "'Stop_Voice' lacks termination conditions in the MSC (p. 10).",
+      "page_hint": "p. 10"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_8_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_8_pbr_designer_b9684560"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Stop_Voice",
+    "expected": "'Stop_Voice' has termination conditions in the MSC (p. 10).",
+    "observed": "'Stop_Voice' lacks termination conditions in the MSC (p. 10).",
+    "evidence_location": "p. 10, 4.2"
+  },
+  {
+    "id": "meeting_1ec872f3",
+    "position": "4.2",
+    "page_hint": "p. 10",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Voice_Msg': 'Voice_Msg' flow is unclear in the MSC (p. 10).",
+    "evidence": {
+      "quote_or_paraphrase": "'Voice_Msg' flow is unclear in the MSC (p. 10).",
+      "page_hint": "p. 10"
+    },
+    "confidence": 0.75,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_8_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_8_pbr_designer_d70fcaaf"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Voice_Msg",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Voice_Msg' flow is unclear in the MSC (p. 10).",
+    "evidence_location": "p. 10, 4.2"
+  },
+  {
+    "id": "meeting_df0f6c6d",
+    "position": "4.2",
+    "page_hint": "p. 10",
+    "risk": "B",
+    "fault_type": "M",
+    "description": "'Voice_Msg': 'Voice_Msg' parameters are ambiguous in the MSC (p. 10).",
+    "evidence": {
+      "quote_or_paraphrase": "'Voice_Msg' parameters are ambiguous in the MSC (p. 10).",
+      "page_hint": "p. 10"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_9_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_9_pbr_designer_cb4decee"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_9_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Voice_Msg",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Voice_Msg' parameters are ambiguous in the MSC (p. 10).",
+    "evidence_location": "p. 10, 4.2"
+  },
+  {
+    "id": "meeting_337fb12e",
+    "position": "4.2",
+    "page_hint": "p. 10",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Start_Voice': 'Start_Voice' is missing timeout handling in the MSC (p. 10).",
+    "evidence": {
+      "quote_or_paraphrase": "'Start_Voice' does not specify timeout handling in the MSC (p. 10).",
+      "page_hint": "p. 10"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_9_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_9_pbr_designer_4921e65a"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_9_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "4.2",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Start_Voice",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "'Start_Voice' does not specify timeout handling in the MSC (p. 10).",
+    "evidence_location": "p. 10, 4.2"
+  },
+  {
+    "id": "meeting_243386a7",
+    "position": "Table 1",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Order': 'Order' signal in Table 1 does not match the definition in section 3.4.1 (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "'Order' signal in Table 1 does not match the definition in section 3.4.1 (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_10_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_10_pbr_designer_b3bb882e"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "3.4.1",
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "'Order' signal in Table 1 does not match the definition in section 3.4.1 (p. 6).",
+    "evidence_location": "p. 6, Table 1"
+  },
+  {
+    "id": "meeting_9a949930",
+    "position": "Table 1",
+    "page_hint": "p. 6",
+    "risk": "B",
+    "fault_type": "W",
+    "description": "'Confirm_Voice': Parameter types for 'Confirm_Voice' do not match between Table 1 and section 3.4.1 (p. 6).",
+    "evidence": {
+      "quote_or_paraphrase": "Parameter types for 'Confirm_Voice' do not match between Table 1 and section 3.4.1 (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.8,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "pbr_description_normalized"
+    ],
+    "reviewer_id": "reviewer_10_pbr_designer",
+    "technique": "PBR_DESIGNER",
+    "source_defect_ids": [
+      "reviewer_10_pbr_designer_572d0edb"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_pbr_designer"
+    ],
+    "source_techniques": [
+      "PBR_DESIGNER"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "3.4.1",
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Confirm_Voice",
+    "expected": "Expected: 'the described item' should match the specification/definition.",
+    "observed": "Parameter types for 'Confirm_Voice' do not match between Table 1 and section 3.4.1 (p. 6).",
+    "evidence_location": "p. 6, Table 1"
+  }
+]

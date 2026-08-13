@@ -1,0 +1,130 @@
+{
+  "inspection_id": "costed_ubr_split_soft_n10_011",
+  "condition": "C1_UBR",
+  "timestamp": "2026-06-11T21:15:48.780718",
+  "llm_params": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "temperature": 0.2,
+    "max_tokens": 4096,
+    "top_p": null,
+    "extra": {}
+  },
+  "artifacts_used": [
+    {
+      "name": "Taxi_des_exp_v2.pdf",
+      "path": "design/Taxi_des_exp_v2.pdf",
+      "type": "design",
+      "page_count": 11,
+      "size_bytes": 73350
+    },
+    {
+      "name": "TextReqSpec_v3.6.pdf",
+      "path": "requirements/TextReqSpec_v3.6.pdf",
+      "type": "requirements",
+      "page_count": 14,
+      "size_bytes": 119869
+    },
+    {
+      "name": "UseCasesRank_v3.4.pdf",
+      "path": "usecases/UseCasesRank_v3.4.pdf",
+      "type": "usecase",
+      "page_count": 8,
+      "size_bytes": 54560
+    },
+    {
+      "name": "GuideUBR_rankbased_v2.pdf",
+      "path": "guides/GuideUBR_rankbased_v2.pdf",
+      "type": "guide",
+      "page_count": 1,
+      "size_bytes": 17397
+    }
+  ],
+  "prompt_versions": {
+    "reviewer_ubr": "v1.0",
+    "scribe_meeting": "v1.0",
+    "moderator_planning": "v1.0",
+    "moderator_followup": "v1.0"
+  },
+  "phase_completed": [
+    "planning",
+    "kickoff",
+    "preparation",
+    "individual_inspection",
+    "inspection_meeting",
+    "rework",
+    "followup"
+  ],
+  "logs_complete": null,
+  "evidence_quality": null,
+  "incomplete_defects_count": null,
+  "ubr_variant": "RB-UBR",
+  "ubr_use_case_source": "usecases/UseCasesRank_v3.4.pdf",
+  "ubr_use_case_count": 19,
+  "ubr_time_budgets": null,
+  "ubr_tc_budgets_detected": null,
+  "reviewer_artifacts_assigned": {
+    "reviewer_1_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_2_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_3_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_4_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_5_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_6_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_7_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_8_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_9_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ],
+    "reviewer_10_ubr": [
+      "design/Taxi_des_exp_v2.pdf",
+      "requirements/TextReqSpec_v3.6.pdf",
+      "usecases/UseCasesRank_v3.4.pdf",
+      "guides/GuideUBR_rankbased_v2.pdf"
+    ]
+  },
+  "defect_schema_version": "1.1.0",
+  "gold_guard_verified": true
+}

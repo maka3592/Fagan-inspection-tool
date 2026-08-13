@@ -1,0 +1,3 @@
+threshold,total_gold,n_matches_validated,match_confirmed,match_doubtful,match_rejected,automatic_union_tp,confirmed_union_tp,doubtful_union_tp,rejected_union_tp,automatic_recall,confirmed_recall,automatic_gold_ids,confirmed_gold_ids,doubtful_gold_ids,rejected_gold_ids,automatic_A,automatic_B,automatic_C,confirmed_A,confirmed_B,confirmed_C
+0.65,36,73,54,19,0,5,4,1,0,0.1389,0.1111,8 28 31 32 38,8 31 32 38,28,,1,1,3,1,1,2
+0.60,36,149,84,65,0,9,7,2,0,0.2500,0.1944,6 7 8 25 27 28 31 32 38,6 7 8 27 31 32 38,25 28,,2,3,4,2,3,2

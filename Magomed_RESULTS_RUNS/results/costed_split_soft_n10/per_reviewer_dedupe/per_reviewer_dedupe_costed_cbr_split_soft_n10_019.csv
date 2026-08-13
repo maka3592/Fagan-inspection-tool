@@ -1,0 +1,11 @@
+reviewer_id,total_findings,unique_ids,duplicates,duplicate_ratio
+reviewer_1_cbr,4,4,0,0.0000
+reviewer_2_cbr,4,4,0,0.0000
+reviewer_3_cbr,5,5,0,0.0000
+reviewer_4_cbr,3,3,0,0.0000
+reviewer_5_cbr,7,7,0,0.0000
+reviewer_6_cbr,4,4,0,0.0000
+reviewer_7_cbr,5,5,0,0.0000
+reviewer_8_cbr,4,4,0,0.0000
+reviewer_9_cbr,4,4,0,0.0000
+reviewer_10_cbr,7,7,0,0.0000

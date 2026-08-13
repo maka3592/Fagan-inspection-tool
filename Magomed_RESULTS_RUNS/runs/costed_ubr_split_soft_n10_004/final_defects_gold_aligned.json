@@ -1,0 +1,527 @@
+[
+  {
+    "id": "meeting_ee68ff11",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The signal is missing from Table 1 despite being referenced in the design.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Order' signal, which is crucial for order processing.",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_2_ubr_c63db6b6",
+      "reviewer_7_ubr_9a872115",
+      "reviewer_10_ubr_fdfbac80",
+      "reviewer_10_ubr_9064e107",
+      "reviewer_10_ubr_9ea523ec",
+      "reviewer_10_ubr_84fada23",
+      "reviewer_10_ubr_e43909e3",
+      "reviewer_10_ubr_8a83d806"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_2_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_0f12f9c9",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order_Reject': The signal is missing from Table 1 despite being referenced in the design.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Order_Reject' signal, which is crucial for order rejection.",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_2_ubr_c63db6b6",
+      "reviewer_7_ubr_9a872115",
+      "reviewer_10_ubr_fdfbac80",
+      "reviewer_10_ubr_9064e107",
+      "reviewer_10_ubr_9ea523ec",
+      "reviewer_10_ubr_84fada23",
+      "reviewer_10_ubr_e43909e3",
+      "reviewer_10_ubr_8a83d806"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_2_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_900ce2a6",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Ack': The signal is missing from Table 1 despite being referenced in the design.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Ack' signal, which is crucial for order acknowledgment.",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_7_ubr_9a872115",
+      "reviewer_10_ubr_fdfbac80",
+      "reviewer_10_ubr_9064e107",
+      "reviewer_10_ubr_9ea523ec",
+      "reviewer_10_ubr_84fada23",
+      "reviewer_10_ubr_e43909e3",
+      "reviewer_10_ubr_8a83d806"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_f5e6678a",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Not_Avail': The signal is missing from Table 1 despite being referenced in the design.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'Not_Avail' signal, which is crucial for indicating unavailability.",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_7_ubr_9a872115",
+      "reviewer_10_ubr_fdfbac80",
+      "reviewer_10_ubr_9064e107",
+      "reviewer_10_ubr_9ea523ec",
+      "reviewer_10_ubr_84fada23",
+      "reviewer_10_ubr_e43909e3",
+      "reviewer_10_ubr_8a83d806"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_20098b46",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'LoginOk': The signal is missing from Table 1 despite being referenced in the design.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'LoginOk' signal, which is crucial for successful login confirmation.",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_7_ubr_9a872115",
+      "reviewer_10_ubr_fdfbac80",
+      "reviewer_10_ubr_9064e107",
+      "reviewer_10_ubr_9ea523ec",
+      "reviewer_10_ubr_84fada23",
+      "reviewer_10_ubr_e43909e3",
+      "reviewer_10_ubr_8a83d806"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_9296b7af",
+    "position": "Table 1",
+    "page_hint": "p. 7",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'LoginFailed': The signal is missing from Table 1 despite being referenced in the design.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 does not include 'LoginFailed' signal, which is crucial for failed login indication.",
+      "page_hint": "p. 7"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_7_ubr_9a872115",
+      "reviewer_10_ubr_fdfbac80",
+      "reviewer_10_ubr_9064e107",
+      "reviewer_10_ubr_9ea523ec",
+      "reviewer_10_ubr_84fada23",
+      "reviewer_10_ubr_e43909e3",
+      "reviewer_10_ubr_8a83d806"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_10_ubr",
+      "reviewer_7_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 7, Table 1"
+  },
+  {
+    "id": "meeting_a0d06bdb",
+    "position": "3.2.2",
+    "page_hint": "p. 3",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The signal has wrong parameter types in Table 1.",
+    "evidence": {
+      "quote_or_paraphrase": "Table 1 indicates 'Order' should have an integer for address, but it is defined as charstring (p. 3).",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text",
+      "position_autofixed"
+    ],
+    "reviewer_id": "reviewer_3_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_3_ubr_c902bf88"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_3_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": "3.2.2",
+    "position_canonical": "Table 1",
+    "position_mentions": [
+      "Table 1"
+    ],
+    "position_autofixed": true,
+    "position_autofix_reason": "single_mentioned_token",
+    "entity": "Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "Table 1 indicates 'Order' should have an integer for address, but it is defined as charstring (p. 3).",
+    "evidence_location": "p. 3, 3.2.2"
+  },
+  {
+    "id": "meeting_f3f8643f",
+    "position": "3.3.1",
+    "page_hint": "p. 5",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Get_Order': Missing acknowledgment signal for retrieving orders.",
+    "evidence": {
+      "quote_or_paraphrase": "There is no acknowledgment defined for 'Get_Order' in the API (p. 5).",
+      "page_hint": "p. 5"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_4_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_4_ubr_7f4736ba"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.3.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Get_Order",
+    "expected": "Expected: 'the described item' should be present/defined as specified.",
+    "observed": "There is no acknowledgment defined for 'Get_Order' in the API (p. 5).",
+    "evidence_location": "p. 5, 3.3.1"
+  },
+  {
+    "id": "meeting_07a60ad1",
+    "position": "3.4.1",
+    "page_hint": "p. 6",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Terminate_Voice': Missing acknowledgment for terminating voice communication.",
+    "evidence": {
+      "quote_or_paraphrase": "The design lacks an acknowledgment signal for 'Terminate_Voice' (p. 6).",
+      "page_hint": "p. 6"
+    },
+    "confidence": 0.9,
+    "flags": [
+      "auto_expected_observed_from_text"
+    ],
+    "reviewer_id": "reviewer_4_ubr",
+    "technique": "UBR",
+    "source_defect_ids": [
+      "reviewer_4_ubr_60a203f1"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_4_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.4.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": "Terminate_Voice",
+    "expected": "The design has an acknowledgment signal for 'Terminate_Voice' (p. 6).",
+    "observed": "The design lacks an acknowledgment signal for 'Terminate_Voice' (p. 6).",
+    "evidence_location": "p. 6, 3.4.1"
+  },
+  {
+    "id": "meeting_73cd0df1",
+    "position": "3.2.1",
+    "page_hint": "p. 3",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Order': The signal definition is missing the dispatch_time parameter.",
+    "evidence": {
+      "quote_or_paraphrase": "The signal 'Order' should include dispatch_time as per requirements.",
+      "page_hint": "p. 3"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_1_ubr_8e862ce5",
+      "reviewer_2_ubr_f65463b8",
+      "reviewer_2_ubr_cbd38174",
+      "reviewer_2_ubr_591345b6"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_1_ubr",
+      "reviewer_2_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "3.2.1",
+    "position_mentions": [],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 3, 3.2.1"
+  },
+  {
+    "id": "meeting_e31f3fa7",
+    "position": "4.1",
+    "page_hint": "p. 9",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Meter_On': Missing signal to indicate when the meter is turned on after order acceptance.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 4.1 does not show a signal for 'Meter_On' after the order is accepted.",
+      "page_hint": "p. 9"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_8_ubr_d9bf76cb",
+      "reviewer_8_ubr_3c713221",
+      "reviewer_8_ubr_24ee997e",
+      "reviewer_8_ubr_46a08adb"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "4.1",
+    "position_mentions": [
+      "4.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 9, 4.1"
+  },
+  {
+    "id": "meeting_488bbb63",
+    "position": "4.1",
+    "page_hint": "p. 9",
+    "risk": "A",
+    "fault_type": "M",
+    "description": "'Position': Missing signal to indicate the position update after the taxi goes to 'Waiting for customer'.",
+    "evidence": {
+      "quote_or_paraphrase": "The MSC in 4.1 does not show a position update signal after the taxi goes to 'Waiting for customer'.",
+      "page_hint": "p. 9"
+    },
+    "confidence": 0.85,
+    "flags": [
+      "missing_entity",
+      "missing_expected",
+      "missing_observed"
+    ],
+    "reviewer_id": null,
+    "technique": null,
+    "source_defect_ids": [
+      "reviewer_8_ubr_d9bf76cb",
+      "reviewer_8_ubr_3c713221",
+      "reviewer_8_ubr_24ee997e",
+      "reviewer_8_ubr_46a08adb"
+    ],
+    "source_reviewer_ids": [
+      "reviewer_8_ubr"
+    ],
+    "source_techniques": [
+      "UBR"
+    ],
+    "original_position": null,
+    "position_canonical": "4.1",
+    "position_mentions": [
+      "4.1"
+    ],
+    "position_autofixed": false,
+    "position_autofix_reason": "",
+    "entity": null,
+    "expected": null,
+    "observed": null,
+    "evidence_location": "p. 9, 4.1"
+  }
+]

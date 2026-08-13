@@ -100,8 +100,14 @@ secrets/
 # Generated Run Outputs (nicht committen, werden neu generiert)
 # -----------------------------------------------------------------------------
 runs/
-eval/
 results/
+
+# Ergebnisse unter Magomed_RESULTS_RUNS ausdrücklich erlauben
+!/Magomed_RESULTS_RUNS/
+!/Magomed_RESULTS_RUNS/runs/
+!/Magomed_RESULTS_RUNS/runs/**
+!/Magomed_RESULTS_RUNS/results/
+!/Magomed_RESULTS_RUNS/results/**
 
 # -----------------------------------------------------------------------------
 # Gold Standard

@@ -1,0 +1,135 @@
+{
+  "dataset": "costed_split_soft_n10",
+  "runs_total": 40,
+  "techniques": {
+    "UBR": 20,
+    "CBR": 20
+  },
+  "reviewers_per_run": 10,
+  "total_gold": 36,
+  "thresholds": {
+    "main": 0.65,
+    "sensitivity": 0.6
+  },
+  "automatic_coverage": {
+    "0.65": {
+      "automatic_union_tp": 5,
+      "automatic_recall": 0.1389,
+      "automatic_gold_ids": "8 28 31 32 38"
+    },
+    "0.60": {
+      "automatic_union_tp": 9,
+      "automatic_recall": 0.25,
+      "automatic_gold_ids": "6 7 8 25 27 28 31 32 38"
+    }
+  },
+  "human_validated_coverage": {
+    "0.65": {
+      "human_confirmed_union_tp": 3,
+      "human_confirmed_recall": 0.0833,
+      "human_confirmed_gold_ids": "8 28 31",
+      "human_doubtful_gold_ids": "",
+      "human_rejected_gold_ids": "32 38"
+    },
+    "0.60": {
+      "human_confirmed_union_tp": 5,
+      "human_confirmed_recall": 0.1389,
+      "human_confirmed_gold_ids": "8 25 27 28 31",
+      "human_doubtful_gold_ids": "7",
+      "human_rejected_gold_ids": "6 32 38"
+    }
+  },
+  "api_usage": {
+    "total_tokens": 8516222,
+    "input_tokens": 8098793,
+    "output_tokens": 417429,
+    "technical_duration_seconds": 5768.845659,
+    "note": "Real API usage measured from response.usage; technical duration is API/tool time, not human effort."
+  },
+  "api_costs": {
+    "currency": "USD",
+    "basis": "list-price-based estimate on real token usage; not billing-dashboard charges",
+    "total_cost_usd": 1.465276,
+    "by_technique": {
+      "UBR": {
+        "total_cost_usd": 0.740605,
+        "total_tokens": 4329911,
+        "total_duration_seconds": 2737.817382
+      },
+      "CBR": {
+        "total_cost_usd": 0.724671,
+        "total_tokens": 4186311,
+        "total_duration_seconds": 3031.028277
+      }
+    },
+    "per_threshold": {
+      "0.65": {
+        "cost_per_automatic_tp_usd": 0.293055,
+        "cost_per_human_confirmed_tp_usd": 0.488425
+      },
+      "0.60": {
+        "cost_per_automatic_tp_usd": 0.162808,
+        "cost_per_human_confirmed_tp_usd": 0.293055
+      }
+    }
+  },
+  "personnel_cost_context": {
+    "currency": "EUR",
+    "basis": "literature-based context estimate, NOT measured in this experiment; no USD/EUR conversion",
+    "scenarios": [
+      {
+        "scenario": "low",
+        "staff_hours_per_defect": 0.8,
+        "labour_cost_eur_per_hour": 43.4,
+        "personnel_cost_eur_per_defect": 34.72,
+        "source_basis": "Applicon-style lower bound / major problem found and fixed"
+      },
+      {
+        "scenario": "medium",
+        "staff_hours_per_defect": 1.58,
+        "labour_cost_eur_per_hour": 43.4,
+        "personnel_cost_eur_per_defect": 68.57,
+        "source_basis": "ICL design-defect effort"
+      },
+      {
+        "scenario": "high",
+        "staff_hours_per_defect": 2.7,
+        "labour_cost_eur_per_hour": 43.4,
+        "personnel_cost_eur_per_defect": 117.18,
+        "source_basis": "Lockheed found-and-fixed upper scenario"
+      }
+    ]
+  },
+  "technique_complementarity": {
+    "0.65": {
+      "ubr_only_gold_ids": "28",
+      "cbr_only_gold_ids": "",
+      "cbr_only_count": 0,
+      "shared_count": 4,
+      "union_equals_ubr": true
+    },
+    "0.60": {
+      "ubr_only_gold_ids": "6 25 27",
+      "cbr_only_gold_ids": "",
+      "cbr_only_count": 0,
+      "shared_count": 6,
+      "union_equals_ubr": true
+    }
+  },
+  "main_findings": [
+    "Confirmed gold coverage is low: 3/36 (t=0.65), 5/36 (t=0.60).",
+    "Automatic text-similarity matching overestimates confirmed defect detection.",
+    "Total measured API cost is very low (~1.47 USD for 40 runs; list-price-based, not billing charges).",
+    "In this setup, CBR produced no additional confirmed gold-standard IDs beyond UBR; at the level of confirmed gold-standard hits, CBR was a subset of UBR.",
+    "UBR union CBR is a post-hoc result union (not a hybrid) and adds no confirmed gold coverage over UBR alone.",
+    "Low API costs make additional repetitions/variants feasible, but low cost does not imply high inspection quality."
+  ],
+  "limitations": [
+    "Single model (gpt-4o-mini) and single specification; limited generalisability.",
+    "Stochastic LLM output: gold-ID composition varies across independent runs (t=0.60 includes ID 27 vs. ID 11 in old baseline).",
+    "Manual validation is a single conservative judgement-based pass.",
+    "Costs are list-price-based estimates on real usage, not billed amounts; prices must be re-checked before submission.",
+    "Personnel costs are external literature estimates, not measured here, and not currency-converted.",
+    "Automatic coverage depends on the unchanged text-similarity matcher."
+  ]
+}

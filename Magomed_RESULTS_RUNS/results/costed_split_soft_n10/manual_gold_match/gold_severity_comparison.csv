@@ -1,0 +1,6 @@
+class,gold_total,confirmed_tp_t065,coverage_t065,confirmed_ids_t065,confirmed_tp_t060,coverage_t060,confirmed_ids_t060
+A,13,1,0.0769,8,1,0.0769,8
+B,13,1,0.0769,31,2,0.1538,27 31
+C,10,1,0.1,28,2,0.2,25 28
+A+B,26,2,0.0769,8 31,3,0.1154,8 27 31
+Gesamt,36,3,0.0833,8 28 31,5,0.1389,8 25 27 28 31

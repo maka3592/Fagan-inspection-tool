@@ -1,0 +1,3 @@
+threshold,role,pbr_candidate_count,pbr_candidate_ids,pbr_confirmed_count,pbr_confirmed_ids,pbr_doubtful_ids,pbr_rejected_ids,ubr_union_cbr_confirmed_ids,pbr_only_confirmed_vs_ubr_cbr,delta_confirmed_from_pbr
+0.65,main,1,8,1,8,,,8 28 31,none,0
+0.60,sensitivity,6,7 8 9 28 32 38,2,8 28,7,32 38,8 25 27 28 31,none,0

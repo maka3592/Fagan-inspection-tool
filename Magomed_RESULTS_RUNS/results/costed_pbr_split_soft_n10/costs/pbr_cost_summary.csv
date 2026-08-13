@@ -1,0 +1,12 @@
+metric,value
+technique,PBR
+runs,20
+llm_calls_logged,460
+input_tokens,3538427
+output_tokens,181630
+total_tokens,3720057
+total_cost_usd,0.639742
+currency,USD
+cost_per_automatic_tp_candidate_t065_usd,0.639742
+cost_per_automatic_tp_candidate_t060_usd,0.106624
+cost_per_confirmed_tp_usd,n/a until manual validation

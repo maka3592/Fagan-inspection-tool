@@ -1,0 +1,61 @@
+threshold,role,scope,reviewer_index,cumulative_confirmed_count,cumulative_confirmed_ids,new_confirmed_added,new_confirmed_ids,cumulative_coverage_of_36
+0.65,main,UBR,1,1,8,1,8,0.0278
+0.65,main,UBR,2,2,8 31,1,31,0.0556
+0.65,main,UBR,3,2,8 31,0,,0.0556
+0.65,main,UBR,4,2,8 31,0,,0.0556
+0.65,main,UBR,5,2,8 31,0,,0.0556
+0.65,main,UBR,6,2,8 31,0,,0.0556
+0.65,main,UBR,7,2,8 31,0,,0.0556
+0.65,main,UBR,8,2,8 31,0,,0.0556
+0.65,main,UBR,9,3,8 28 31,1,28,0.0833
+0.65,main,UBR,10,3,8 28 31,0,,0.0833
+0.65,main,CBR,1,0,,0,,0.0
+0.65,main,CBR,2,1,8,1,8,0.0278
+0.65,main,CBR,3,1,8,0,,0.0278
+0.65,main,CBR,4,1,8,0,,0.0278
+0.65,main,CBR,5,1,8,0,,0.0278
+0.65,main,CBR,6,1,8,0,,0.0278
+0.65,main,CBR,7,2,8 31,1,31,0.0556
+0.65,main,CBR,8,2,8 31,0,,0.0556
+0.65,main,CBR,9,2,8 31,0,,0.0556
+0.65,main,CBR,10,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,1,1,8,1,8,0.0278
+0.65,main,UBR_union_CBR,2,2,8 31,1,31,0.0556
+0.65,main,UBR_union_CBR,3,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,4,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,5,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,6,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,7,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,8,2,8 31,0,,0.0556
+0.65,main,UBR_union_CBR,9,3,8 28 31,1,28,0.0833
+0.65,main,UBR_union_CBR,10,3,8 28 31,0,,0.0833
+0.60,sensitivity,UBR,1,2,8 25,2,8 25,0.0556
+0.60,sensitivity,UBR,2,3,8 25 31,1,31,0.0833
+0.60,sensitivity,UBR,3,3,8 25 31,0,,0.0833
+0.60,sensitivity,UBR,4,3,8 25 31,0,,0.0833
+0.60,sensitivity,UBR,5,4,8 25 27 31,1,27,0.1111
+0.60,sensitivity,UBR,6,4,8 25 27 31,0,,0.1111
+0.60,sensitivity,UBR,7,4,8 25 27 31,0,,0.1111
+0.60,sensitivity,UBR,8,4,8 25 27 31,0,,0.1111
+0.60,sensitivity,UBR,9,5,8 25 27 28 31,1,28,0.1389
+0.60,sensitivity,UBR,10,5,8 25 27 28 31,0,,0.1389
+0.60,sensitivity,CBR,1,1,8,1,8,0.0278
+0.60,sensitivity,CBR,2,1,8,0,,0.0278
+0.60,sensitivity,CBR,3,1,8,0,,0.0278
+0.60,sensitivity,CBR,4,1,8,0,,0.0278
+0.60,sensitivity,CBR,5,1,8,0,,0.0278
+0.60,sensitivity,CBR,6,1,8,0,,0.0278
+0.60,sensitivity,CBR,7,2,8 31,1,31,0.0556
+0.60,sensitivity,CBR,8,3,8 28 31,1,28,0.0833
+0.60,sensitivity,CBR,9,3,8 28 31,0,,0.0833
+0.60,sensitivity,CBR,10,3,8 28 31,0,,0.0833
+0.60,sensitivity,UBR_union_CBR,1,2,8 25,2,8 25,0.0556
+0.60,sensitivity,UBR_union_CBR,2,3,8 25 31,1,31,0.0833
+0.60,sensitivity,UBR_union_CBR,3,3,8 25 31,0,,0.0833
+0.60,sensitivity,UBR_union_CBR,4,3,8 25 31,0,,0.0833
+0.60,sensitivity,UBR_union_CBR,5,4,8 25 27 31,1,27,0.1111
+0.60,sensitivity,UBR_union_CBR,6,4,8 25 27 31,0,,0.1111
+0.60,sensitivity,UBR_union_CBR,7,4,8 25 27 31,0,,0.1111
+0.60,sensitivity,UBR_union_CBR,8,5,8 25 27 28 31,1,28,0.1389
+0.60,sensitivity,UBR_union_CBR,9,5,8 25 27 28 31,0,,0.1389
+0.60,sensitivity,UBR_union_CBR,10,5,8 25 27 28 31,0,,0.1389

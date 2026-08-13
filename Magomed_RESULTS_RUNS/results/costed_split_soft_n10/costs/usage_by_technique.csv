@@ -1,0 +1,3 @@
+dataset,technique,runs_completed,calls_total,reviewer_calls_total,input_tokens_total,output_tokens_total,total_tokens_total,total_cost_usd,duration_seconds_total,mean_cost_per_run_usd,mean_cost_per_reviewer_call_usd,mean_duration_per_run_seconds,usable_runs
+costed_split_soft_n10,CBR,20,461,401,3971368,214943,4186311,0.724671,3031.028277,0.03623355,0.00180716,151.551414,20
+costed_split_soft_n10,UBR,20,461,401,4127425,202486,4329911,0.74060535,2737.817382,0.03703027,0.0018469,136.890869,20

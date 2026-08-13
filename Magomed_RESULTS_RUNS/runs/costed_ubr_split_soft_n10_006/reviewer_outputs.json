@@ -1,0 +1,1492 @@
+[
+  {
+    "reviewer_id": "reviewer_1_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_1_ubr_5fec9be6",
+        "position": "3.4.1",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The MSC in 3.4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 5, 3.4.1"
+      },
+      {
+        "id": "reviewer_1_ubr_aa529871",
+        "position": "3.4.1",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 indicates that 'Order' should include additional parameters not reflected in the design.",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 indicates that 'Order' should include additional parameters not reflected in the design.",
+        "evidence_location": "p. 5, 3.4.1"
+      },
+      {
+        "id": "reviewer_1_ubr_29a13890",
+        "position": "3.1",
+        "page_hint": "p. 3",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Order_struct': The definition of 'Address' is inconsistent with the use case.",
+        "evidence": {
+          "quote_or_paraphrase": "'Address' is defined as an integer, which contradicts the expected string format in the use case.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_struct",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "'Address' is defined as an integer, which contradicts the expected string format in the use case.",
+        "evidence_location": "p. 3, 3.1"
+      },
+      {
+        "id": "reviewer_1_ubr_05fde2a8",
+        "position": "3.2.1",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Start_Voice': Missing timeout specification for voice communication initiation.",
+        "evidence": {
+          "quote_or_paraphrase": "Section 3.2.1 does not specify any timeout for initiating voice communication.",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Section 3.2.1 does not specify any timeout for initiating voice communication.",
+        "evidence_location": "p. 4, 3.2.1"
+      },
+      {
+        "id": "reviewer_1_ubr_c982236a",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Ack': The signal parameters do not match the expected types in the use case.",
+        "evidence": {
+          "quote_or_paraphrase": "The use case expects different parameter types than those defined in the signal.",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.7,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_1_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The use case expects different parameter types than those defined in the signal.",
+        "evidence_location": "p. 5, 3.4.2"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found 5 defects related to signal definitions and inconsistencies.",
+    "timestamp": "2026-06-11T21:04:26.953227",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_2_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_2_ubr_92ed7b9e",
+        "position": "3.2.1",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': A signal is missing for confirming orders from the taxi to the central.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a confirmation signal for orders sent from the taxi to the central (p. 3).",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a confirmation signal for orders sent from the taxi to the central (p. 3).",
+        "evidence_location": "p. 3, 3.2.1"
+      },
+      {
+        "id": "reviewer_2_ubr_0ae32d90",
+        "position": "3.2.1",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not include a reject signal for the order flow (p. 3).",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The design should include a reject signal for the order flow (p. 3).",
+        "observed": "The design does not include a reject signal for the order flow (p. 3).",
+        "evidence_location": "p. 3, 3.2.1"
+      },
+      {
+        "id": "reviewer_2_ubr_764ec0d9",
+        "position": "3.2.1",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 specifies incorrect parameter types for the 'Order' signal (p. 3).",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 specifies incorrect parameter types for the 'Order' signal (p. 3).",
+        "evidence_location": "p. 3, 3.2.1"
+      },
+      {
+        "id": "reviewer_2_ubr_637f8b01",
+        "position": "3.4.1",
+        "page_hint": "p. 5",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Confirm': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 specifies incorrect parameter types for the 'Confirm' signal (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "Table 1 specifies incorrect parameter types for the 'Confirm' signal (p. 5).",
+        "evidence_location": "p. 5, 3.4.1"
+      },
+      {
+        "id": "reviewer_2_ubr_4d2d4da6",
+        "position": "3.4.2",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Cancel': A signal is missing for canceling orders after acceptance.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a signal for canceling an accepted order (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_2_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Cancel",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a signal for canceling an accepted order (p. 6).",
+        "evidence_location": "p. 6, 3.4.2"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found 5 defects related to signal definitions and parameter types.",
+    "timestamp": "2026-06-11T21:04:39.550069",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_3_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_3_ubr_6cbc41ce",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The MSC in 3.4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_ubr_571fc5f5",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "The Order signal in Table 1 does not match the expected Order_struct definition.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The Order signal in Table 1 does not match the expected Order_struct definition.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_ubr_80b32b3b",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'LoginOk': The signal is incorrectly defined with missing parameters.",
+        "evidence": {
+          "quote_or_paraphrase": "The LoginOk signal should include driver number as per requirements but is missing.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "LoginOk",
+        "expected": "The LoginOk signal should include driver number as per requirements but is present/defined.",
+        "observed": "The LoginOk signal should include driver number as per requirements but is missing.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_ubr_1789266c",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'AlarmReset': Missing acknowledgment signal for alarm reset.",
+        "evidence": {
+          "quote_or_paraphrase": "There is no acknowledgment signal defined for when the alarm is reset.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "AlarmReset",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "There is no acknowledgment signal defined for when the alarm is reset.",
+        "evidence_location": "p. 3, 3.2.2"
+      },
+      {
+        "id": "reviewer_3_ubr_2dcff21c",
+        "position": "3.2.2",
+        "page_hint": "p. 3",
+        "risk": "C",
+        "fault_type": "W",
+        "description": "'Start_Voice': The signal has inconsistent parameter types in the design.",
+        "evidence": {
+          "quote_or_paraphrase": "The Start_Voice signal parameters do not match the expected types in the design.",
+          "page_hint": "p. 3"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_3_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The Start_Voice signal parameters do not match the expected types in the design.",
+        "evidence_location": "p. 3, 3.2.2"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found 5 defects related to signal definitions and missing acknowledgments.",
+    "timestamp": "2026-06-11T21:04:51.496774",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_4_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_4_ubr_91101f1b",
+        "position": "3.3.1",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Allocate_car': A signal is missing for confirming car allocation.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a confirmation signal for car allocation (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Allocate_car",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a confirmation signal for car allocation (p. 5).",
+        "evidence_location": "p. 5, 3.3.1"
+      },
+      {
+        "id": "reviewer_4_ubr_ef6ffe65",
+        "position": "3.3.1",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Get_Order': Missing acknowledgment signal for order retrieval.",
+        "evidence": {
+          "quote_or_paraphrase": "There is no acknowledgment signal defined for 'Get_Order' in the design (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Get_Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "There is no acknowledgment signal defined for 'Get_Order' in the design (p. 5).",
+        "evidence_location": "p. 5, 3.3.1"
+      },
+      {
+        "id": "reviewer_4_ubr_d32da3b7",
+        "position": "3.4.1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Confirm': Missing acknowledgment for order confirmation from the central.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not include an acknowledgment signal for order confirmation (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm",
+        "expected": "The design should include an acknowledgment signal for order confirmation (p. 6).",
+        "observed": "The design does not include an acknowledgment signal for order confirmation (p. 6).",
+        "evidence_location": "p. 6, 3.4.1"
+      },
+      {
+        "id": "reviewer_4_ubr_8e99890b",
+        "position": "3.4.2",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': Missing acknowledgment signal for order acceptance.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify an acknowledgment signal for 'Ack' (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify an acknowledgment signal for 'Ack' (p. 6).",
+        "evidence_location": "p. 6, 3.4.2"
+      },
+      {
+        "id": "reviewer_4_ubr_0cd2400d",
+        "position": "3.4.2",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Reject': Missing acknowledgment signal for order rejection.",
+        "evidence": {
+          "quote_or_paraphrase": "There is no acknowledgment signal defined for 'Order_Reject' in the design (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_4_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Reject",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "There is no acknowledgment signal defined for 'Order_Reject' in the design (p. 6).",
+        "evidence_location": "p. 6, 3.4.2"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found 5 defects related to missing acknowledgment signals in the central-operator API.",
+    "timestamp": "2026-06-11T21:05:04.590278",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_5_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_5_ubr_1229211c",
+        "position": "3.3.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': A signal is missing for acknowledging order reception from the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify an acknowledgment signal for order reception (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify an acknowledgment signal for order reception (p. 5).",
+        "evidence_location": "p. 5, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_ubr_5a930060",
+        "position": "3.3.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Reject': A signal is missing for rejecting orders from the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a rejection acknowledgment for orders (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Reject",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a rejection acknowledgment for orders (p. 5).",
+        "evidence_location": "p. 5, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_ubr_c23f04c5",
+        "position": "3.3.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Cancel': A signal is missing for canceling orders from the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a cancellation acknowledgment for orders (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Cancel",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a cancellation acknowledgment for orders (p. 5).",
+        "evidence_location": "p. 5, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_ubr_c9246354",
+        "position": "3.3.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Not_Avail': A signal is missing for indicating a taxi is not available.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a signal for indicating taxi unavailability (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Not_Avail",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a signal for indicating taxi unavailability (p. 5).",
+        "evidence_location": "p. 5, 3.3.2"
+      },
+      {
+        "id": "reviewer_5_ubr_7725b177",
+        "position": "3.4.1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Confirm': A signal is missing for confirming order reception by the operator.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a confirmation signal for order reception by the operator (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a confirmation signal for order reception by the operator (p. 6).",
+        "evidence_location": "p. 6, 3.4.1"
+      },
+      {
+        "id": "reviewer_5_ubr_e61febce",
+        "position": "3.4.1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Confirm_Voice': A signal is missing for confirming voice communication establishment.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a confirmation signal for voice communication (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_5_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Confirm_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a confirmation signal for voice communication (p. 6).",
+        "evidence_location": "p. 6, 3.4.1"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found multiple defects related to missing acknowledgment signals.",
+    "timestamp": "2026-06-11T21:05:23.889304",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_6_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_6_ubr_25a5e1e8",
+        "position": "3.4.1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Reject_Order': A signal is missing for not confirming orders.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Reject_Order",
+        "expected": "The MSC in 3.4.1 should include a reject signal for the order flow.",
+        "observed": "The MSC in 3.4.1 does not include a reject signal for the order flow.",
+        "evidence_location": "p. 6, 3.4.1"
+      },
+      {
+        "id": "reviewer_6_ubr_22a32ce6",
+        "position": "3.4.1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Cancel': A signal is missing for canceling an order after acceptance.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not depict any cancelation signal for accepted orders.",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.9,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Cancel",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 3.4.1 does not depict any cancelation signal for accepted orders.",
+        "evidence_location": "p. 6, 3.4.1"
+      },
+      {
+        "id": "reviewer_6_ubr_aa1141fd",
+        "position": "3.4.1",
+        "page_hint": "p. 6",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': The signal sequence for order confirmation is incomplete.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 3.4.1 does not show the complete flow for confirming an order.",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_6_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 3.4.1 does not show the complete flow for confirming an order.",
+        "evidence_location": "p. 6, 3.4.1"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found 3 defects related to missing signals and incomplete sequences in the MSC.",
+    "timestamp": "2026-06-11T21:05:31.679436",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_7_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_7_ubr_defb8f22",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': A signal is missing for confirming order acceptance from the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not include an acknowledgment signal for order acceptance (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "The design should include an acknowledgment signal for order acceptance (p. 5).",
+        "observed": "The design does not include an acknowledgment signal for order acceptance (p. 5).",
+        "evidence_location": "p. 5, 3.4.2"
+      },
+      {
+        "id": "reviewer_7_ubr_da8d46ff",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Cancel': A signal is missing for canceling an order after acceptance.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a signal for canceling an accepted order (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Cancel",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a signal for canceling an accepted order (p. 5).",
+        "evidence_location": "p. 5, 3.4.2"
+      },
+      {
+        "id": "reviewer_7_ubr_357cbc59",
+        "position": "3.4.2",
+        "page_hint": "p. 5",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Reject': A signal is missing for confirming order rejection from the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not include a rejection acknowledgment signal for orders (p. 5).",
+          "page_hint": "p. 5"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Reject",
+        "expected": "The design should include a rejection acknowledgment signal for orders (p. 5).",
+        "observed": "The design does not include a rejection acknowledgment signal for orders (p. 5).",
+        "evidence_location": "p. 5, 3.4.2"
+      },
+      {
+        "id": "reviewer_7_ubr_dce3bfa6",
+        "position": "Table 1",
+        "page_hint": "p. 6",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Order': The signal has wrong parameter types in Table 1.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 incorrectly omits the order number parameter for the 'Order' signal (p. 6).",
+          "page_hint": "p. 6"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "Table 1 incorrectly omits the order number parameter for the 'Order' signal (p. 6).",
+        "evidence_location": "p. 6, Table 1"
+      },
+      {
+        "id": "reviewer_7_ubr_3e6c8783",
+        "position": "3.4.1",
+        "page_hint": "p. 4",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Terminate_Voice': A signal is missing for confirming termination of voice communication.",
+        "evidence": {
+          "quote_or_paraphrase": "The design does not specify a confirmation signal for voice termination (p. 4).",
+          "page_hint": "p. 4"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_7_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Terminate_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The design does not specify a confirmation signal for voice termination (p. 4).",
+        "evidence_location": "p. 4, 3.4.1"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.5 in priority order. Found 5 defects related to missing signals and one inconsistency in parameter types.",
+    "timestamp": "2026-06-11T21:05:44.262836",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_8_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_8_ubr_bf9247c7",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': A signal is missing for the rejection of an order.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not include a reject signal after the order is sent.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "The MSC in 4.1 should include a reject signal after the order is sent.",
+        "observed": "The MSC in 4.1 does not include a reject signal after the order is sent.",
+        "evidence_location": "p. 9, 4.1"
+      },
+      {
+        "id": "reviewer_8_ubr_bd3a3d2e",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': The acknowledgment signal is missing after the order confirmation.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 does not show an acknowledgment signal after the order is confirmed.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.1 does not show an acknowledgment signal after the order is confirmed.",
+        "evidence_location": "p. 9, 4.1"
+      },
+      {
+        "id": "reviewer_8_ubr_b32112ce",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Meter_On': The signal is shown before the acknowledgment is received.",
+        "evidence": {
+          "quote_or_paraphrase": "The sequence in MSC 4.1 shows 'Meter_On' before 'Ack' is confirmed.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Meter_On",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The sequence in MSC 4.1 shows 'Meter_On' before 'Ack' is confirmed.",
+        "evidence_location": "p. 9, 4.1"
+      },
+      {
+        "id": "reviewer_8_ubr_bf9fe3ef",
+        "position": "4.1",
+        "page_hint": "p. 9",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Position': The signal is sent without confirming the order first.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.1 indicates 'Position' is sent before the order confirmation.",
+          "page_hint": "p. 9"
+        },
+        "confidence": 0.7,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_8_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Position",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The MSC in 4.1 indicates 'Position' is sent before the order confirmation.",
+        "evidence_location": "p. 9, 4.1"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.2 in priority order. Found 4 defects in the MSC sequences.",
+    "timestamp": "2026-06-11T21:06:06.180738",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_9_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_9_ubr_c6669d17",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Stop_Voice': A signal is missing for terminating voice communication when the driver cancels the call.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not show a signal for the driver terminating the voice communication.",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_9_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Stop_Voice",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "The MSC in 4.2 does not show a signal for the driver terminating the voice communication.",
+        "evidence_location": "p. 10, 4.2"
+      },
+      {
+        "id": "reviewer_9_ubr_c187b58a",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Voice_Msg': Missing acknowledgment handling for voice messages sent from the operator.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 does not include any acknowledgment for the voice messages sent.",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_9_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Voice_Msg",
+        "expected": "The MSC in 4.2 should include any acknowledgment for the voice messages sent.",
+        "observed": "The MSC in 4.2 does not include any acknowledgment for the voice messages sent.",
+        "evidence_location": "p. 10, 4.2"
+      },
+      {
+        "id": "reviewer_9_ubr_f5912408",
+        "position": "4.2",
+        "page_hint": "p. 10",
+        "risk": "B",
+        "fault_type": "W",
+        "description": "'Start_Voice': The parameters for initiating voice communication are inconsistent with the signal definitions.",
+        "evidence": {
+          "quote_or_paraphrase": "The MSC in 4.2 uses parameters that do not match those defined in the API for Start_Voice.",
+          "page_hint": "p. 10"
+        },
+        "confidence": 0.75,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_9_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Start_Voice",
+        "expected": "Expected: 'the described item' should match the specification/definition.",
+        "observed": "The MSC in 4.2 uses parameters that do not match those defined in the API for Start_Voice.",
+        "evidence_location": "p. 10, 4.2"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.2 in priority order. Found 3 defects in signal sequences related to voice communication.",
+    "timestamp": "2026-06-11T21:06:27.274284",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  },
+  {
+    "reviewer_id": "reviewer_10_ubr",
+    "role": "reviewer",
+    "technique": "UBR",
+    "defects": [
+      {
+        "id": "reviewer_10_ubr_6d143d1f",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order': A signal is missing for the order confirmation from the central to the taxi.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 does not include a confirmation signal for orders sent to taxis.",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order",
+        "expected": "Table 1 should include a confirmation signal for orders sent to taxis.",
+        "observed": "Table 1 does not include a confirmation signal for orders sent to taxis.",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_ubr_6c31c8f5",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Order_Reject': A signal is missing for the rejection of orders by the central.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 does not specify a signal for order rejection from the central to the taxi.",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Order_Reject",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 does not specify a signal for order rejection from the central to the taxi.",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_ubr_dcba4228",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Ack': The signal is listed but never used in the design.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 includes 'Ack' but there is no reference to its usage in the design.",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.8,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Ack",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 includes 'Ack' but there is no reference to its usage in the design.",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_ubr_0d4d321b",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'LoginFailed': A signal is missing for failed login attempts.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 does not include a signal for login failure notifications.",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "LoginFailed",
+        "expected": "Table 1 should include a signal for login failure notifications.",
+        "observed": "Table 1 does not include a signal for login failure notifications.",
+        "evidence_location": "p. 7, Table 1"
+      },
+      {
+        "id": "reviewer_10_ubr_c6f6eb7f",
+        "position": "Table 1",
+        "page_hint": "p. 7",
+        "risk": "A",
+        "fault_type": "M",
+        "description": "'Text_Message': The signal is missing for acknowledgment of received text messages.",
+        "evidence": {
+          "quote_or_paraphrase": "Table 1 does not specify a signal for acknowledgment of text messages sent to taxis.",
+          "page_hint": "p. 7"
+        },
+        "confidence": 0.85,
+        "flags": [
+          "auto_expected_observed_from_text"
+        ],
+        "reviewer_id": "reviewer_10_ubr",
+        "technique": "UBR",
+        "source_defect_ids": [],
+        "source_reviewer_ids": [],
+        "source_techniques": [],
+        "original_position": null,
+        "position_canonical": null,
+        "position_mentions": [],
+        "position_autofixed": false,
+        "position_autofix_reason": "",
+        "entity": "Text_Message",
+        "expected": "Expected: 'the described item' should be present/defined as specified.",
+        "observed": "Table 1 does not specify a signal for acknowledgment of text messages sent to taxis.",
+        "evidence_location": "p. 7, Table 1"
+      }
+    ],
+    "notes": "Traced Use Cases 1.1 to 1.19. Found several missing signals in Table 1 that are referenced in the use cases.",
+    "timestamp": "2026-06-11T21:06:38.026523",
+    "is_incomplete": false,
+    "incomplete_reason": null
+  }
+]

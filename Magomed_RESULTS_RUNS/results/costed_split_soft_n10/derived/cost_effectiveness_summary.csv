@@ -1,0 +1,9 @@
+scope,threshold,role,api_cost_usd,confirmed_count,confirmed_ids,cost_per_confirmed_usd,confirmed_A,confirmed_B,confirmed_C,confirmed_A_plus_B,cost_per_confirmed_A_critical_usd,cost_per_confirmed_A_plus_B_usd
+UBR_union_CBR,0.65,main,1.465276,3,8 28 31,0.488425,1,1,1,2,1.465276,0.732638
+UBR,0.65,main,0.740605,3,8 28 31,0.246868,1,1,1,2,0.740605,0.370302
+CBR,0.65,main,0.724671,2,8 31,0.362335,1,1,0,2,0.724671,0.362335
+UBR_union_CBR_union_PBR,0.65,main,2.105018,3,8 28 31,0.701673,1,1,1,2,2.105018,1.052509
+UBR_union_CBR,0.60,sensitivity,1.465276,5,8 25 27 28 31,0.293055,1,2,2,3,1.465276,0.488425
+UBR,0.60,sensitivity,0.740605,5,8 25 27 28 31,0.148121,1,2,2,3,0.740605,0.246868
+CBR,0.60,sensitivity,0.724671,3,8 28 31,0.241557,1,1,1,2,0.724671,0.362335
+UBR_union_CBR_union_PBR,0.60,sensitivity,2.105018,5,8 25 27 28 31,0.421004,1,2,2,3,2.105018,0.701673

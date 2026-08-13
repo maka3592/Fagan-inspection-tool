@@ -1,0 +1,8 @@
+threshold,gold_id,risk,candidate_type,n_runs_hitting,best_similarity,source_run,reviewer,pbr_defect_text,validation_status,manual_decision,notes
+0.65,8,A,existing-vs-UBR-CBR,4,0.6708,costed_pbr_split_soft_n10_019,reviewer_7_pbr_user,'Order_Cancel': The design is missing a mechanism for notifying the operator of order cancellations.,pending,,
+0.60,7,B,new-vs-UBR-CBR,2,0.6226,costed_pbr_split_soft_n10_001,reviewer_2_pbr_tester,'Allocate_car': The parameter types for Allocate_car are is missing in the design (p. 4).,pending,,
+0.60,8,A,existing-vs-UBR-CBR,11,0.6593,costed_pbr_split_soft_n10_008,reviewer_1_pbr_tester,'Order_Cancel': The design states that an order can be cancelled but is missing details on the process (p. 5).,pending,,
+0.60,9,C,new-vs-UBR-CBR,1,0.6086,costed_pbr_split_soft_n10_009,reviewer_10_pbr_designer,'Allocate_car': The first parameter corresponds to the number on a operator. The second parameter corresponds to a taxi number (p. 4).,pending,,
+0.60,28,C,existing-vs-UBR-CBR,1,0.6026,costed_pbr_split_soft_n10_006,reviewer_8_pbr_designer,'Voice_Msg': The MSC in 4.2 does not clarify conditions for terminating voice messages (p. 10).,pending,,
+0.60,32,C,new-vs-UBR-CBR,1,0.6019,costed_pbr_split_soft_n10_020,reviewer_8_pbr_designer,'Start_Voice': 'Start_Voice' does not include confirmation handling in the MSC (p. 10).,pending,,
+0.60,38,C,new-vs-UBR-CBR,6,0.6186,costed_pbr_split_soft_n10_001,reviewer_8_pbr_designer,'Ack': The MSC in section 4.1 is missing a clear acknowledgment for the 'Order' signal (p. 9).,pending,,

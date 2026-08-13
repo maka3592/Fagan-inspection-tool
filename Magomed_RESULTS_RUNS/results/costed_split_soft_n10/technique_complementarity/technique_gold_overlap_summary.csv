@@ -1,0 +1,7 @@
+dataset,threshold,technique_or_combination,automatic_gold_ids,automatic_tp,automatic_recall,human_confirmed_gold_ids,human_confirmed_tp,human_confirmed_recall,human_doubtful_gold_ids,human_doubtful_tp,human_rejected_gold_ids,human_rejected_tp,total_cost_usd,cost_per_automatic_tp_usd,cost_per_human_confirmed_tp_usd,note
+costed_split_soft_n10,0.65,UBR,8 28 31 32 38,5,0.1389,8 28 31,3,0.0833,,0,32 38,2,0.740605,0.148121,0.246868,UBR allein (automatische Gold-Treffer)
+costed_split_soft_n10,0.65,CBR,8 31 32 38,4,0.1111,8 31,2,0.0556,,0,32 38,2,0.724671,0.181168,0.362335,CBR allein (automatische Gold-Treffer)
+costed_split_soft_n10,0.65,UBR_union_CBR,8 28 31 32 38,5,0.1389,8 28 31,3,0.0833,,0,32 38,2,1.465276,0.293055,0.488425,post-hoc Ergebnis-Union UBR ∪ CBR; KEIN Hybrid-Reading-Ansatz
+costed_split_soft_n10,0.60,UBR,6 7 8 25 27 28 31 32 38,9,0.2500,8 25 27 28 31,5,0.1389,7,1,6 32 38,3,0.740605,0.082289,0.148121,UBR allein (automatische Gold-Treffer)
+costed_split_soft_n10,0.60,CBR,7 8 28 31 32 38,6,0.1667,8 28 31,3,0.0833,7,1,32 38,2,0.724671,0.120778,0.241557,CBR allein (automatische Gold-Treffer)
+costed_split_soft_n10,0.60,UBR_union_CBR,6 7 8 25 27 28 31 32 38,9,0.2500,8 25 27 28 31,5,0.1389,7,1,6 32 38,3,1.465276,0.162808,0.293055,post-hoc Ergebnis-Union UBR ∪ CBR; KEIN Hybrid-Reading-Ansatz

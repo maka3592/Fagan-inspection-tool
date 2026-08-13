@@ -1,0 +1,2 @@
+threshold,mode,scope,n_filter,n_runs_ubr,n_runs_cbr,n_runs_pbr,tp_ubr,tp_cbr,tp_pbr,tp_union,recall_ubr,recall_cbr,recall_pbr,recall_union,tpA_ubr,tpA_cbr,tpA_pbr,tpA_union,recallA_ubr,recallA_cbr,recallA_pbr,recallA_union,tpB_ubr,tpB_cbr,tpB_pbr,tpB_union,recallB_ubr,recallB_cbr,recallB_pbr,recallB_union,total_gold,total_A,total_B
+0.65,pooled,split,10,0,0,20,0.00,0.00,1.00,1.00,0.0000,0.0000,0.0278,0.0278,0.00,0.00,1.00,1.00,0.0000,0.0000,0.0769,0.0769,0.00,0.00,0.00,0.00,0.0000,0.0000,0.0000,0.0000,36,13,13

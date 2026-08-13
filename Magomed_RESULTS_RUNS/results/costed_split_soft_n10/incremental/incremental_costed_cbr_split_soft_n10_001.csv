@@ -1,0 +1,11 @@
+k,reviewer_id,new_unique,cumulative_unique
+1,reviewer_1_cbr,4,4
+2,reviewer_2_cbr,5,9
+3,reviewer_3_cbr,3,12
+4,reviewer_4_cbr,3,15
+5,reviewer_5_cbr,7,22
+6,reviewer_6_cbr,3,25
+7,reviewer_7_cbr,4,29
+8,reviewer_8_cbr,5,34
+9,reviewer_9_cbr,3,37
+10,reviewer_10_cbr,8,45
